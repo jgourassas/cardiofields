@@ -1,0 +1,50 @@
+<div class="notification is-link is-light">
+ <strong>Navigation - Go To</strong>
+</div>
+<div class="block">
+
+<span><%= link "Back To Field List",
+to: Routes.definition_path(@conn, :index), class: "button is-primary" %></span>
+<span>
+ <%= link   to: Routes.definition_defs_sentence_path(@conn, :index, @definition),
+class: "button is-primary" do   %>
+
+<span>
+     &nbsp;&nbsp;
+</span>
+
+   <span>
+   <%= render  CardiofieldsWeb.SharedView, "_defs_phrases_count.html", definition: @definition %>
+   </span>
+   <%end%>
+<!----------rernder codes------------------>
+<span>
+   <%= link  to: Routes.definition_defs_code_path(@conn, :index, @definition),
+class: "button is-primary" do   %>
+
+<span>
+    &nbsp;&nbsp;
+</span>
+
+   <span>
+      <%= render  CardiofieldsWeb.SharedView, "_defs_codes_count.html",
+      definition: @definition %>
+   </span>
+   <%end%>
+  <!-------------------------->
+  <!-----remder options--------------------->
+<span>
+   <%= link to: Routes.definition_defs_option_path(@conn, :index,@definition),
+    class: "button is-primary" do   %>
+   </span>
+
+<span>
+    &nbsp;&nbsp;
+</span>
+
+   <span>
+      <%= render  CardiofieldsWeb.SharedView, "_defs_options_count.html",
+      definition: @definition %>
+   </span>
+   <%end%>
+</div><!----block--------->

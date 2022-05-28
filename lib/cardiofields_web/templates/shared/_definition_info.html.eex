@@ -1,0 +1,9 @@
+
+<article class="message is-info">
+  <div class="message-body">
+ <strong>Field Name:</strong> <%= @definition.name %><br/>
+ <strong>Field Instructions </strong>: <%= raw @definition.coding_instructions %>
+ <strong>Table:</strong>
+<%= @definition.table_name %>
+  </div>
+</article>

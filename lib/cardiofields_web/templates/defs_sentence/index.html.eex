@@ -1,0 +1,109 @@
+
+<% alias Cardiofields.Canons.Definition %>
+<% alias Cardiofields.Canons.Language %>
+
+<h5 class="title is-5 has-text-centered">
+  Listing Sentences For a Field
+ <span class ="frame_3">
+ <%= "#{@definition.name}" %>
+ </span>
+</h5>
+
+<%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
+
+<span class="icon">
+  <i class="fa fa-language fa-2x"></i>
+</span>
+<div class="frame_1 box  has-background-light ">
+ <table class="table is-bordered
+is-striped
+is-narrow
+is-fullwidth
+is-hoverable">
+  <thead class="thead">
+    <tr>
+      <th>Updated - Inserted</th>
+      <th>Language</th>
+      <th>Sentence</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+<%= for defs_sentence <- @defs_sentences do %>
+    <tr>
+
+
+<td class="has-background-primary-light">
+   <span class="tag is-secondary", style="font-size: 14px;">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   Updated: <%= defs_sentence.updated_at %></span>
+    <br/>
+   <span class="tag is-primary", style="font-size: 14px;">
+   <i class="fa fa-registered" aria-hidden="true"></i>
+      Inserted: 
+   <%= defs_sentence.inserted_at %></span>
+</td>
+
+
+
+
+      <td><%= defs_sentence.language %></td>
+     <td><em><%= raw defs_sentence.sentence %></em></td>
+
+      <td>
+        <span><%= link "Show",
+        to: Routes.definition_defs_sentence_path(@conn,
+        :show, @definition,defs_sentence),
+        class: "button is-primary is-small is-fullwidth" %></span>
+      </td>
+      <td>
+     <span><%= link "Edit",
+     to: Routes.definition_defs_sentence_path(@conn,
+     :edit, @definition,defs_sentence),
+     class: "button is-primary is-small is-fullwidth" %></span>
+
+      </td>
+      <td>
+
+        <span>
+          <%= link "Delete",
+          to: Routes.definition_defs_sentence_path(@conn,
+          :delete, @definition, defs_sentence), method: :delete,
+          data: [confirm: "Are you sure?"],
+          class: "button is-danger  is-small  is-fullwidth" %>
+
+        </span>
+
+      <td>
+
+        </td>
+
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+
+<span>
+<%= link "New Phrase - Sentence For Field",
+      to: Routes.definition_defs_sentence_path(@conn, :new, @definition),
+class: "button is-info is-large is-fullwidth" %>
+</span>
+
+<span>
+<%#= link "Back  to  List of Fields", to: Routes.definition_path(@conn, :index),
+       class: "button is-link"  %>
+</span>
+
+<span>
+  <%#= link "To Field Options List",
+to: Routes.definition_defs_option_path(@conn, :index,@definition),
+       class: "button is-success"  %>
+</span>
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>

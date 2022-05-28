@@ -1,0 +1,41 @@
+<div class="block">
+
+<span>
+   <%= link to: Routes.definition_defs_option_opts_sentence_path(@conn, :index, @definition, 
+   @defs_option),
+    class: "button is-light" do   %>
+   </span>
+   <%= render  CardiofieldsWeb.SharedView, "_opts_sentences_count.html",
+      definition: @definition, defs_option: @defs_option %>
+   </span>
+   <%end%>
+
+<span>
+     &nbsp;&nbsp;
+</span>
+
+   <span>
+   <%= link to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, 
+   @defs_option),
+    class: "button is-light" do   %>
+   </span>
+   <%= render  CardiofieldsWeb.SharedView, "_opts_codes_count.html",
+      definition: @definition, defs_option: @defs_option %>
+   </span>
+   <%end%>
+   
+<span>
+     &nbsp;&nbsp;
+</span>
+
+<span>
+   <%= link to: Routes.definition_defs_option_opts_image_path(@conn, :index, @definition, 
+   @defs_option),
+    class: "button is-light" do   %>
+   </span>
+   <%= render  CardiofieldsWeb.SharedView, "_opts_images_count.html",
+      definition: @definition, defs_option: @defs_option %>
+   </span>
+   <%end%>
+   </div>
+

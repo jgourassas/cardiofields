@@ -1,0 +1,55 @@
+<h5 class="title is-5 has-text-centered">
+Showing Code For Field:
+
+<span class ="frame_3">
+<%= "#{@definition.name}" %>
+</span>
+
+</h5>
+
+    <%= render  CardiofieldsWeb.SharedView,
+    "_definition_info.html", definition: @definition %>
+
+<ul class="frame_1  list is-hoverable">
+
+  <li class="list-item">
+    <strong>Code system:</strong>
+    <%= @defs_code.code_system %>
+  </li>
+
+  <li class="list-item">
+    <strong>Code:</strong>
+    <%= @defs_code.code %>
+  </li>
+
+  <li class="list-item">
+    <strong>Description:</strong>
+    <%= raw @defs_code.description %>
+  </li>
+
+  <li class="list-item">
+    <strong>Note:</strong>
+    <%= raw @defs_code.note %>
+  </li>
+
+  <li class="list-item">
+    <strong>Definition ID:</strong>
+    <%= @defs_code.definition_id %>
+  </li>
+
+</ul>
+
+
+
+<%#= link "Back To Definition Codes  List", to: Routes.definition_defs_code_path(@conn, :index, @definition) , class: "button is-link"%>
+<span><%= link "Edit", to: Routes.definition_defs_code_path(@conn, :edit, @definition, @defs_code), 
+class: "button is-primary is-fullwidth" %>
+</span>
+
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="568.73645"
+       y="41.152855"
+       id="text8021"><tspan
+         id="tspan8019"
+         x="568.73645"
+         y="41.152855"></tspan><tspan
+         id="tspan8023"
+         x="568.73645"
+         y="91.152855">Definitions</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="76.104713"
+       y="302.07916"
+       id="text14879"><tspan
+         id="tspan14877"
+         x="76.104713"
+         y="302.07916">Definition Sentences</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999997"
+       x="1008.2769"
+       y="315.67349"
+       id="text21189"><tspan
+         id="tspan21187"
+         x="1008.2769"
+         y="315.67349"
+         style="stroke-width:0.999997">Definition Codes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="553.12274"
+       y="305.81165"
+       id="text27587"><tspan
+         id="tspan27585"
+         x="553.12274"
+         y="305.81165">Definition Options</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="199.57983"
+       y="615.30054"
+       id="text32615"><tspan
+         id="tspan32613"
+         x="199.57983"
+         y="615.30054">Options Codes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="871.88446"
+       y="612.37854"
+       id="text42513"><tspan
+         id="tspan42511"
+         x="871.88446"
+         y="612.37854">Option Sentences</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 680,80 260,280"
+       id="path44995" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 660,80 c 40,220 40,220 40,220"
+       id="path44997" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 660,100 c 540,200 540,200 540,200 l 20,20"
+       id="path44999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 280,600 c 0,0 0,0 420,-300 380,300 380,300 380,300 v 0"
+       id="path45001" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1080,600 h 80"
+       id="path45003" />
+  </g>
+</svg>

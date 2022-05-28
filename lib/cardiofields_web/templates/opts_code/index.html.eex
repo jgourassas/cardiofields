@@ -1,0 +1,109 @@
+<h5 class="title is-5 has-text-centered">
+ Listing Codes For Option:
+<span class ="frame_3">
+ <%= raw "#{@defs_option.code}" %>
+</span>
+</h5>
+
+  <%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
+
+<div class="colums">
+
+<div class="column is-12">
+<div class= "frame_1 box  has-background-light ">
+
+   <table class="table is-bordered
+is-striped
+is-narrow
+is-fullwidth
+is-hoverable">
+
+  <thead class="thead">
+
+                <tr>
+                <th>Updated - Inserted</th>
+                    <th>Coding system</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Show</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <%= for opts_code <- @opts_codes do %>
+                    <tr>
+
+<td class="has-background-primary-light">
+   <span class="tag is-secondary", style="font-size: 14px;">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   Updated: <%= opts_code.updated_at %></span>
+    <br/>
+   <span class="tag is-primary", style="font-size: 14px;">
+   <i class="fa fa-registered" aria-hidden="true"></i>
+      Inserted: 
+   <%= opts_code.inserted_at %></span>
+</td>
+
+
+
+
+
+                        <td><%= opts_code.code_system %></td>
+                        <td><%= opts_code.code %></td>
+                        <td nowrap="nowrap"><%= raw(opts_code.description) %></td>
+                        <td>
+
+<%= link "Show",
+to: Routes.definition_defs_option_opts_code_path(@conn, :show,
+                                @definition,
+                                @defs_option, opts_code),
+                            class: "button is-primary is-small" %>
+                        </td>
+
+                        <td>
+
+                            <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit,
+                                @definition ,
+                                @defs_option, opts_code),
+                            class: "button is-primary is-small" %>
+                        </td>
+
+                        <td>
+
+                            <%= link "Delete", to:  Routes.definition_defs_option_opts_code_path(@conn, :delete, @definition, @defs_option, opts_code), method: :delete, data: [confirm: "Are you sure?"],
+                            class: "button is-small is-danger" %>
+
+
+                        </td>
+
+
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+</div>
+
+<span>
+        <%= link  "Enter A New Code For Option ",
+  to:  Routes.definition_defs_option_opts_code_path(@conn, :new, @definition, @defs_option),
+class: "button is-info is-large is-fullwidth"%>
+
+</span>
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>
+ 
+ <span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+
+
+    </div>
+    </div>

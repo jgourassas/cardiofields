@@ -1,0 +1,15 @@
+
+<strong>
+  Procedure Date:   <%= @info_coronary.info_cor_date %>
+</strong>
+
+<span>  </span>
+
+<%#  if(@patient.patnts_birth_dt !== "") do %>
+<strong >  
+ <span>
+   Lab Number: <%= @info_coronary.info_exam_num %>
+</span>
+</strong>
+<%#  end %>
+<span>  </span>

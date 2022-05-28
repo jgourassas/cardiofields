@@ -1,0 +1,1022 @@
+defmodule Angio.Canons.Report do
+  # use Ecto.Schema
+  ##############################
+  # This is a naive implementation for learnig
+  #######################################
+  #
+  require IEx
+
+  import Ecto.Query
+  alias Angio.Canons.Definition, as: Definition
+  # alias Angio.Canons.Defs_sentence, as: Defs_sentence
+  alias Angio.Canons.Defs_option, as: Defs_option
+
+  import Pandex
+
+  #  alias Angio.Canons, as: Query
+
+  def make_angio_report_2(id, language) do
+    {:ok, response} =
+      """
+      query GetInfoCoronary($id: ID) {
+      getInfoCoronary(id: $id){
+        infoCorDate
+        corLesions{
+          corLesSegCdisc
+        }
+        cathGrafts{
+          cathGraftSegmentsCdisc
+        }
+
+        corCollaterals{
+          collatYn
+        }
+      lventricles{
+      cathLvHeartRate
+      }
+        corAnatomies{
+          corAnatDominance
+        }
+
+
+
+
+      }
+      }
+
+      """
+      |> Absinthe.run(AngioWeb.Schema, variables: %{"id" => id})
+
+    # response_l = response[:data]["getInfoCoronary"]
+    # response_l = response[:data]
+    # IO.puts("-----response List--------------------")
+    # IO.inspect(response_l)
+
+    if response == nil or response == [] do
+      nothing_found("Angio Data")
+    else
+      response
+    end
+  end
+
+  ####################################
+  def make_angio_report(id, language) do
+    {:ok, response} =
+      """
+
+      query GetInfoCoronary($id: ID) {
+        getInfoCoronary(id: $id){
+
+          id,
+          cor_les_count,
+           icd10cm_code_1,
+           icd10cm_code_2,
+           icd10cm_code_3,
+           icd10cm_code_4,
+           info_cor_anomalies_yn,
+           info_cor_arrival_dt,
+           info_cor_arrival_tm,
+           info_cor_cabg_prior_dt,
+           info_cor_date,
+           info_cor_diagnostic_status,
+           info_cor_dis_ves_num,
+           info_cor_end_tm,
+           info_cor_grafts_dis_yn,
+           info_cor_grafts_implanted_num,
+           info_cor_grafts_patent_num,
+           info_cor_grafts_yn,
+           info_cor_main_reason,
+           info_cor_normal_natives_yn,
+           info_cor_notes,
+           info_cor_prior_interv_yn,
+           info_cor_rx_recommend,
+           info_cor_start_tm,
+           info_exam_num,
+          patient_id,
+
+          corLesions{
+        cor_les_seg_cdisc,
+        cor_les_pct,
+        cor_les_major_branch,
+        cor_les_seg_ncdr,
+        cor_les_seg_sts,
+        cor_les_vessel_size,
+        cor_les_length,
+        cor_les_prior_treated_yn,
+        cor_les_prior_stent_yn,
+        cor_les_prior_treated_dt,
+        cor_les_prior_treated_other,
+        cor_les_aneurysm_yn,
+        cor_les_bifurcation_yn,
+        cor_les_calcium_yn,
+        cor_les_chronic_total_yn,
+        cor_les_counter,
+        cor_les_ffr,
+        cor_les_graft_pct,
+        cor_les_ivus,
+        cor_les_ostial_loc_yn,
+        cor_les_protected_yn,
+        cor_les_stent_dt,
+        cor_les_stent_pct,
+        cor_les_tandem_yn,
+        cor_les_thrombus_yn,
+        cor_les_type_aha,
+        cor_les_type_scai,
+        patient_id,
+        }
+        cathGrafts{
+          graft_prox_sten_prior_treated_dt,
+          graft_ostial_sten_ivus,
+          graft_prox_sten_ivus,
+          graft_mid_sten_device_present_yn,
+          graft_dist_sten_prior_treated_dt,
+          graft_mid_sten_prior_treated_yn,
+          cath_graft_conduit_type,
+          graft_prox_sten_ffr,
+          graft_dist_anast_sten_yn,
+          graft_index,
+          cath_graft_segments_sts,
+          graft_total_occlusion_yn,
+          graft_dist_sten_yn,
+          graft_mid_sten_yn,
+          graft_prox_sten_yn,
+          graft_ostial_sten_ffr,
+          graft_dist_sten_ivus,
+          graft_morphology,
+          graft_mid_sten_ffr,
+          cath_graft_header,
+          graft_dist_anast_sten_ffr,
+          graft_dist_sten_ffr,
+          graft_dist_anast_type,
+          graft_ostial_prior_treated_dt,
+          graft_dist_sten_prior_treated_yn,
+          graft_dist_sten_device_present_yn,
+          graft_ostial_prior_treated_yn,
+          graft_mid_sten_prior_treated_dt,
+          graft_prox_sten_device_present_yn,
+          graft_ostial_sten_pct,
+          cath_graft_prox_site,
+          graft_dist_anast_prior_treated_yn,
+          patient_id,
+          graft_ostial_sten_yn,
+          cath_graft_segments_ncdr,
+          graft_dist_anast_device_present_yn,
+          graft_sten_yn,
+          cath_graft_segments_main_vessel,
+          graft_ostial_device_present_yn,
+          graft_dist_anast_sten_pct,
+          graft_prox_sten_pct,
+          graft_notes,
+          graft_mid_sten_ivus,
+          cath_graft_segments_cdisc,
+          graft_prox_sten_prior_treated_yn,
+          graft_dist_anast_sten_ivus,
+          graft_dist_sten_pct,
+          graft_mid_sten_pct,
+          }
+         corCollaterals{
+        collat_yn,
+        collat_donor_seg,
+        collat_recipient_seg,
+        collat_via_seg,
+        collat_rentrop_grade,
+        collat_flow_idx_calc_yn,
+        collat_flow_idx_method,
+        collat_flow_idx_result,
+        collat_qualitative_class,
+        }
+        lventricles{
+          cath_lv_ef_method,
+          cath_lv_ef_val,
+          cath_lv_heart_rate,
+          cath_lv_lao_apical_septal,
+          cath_lv_lao_basal_septal,
+          cath_lv_lao_inf_lat,
+          cath_lv_lao_post_lat,
+          cath_lv_lao_super_lat,
+          cath_lv_lv_pres_end_dias,
+          cath_lv_lv_pres_sys,
+          cath_lv_mvr,
+          cath_lv_normal_yn,
+          cath_lv_rao_antero_basal,
+          cath_lv_rao_antero_lat,
+          cath_lv_rao_apical,
+          cath_lv_rao_diaphragmatic,
+          cath_lv_rao_post_basal,
+          cath_lv_wall_seg_func,
+          aortic_pres_sys,
+          aortic_pres_dia,
+          cath_lv_notes,
+        }
+        cathEvents{
+          cath_ev_shock_start_yn,
+          cath_ev_expired_yn,
+          cath_ev_shock_new_post_yn,
+          cath_ev_tamponate_yn,
+          cath_ev_stroke_prior_yn,
+          cath_ev_chf_new_post_yn,
+          cath_ev_bleed_gi_yn,
+          cath_ev_av_fistula_yn,
+          cath_ev_shock_cath_induced_yn,
+          cath_ev_valve_injury_yn,
+          cath_ev_blood_transfusion_yn,
+          uni_currently_on_dialysis,
+          cath_ev_vasc_compl_yn,
+          cath_ev_for_cabg_indication,
+          cath_ev_cor_art_thrombus_yn,
+          cath_ev_cardiac_perforation_yn,
+          cath_ev_death_at_proc_yn,
+          cath_ev_event_yn,
+          cath_event_notes,
+          uni_dialysis_new_req_dt,
+          cath_ev_vasc_pseudoaneurysm_yn,
+          cath_ev_cor_art_dissection_yn,
+          cath_ev_hb_prior_transfer,
+          cath_ev_hematoma_treat,
+          uni_dialysis_new_req_yn,
+          cath_ev_bleed_yn,
+          cath_ev_header,
+          cath_ev_stroke_new_24h_yn,
+          cath_ev_stroke_new_hemo_yn,
+          cath_ev_cabg_dt,
+          cath_ev_cor_art_perforation_yn,
+          res_term_infarction_type,
+          cath_ev_vasc_dissection_yn,
+          cath_ev_bleed_gu_yn,
+          cath_ev_heart_block_yn,
+          cath_ev_hematoma_at_access_yn,
+          cath_ev_bleed_dt,
+          cath_ev_vasc_limb_ischemia_yn,
+          cath_ev_bleed_retroperi_yn,
+          cath_ev_cardioversion_yn,
+          cath_ev_bleed_tm,
+          cath_ev_infarction_yn,
+          cath_ev_for_cabg_status,
+          cath_ev_cabg_location,
+          cath_ev_hematoma_size,
+          cath_ev_cor_vein_dissection_yn,
+          cath_ev_cabg_tm,
+          cath_ev_bleed_other_yn,
+          cath_ev_prior_mi_yn,
+          cath_ev_bleed_access_yn,
+          cath_ev_stroke_new_yn,
+          uni_cardiac_perforation_site,
+
+
+        }
+        cathMeds{
+          cmed_atropine_yn,
+          cmed_antiarrhythmics_yn,
+          cmed_ca_channel_pre_yn,
+          cmed_gp_iib_iiia_yn,
+
+          cmed_ranolazine_yn,
+      cmed_inotrops_yn,
+      cmed_bblocker_yn,
+      cmed_statin_yn,
+      cmed_lmwh_yn,
+      cmed_pde_inhibitor_yn,
+      cmed_direct_thrombin,
+      cmed_anticoagulants_yn,
+      cmed_anti_anginal_other_yn,
+      cmed_ufh_dose,
+
+      cmed_lytics_bolus_tm,
+      cmed_no_statin_agent_yn,
+      cmed_ufh_yn,
+      cmed_thienopyridines,
+      cmed_anti_anginal_yn,
+      cmed_nitrates_long_act_yn,
+      cmed_vaso_dilators_yn,
+
+      cmed_lytics_bolus_dt,
+      cmed_antiplatelets_yn,
+      cmed_notes,
+      cmed_arb_yn,
+      cmed_xa_inhibitors,
+      cmed_ace_yn,
+      cmed_antihypertensives_yn,
+      cmed_lytics_yn,
+      cmed_aspirin_yn,
+      cmed_medications_other_yn,
+      cmed_prostaglandins_yn,
+      cmed_diuretics_yn,
+
+        }
+        cathRadiations{
+          car_fluoro_time,
+          car_dose_area_product,
+          car_area_product_units,
+          car_dose_area_meas_method,
+          car_comulative_kerma,
+        }
+        procEpisodes{
+      proc_epis_request_dt,
+      proc_epis_request_tm,
+      proc_epis_cor_machine,
+      proc_epis_cor_machine_loc,
+      proc_epis_cor_machine_id,
+      proc_epis_refer_person,
+      proc_epis_prim_operetor_fname,
+      proc_epis_prim_operator_lname,
+      proc_epis_prim_operator_mname,
+      proc_epis_prim_operator_npi,
+      proc_epis_art_access_r_femoral,
+      proc_epis_art_access_l_femoral,
+      proc_epis_art_access_r_brachial,
+      proc_epis_art_access_l_brachial,
+      caepsds_art_access_r_radial,
+      proc_epis_art_access_l_radial,
+      proc_epis_closure_device,
+      proc_epis_icd10_pcs_1,
+      proc_epis_icd10_pcs_2,
+      proc_epis_icd10_pcs_3,
+      proc_epis_icd10_pcs_4,
+      proc_epis_contrast_volume,
+      proc_epis_contrast_name,
+      proc_epis_catheter_l_name,
+      proc_epis_catheter_l_size,
+      proc_epis_catheter_r_name,
+      proc_epis_catheter_r_size,
+      proc_epis_catheter_lv_name,
+      proc_epis_catheter_lv_size,
+      proc_epis_notes
+
+        }
+        corAnatomies{
+          id,
+          cor_anat_dominance,
+          cor_anat_anomalies_yn,
+          cor_anat_conus_type,
+        cor_anat_lad_d1_type,
+        cor_anat_lad_d2_type,
+        cor_anat_lad_d3_type,
+        cor_anat_lad_distal_type,
+        cor_anat_lad_mid_type,
+        cor_anat_lad_ostium_type,
+        cor_anat_lad_prox_type,
+        cor_anat_lcx_distal_type,
+        cor_anat_lcx_mid_type,
+        cor_anat_lcx_om1_type,
+        cor_anat_lcx_om2_type,
+        cor_anat_lcx_om3_type,
+        cor_anat_lcx_ostium_type,
+        cor_anat_lcx_prox_type,
+        cor_anat_lcx_type,
+        cor_anat_lm_ostium_type,
+        cor_anat_lm_type,
+        cor_anat_notes,
+        cor_anat_pl_type,
+        cor_anat_ramus_type,
+        cor_anat_rca_distal_type,
+        cor_anat_rca_mid_type,
+        cor_anat_rca_ostium_type,
+        cor_anat_rca_pda_type,
+        cor_anat_rca_rv_branch_type,
+        cor_anat_rca_type,
+        cor_anat_septal_ostium_type,
+        cor_anat_sino_atrial_type,
+        cor_anat_variations_yn,
+        }
+
+        }
+        }
+      """
+      |> Absinthe.run(AngioWeb.Schema, variables: %{"id" => id})
+
+    if response == nil do
+      nothing_found("Angio Data")
+    else
+      response
+
+      #################################
+    end
+  end
+
+  ########################
+  def make_lab_admissions(id, language) do
+    {:ok, response} =
+      """
+      query GetInfoCoronary($id: ID) {
+        getInfoCoronary(id: $id){
+
+          cor_les_count,
+           icd10cm_code_1,
+           icd10cm_code_2,
+           icd10cm_code_3,
+           icd10cm_code_4,
+           info_cor_anomalies_yn,
+           info_cor_arrival_dt,
+           info_cor_arrival_tm,
+           info_cor_cabg_prior_dt,
+           info_cor_date,
+           info_cor_diagnostic_status,
+           info_cor_dis_ves_num,
+           info_cor_end_tm,
+           info_cor_grafts_dis_yn,
+           info_cor_grafts_implanted_num,
+           info_cor_grafts_patent_num,
+           info_cor_grafts_yn,
+           info_cor_main_reason,
+           info_cor_normal_natives_yn,
+           info_cor_notes,
+           info_cor_prior_interv_yn,
+           info_cor_rx_recommend,
+           info_cor_start_tm,
+           info_exam_num,
+
+        }
+      }
+      """
+      |> Absinthe.run(AngioWeb.Schema, variables: %{"id" => id})
+
+    list = response[:data]["getInfoCoronary"]
+
+    # IO.puts("======lab admissions================================================")
+    # IO.inspect(list)
+    # IEx.pry()
+    # IO.puts("====================================================================")
+
+    if list !== nil do
+      manage_elements([list], language)
+    else
+      nothing_found("Lab Admissions")
+    end
+  end
+
+  #####################
+  def make_proc_episodes(id, language) do
+    response = make_angio_report(id, language)
+
+    episode_list = response[:data]["getInfoCoronary"]["procEpisodes"]
+
+    if episode_list !== nil do
+      manage_elements(episode_list, language)
+    else
+      nothing_found("Procedure Episode")
+    end
+  end
+
+  ###############################
+  @spec make_medications(any, any) :: none
+  def make_medications(id, language) do
+    response = make_angio_report(id, language)
+
+    med_list = response[:data]["getInfoCoronary"]["cathMeds"]
+
+    if med_list !== nil do
+      manage_elements(med_list, language)
+    else
+      nothing_found("Medications")
+    end
+  end
+
+  ##############################
+  def make_radiations(id, language) do
+    response = make_angio_report(id, language)
+
+    rad_list = response[:data]["getInfoCoronary"]["cathRadiations"]
+
+    if rad_list !== nil do
+      manage_elements(rad_list, language)
+    else
+      nothing_found("Radiations")
+    end
+  end
+
+  ########################
+  def make_cath_events(id, language) do
+    response = make_angio_report(id, language)
+
+    event_list = response[:data]["getInfoCoronary"]["cathEvents"]
+
+    if event_list !== nil do
+      manage_elements(event_list, language)
+    else
+      nothing_found("Cath Events")
+    end
+  end
+
+  ############################
+  #########################
+  def make_lventricles(id, language) do
+    response = make_angio_report(id, language)
+
+    lv_list = response[:data]["getInfoCoronary"]["lventricles"]
+
+    if lv_list !== nil do
+      manage_elements(lv_list, language)
+    else
+      nothing_found("Left Ventricle")
+    end
+  end
+
+  ############################
+  def make_collaterals(id, language) do
+    response = make_angio_report(id, language)
+
+    collaterals_list = response[:data]["getInfoCoronary"]["corCollaterals"]
+
+    if collaterals_list !== nil do
+      manage_elements(collaterals_list, language)
+    else
+      nothing_found("Collaterals")
+    end
+  end
+
+  ######################
+  def make_lesions(id, language) do
+    response = make_angio_report(id, language)
+
+    lesions_list = response[:data]["getInfoCoronary"]["corLesions"]
+
+    # lesions = Enum.reverse(lesions_list)
+
+    if lesions_list !== nil do
+      manage_elements(lesions_list, language)
+    else
+      nothing_found("lesions")
+    end
+  end
+
+  ###################
+  def make_grafts(id, language) do
+    response = make_angio_report(id, language)
+
+    grafts_list = response[:data]["getInfoCoronary"]["cathGrafts"]
+
+    # grafts = Enum.reverse(grafts_list)
+
+    if grafts_list !== nil do
+      manage_elements(grafts_list, language)
+    else
+      nothing_found(" Grafts")
+    end
+  end
+
+  ###################
+
+  @spec manage_elements(any, any) :: :ok
+  def manage_elements(elements, language) do
+    for element <- elements do
+      # for {lesion, i} <- Enum.with_index(lesions) do
+      data = format_info(element, language)
+      make_page(data)
+      # make_template(data)
+    end
+  end
+
+  ###############################
+  def show_separator() do
+    # separator = "<p /> <span class='fa fa-check '; style='color:#fff; height:20px;'> </span>"
+
+    separator = " <p /> <hr class= 'hr'> <p />"
+  end
+
+  ###########################
+
+  def format_info(result, language) do
+    {:ok, res_agent} = Agent.start_link(fn -> [] end)
+
+    Enum.each(result, fn {field_name, value} ->
+      allow_value = allow_value(value)
+
+      if allow_value !== nil do
+        a_value = check_type(allow_value)
+
+        output_l = transform_narrative(field_name, a_value, language)
+
+        Agent.update(res_agent, fn res ->
+          res ++ [output_l]
+        end)
+
+        ############### update angent
+      end
+    end)
+
+    results = Agent.get(res_agent, fn res -> res end)
+    Agent.stop(res_agent)
+
+    for result <- results do
+      data = layout_element(result)
+    end
+  end
+
+  #################################
+  def make_page(data) do
+    {:ok, page_agent} = Agent.start_link(fn -> [] end)
+
+    Agent.update(page_agent, fn res ->
+      res ++ data
+    end)
+
+    results = Agent.get(page_agent, fn res -> res end)
+
+    Agent.stop(page_agent)
+    separator = show_separator()
+
+    data = [separator] ++ results
+
+    # convert(data)
+  end
+
+  ###############################
+  @spec make_template(any) :: any
+  def make_template(data) do
+    Enum.each(data, fn d ->
+      IO.inspect(d)
+      d_data = Mustache.render("Hello {{field_name}}, my name is {{sentence}}", d)
+    end)
+
+    # data = %{subject: "world", name: "John"}
+    # name = Mustache.render("Hello {{subject}}, my name is {{name}}", data)
+    # name = Mustache.render("Hello {{field_name}}, my name is {{sentence}}", data)
+    # actual = Mustache.render(template, data)
+  end
+
+  #####################
+  def layout_element(results) do
+    # name = Mustache.render("Hello, my name is {{name}}", %{name: "Alice"})
+    # name = Mustache.render("Hello, my name is {{cor_les_seg_cdisc}}", %{cor_les_seg_cdisc: "Alice"})
+
+    field_name = results[:field_name]
+    sentence = results[:sentence]
+    value = results[:value]
+
+    # xml =
+    # field_name <>
+    # "<strong>" <>
+    #   sentence <>
+    #   "</strong>" <>
+    #   "  " <>
+    #   "<em>" <>
+    #   value <>
+    #   "</em>"
+    #   <> ". \t\t\n " <>
+    #   "<br \>"
+    #   |> XmlBuilder.generate
+
+    field_format =
+      "<span style='color:#000'>" <>
+        " ( " <>
+        field_name <>
+        "</span>" <>
+        " ) " <>
+        " "
+
+    # field_format <>
+    # "<strong>" <>
+    #  "</strong>" <>
+    # field_format <>
+
+    say =
+      sentence <>
+        " " <>
+        "<b><em style='font-size:18px'>" <>
+        value <>
+        "</b></em>" <>
+        ". \t \t  " <>
+        "<br \>"
+
+    # _say = %{field_name: field_name, sentence: sentence, value: value}
+  end
+
+  ###################################
+  def allow_value(value) do
+    cond do
+      value == nil ->
+        nil
+
+      value == true ->
+        value
+
+      value == false ->
+        nil
+
+      is_list(value) ->
+        List.first(value)
+
+      value ->
+        value
+    end
+  end
+
+  #########################
+  def check_type(value) do
+    cond do
+      is_list(value) ->
+        _a_value = List.first(value)
+
+      is_boolean(value) ->
+        _a_value = boolean_to_string(value)
+
+      is_binary(value) ->
+        _a_value = value
+
+      "" ->
+        ""
+    end
+  end
+
+  ######################
+  def transform_narrative(field_name, value, language) do
+    definition_id = get_definition_id(field_name)
+
+    defs_sentence = get_defs_sentence(definition_id, language)
+
+    option_id = get_defs_option_id(value, field_name)
+    opts_sentence = get_opts_sentence(option_id, language)
+
+    defs_options_selection_text = get_defs_options_selection_text(definition_id, value, language)
+
+    a_value =
+      cond do
+        opts_sentence !== nil ->
+          opts_sentence
+
+        opts_sentence == nil && defs_options_selection_text !== nil ->
+          " " <> defs_options_selection_text
+
+        value == "Yes" ->
+          ""
+
+        true ->
+          value
+      end
+
+    sentence =
+      cond do
+        defs_sentence !== nil ->
+          defs_sentence
+
+        true ->
+          "<span style='color:#33FF33;'> Check Field " <> field_name <> " </span> "
+      end
+
+    #####################
+    sentence_str = "#{sentence}"
+
+    a_sentence =
+      sentence_str
+      |> String.replace("<p>", " \t ")
+      |> String.replace("</p>", " \t ")
+
+    struct = [{:field_name, field_name}, {:sentence, a_sentence}, {:value, a_value}]
+    #########################
+  end
+
+  ###############################
+  def nothing_found(message) do
+    "<h3 class= 'title is-4'> Nothing found in:  " <> message <> "<h4>"
+  end
+
+  #################################
+
+  @spec get_opts_sentence(any, any) :: none
+  def get_opts_sentence(defs_option_id, language) do
+    response =
+      """
+         query GetReportOptsSentence($defs_option_id: ID, $language: String!) {
+          getReportOptsSentence(defs_option_id: $defs_option_id, language: $language){
+          language
+         sentence
+       }
+      }
+      """
+      |> Absinthe.run(AngioWeb.Schema,
+        variables: %{"defs_option_id" => defs_option_id, "language" => language}
+      )
+
+    case response do
+      {:ok, response} ->
+        opts_language = response[:data]["getReportOptsSentence"]["language"]
+
+        if opts_language == language do
+          opts_sentence = response[:data]["getReportOptsSentence"]["sentence"]
+          # IO.inspect opts_sentence
+        end
+    end
+
+    #################
+  end
+
+  ##################################
+  def get_defs_option_id(code, field_name) do
+    query =
+      from(
+        d in Defs_option,
+        # where: d.name == ^field_name and d.code == type(^code, :string),
+        where: d.name == ^field_name and d.code == ^code,
+        select: d.id
+      )
+
+    _res = Angio.Repo.one(query)
+  end
+
+  ###############################
+  def get_option_text(code, name) do
+    query =
+      from(
+        d in Defs_option,
+        # where: d.name == ^name and d.code == type(^code, :string),
+        where: d.name == ^name and d.code == ^code,
+        select: d.selection_text
+      )
+
+    res = Angio.Repo.one(query)
+
+    if(res !== nil) do
+      res
+    else
+      code
+    end
+  end
+
+  ###############################
+  ## Fix the booleans
+  def make_patient_report(id, language) do
+    # response =
+    {:ok, response} =
+      """
+         query GetPatientReport($id: ID) {
+         getPatientReport(id: $id){
+          patnts_language_preferred,
+          patnts_ssn_na,
+          patnts_ssn,
+          patnts_race,
+          patnts_gender
+          patnts_birth_dt,
+          patnts_middle_name,
+          patnts_first_name,
+          patnts_father_name,
+          patnts_last_name,
+
+       }
+      }
+      """
+      |> Absinthe.run(AngioWeb.Schema, variables: %{"id" => id})
+
+    result = response[:data]["getPatientReport"]
+
+    ############################
+
+    result = format_info(result, language)
+    # result_reverse = Enum.reverse(result)
+    # format_info(result_reverse, language)
+  end
+
+  # end make_patient_report
+  ##################
+  def get_definition_id(field_name) do
+    query =
+      from(
+        d in Definition,
+        where: d.name == ^field_name,
+        select: d.id
+      )
+
+    _definition_id = Angio.Repo.one(query)
+  end
+
+  ########################
+
+  #####################
+  def get_defs_sentence(definition_id, language) do
+    {:ok, response} =
+      """
+         query GetSentence($definition_id: ID, $language: String!) {
+         getSentence(definition_id: $definition_id, language: $language){
+         sentence
+       }
+      }
+      """
+      |> Absinthe.run(AngioWeb.Schema,
+        variables: %{"definition_id" => definition_id, "language" => language}
+      )
+
+    #  {:ok, %{data: %{"getSentence" => %{"sentence" => "<p>Birth Date</p>"}}}}
+
+    _results = response[:data]["getSentence"]["sentence"]
+  end
+
+  #######################
+
+  ################################
+  def get_all_definition(id, language) do
+    {:ok, response} =
+      """
+      query GetDefinition($id: ID) {
+        getDefinition(id: $id){
+          id
+          name
+           defsSentences{
+            definitionId
+                 sentence
+                 language
+               }
+          defsCodes{
+            code
+            codeSystem
+
+          }
+          defsSentences{
+            language
+            sentence
+          }
+          defsOptions{
+            code
+            selectionText
+
+          optsSentences{
+            language
+            sentence
+          }
+          }
+
+
+       }
+      }
+
+      """
+      |> Absinthe.run(AngioWeb.Schema, variables: %{"id" => id})
+
+    field = response[:data]["getDefinition"]
+  end
+
+  ##########################
+
+  @spec get_defs_options_selection_text(any, any, any) :: none
+  def get_defs_options_selection_text(definition_id, code, language) do
+    response = get_all_definition(definition_id, language)
+    defs_options = response["defsOptions"]
+
+    if defs_options !== nil do
+      selection_list =
+        Enum.filter(defs_options, fn x ->
+          x["code"] == code
+        end)
+
+      sel = get_in(selection_list, [Access.all(), "selectionText"])
+      _selection_text = List.first(sel)
+    else
+      ""
+    end
+  end
+
+  ######################################
+
+  ############################################
+  @doc """
+  formates output
+  Tables
+   definitions (fields) = cah_angina_class
+  defs_sentences = English: Angina Class - Greek: Κατηγορία Στηθάγχης
+  defs_codes = SNOMED-CT 194828000 for cah_angina_class
+
+  defs_options (Pick-List) = Code 1,2,3,4 selection_text = Class I, II ..
+
+  opts_sentences: English: Class I - GR: Κατηγορία Ι (for angina class I)
+  opts_codes for Class I = SNOMED-CT = 61490001
+
+  """
+
+  ############################
+  defp boolean_to_string(bool) do
+    if is_boolean(bool) do
+      if bool, do: "Yes", else: "No"
+    else
+      bool
+    end
+  end
+
+  #########################
+
+  #################################
+  defp do_flatten([], acc), do: acc
+
+  defp do_flatten([{_k, v} | rest], acc) when is_map(v) do
+    v = Map.to_list(v)
+    flattened_subtree = do_flatten(v, acc)
+    do_flatten(flattened_subtree ++ rest, acc)
+  end
+
+  defp do_flatten([kv | rest], acc) do
+    do_flatten(rest, [kv | acc])
+  end
+
+  ############################
+
+  def convert(string) do
+    input = """
+    $if(field_name)$
+     $sentence$
+     $endif$
+    """
+
+    {:ok, output} = markdown_to_html(string)
+
+    output
+  end
+
+  ## end module###############
+end

@@ -1,0 +1,44 @@
+
+Programming notes 
+IN BULMA CCS
+<!---------start----------------------------------->
+  <div class = "columns">
+   <span class = "tag is-info"> A tag</span>
+<div class = "column">
+11111111
+</div><!----column-------------------->
+ <div class = "column">
+ 2222222
+ </div><!----column-------------------->
+
+<div class = "column">
+ 3333333333
+ </div><!----column-------------------->
+
+
+</div><!----columns--------------------------->
+
+<!---------end start------------------------------------>
+
+create table(:documents) do
+  add :title, :string
+  add :title, :string, size: 40
+  add :title, :string, default: "Hello"
+  add :title, :string, default: fragment("now()")
+  add :title, :string, null: false
+  add :body, :text
+  add :age, :integer
+  add :price, :float
+  add :price, :float, precision: 10, scale: 2
+  add :published_at, :datetime
+  add :group_id, references(:groups)
+  add :object, :json
+
+  timestamps  # inserted_at and updated_at
+end
+create_if_not_exists table(:documents) do: ... end
+
+
+ffmpeg -i in.avi out.mp4
+  # ffmpeg -i in.avi out.ogv
+  # ffmpeg -i input.avi -acodec libfaac -b:a 128k -vcodec mpeg4 -b:v 1200k -flags +aic+mv4 output.mp4

@@ -1,0 +1,14 @@
+
+<span>
+   <%= link  to: Routes.definition_defs_code_path(@conn, :index, @definition),
+class: "button is-light" do   %>
+<span>
+    To Field Codes List: &nbsp;&nbsp;
+   </span>
+
+   <span>
+      <%= render  CardiofieldsWeb.SharedView, "_defs_codes_count.html",
+      definition: @definition %>
+   </span>
+   <%end%>
+   </span>

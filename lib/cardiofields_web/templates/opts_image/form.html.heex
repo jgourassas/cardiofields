@@ -1,0 +1,49 @@
+
+<div class="columns">
+  <div class="column">
+<%= form_for @changeset, @action, [multipart: true], fn f -> %>
+<div class="field">
+<div class="form-group">
+<label class="label">Select Image</label>
+  <%= file_input f, :image, required: true, 
+  class: "form-control button  is-medium is-success" %>
+</div><!------form group----------->
+
+</div><!----field---------------->
+<div class="column">
+  <div class="field">
+    <label class="label">Title - Owner</label>
+    <div class="control">
+      <%= text_input f, :data_owner,
+          class: "input",
+          type: "input", placeholder: "Please Give A Title"
+          %>
+    <p class="help"></p>
+   <%= error_tag f, :data_owner %>
+  
+    </div><!---control---------->
+     </div><!-------field-------->
+
+</div>
+
+<!---
+add :mime_type, :string
+      add :mime_size, :string
+      add :radlex_id, :string
+      add :dicom_reference, :string
+      add :dicom_size, :string
+      add :data_responsible, :string
+      add :data_owner, :string
+-->
+
+ <div>
+    <%= submit "Save Image - Media ", class: "button is-info is-medium is-fullwidth " %>
+
+  </div>
+<% end %>
+
+
+
+</div><!---div column--->
+
+</div><!----columns---->

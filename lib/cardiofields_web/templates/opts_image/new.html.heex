@@ -1,0 +1,26 @@
+<div class="title_form">
+    <h5 class="title is-5 has-text-centered">
+    Form For an Option Images  Pick-List Item:
+    <span class="frame_3 has-background-light">
+    <%= "#{@defs_option.selection_text}" %>
+    </span>
+    </h5>
+</div>    
+
+
+
+
+<%= render "form.html", Map.put(assigns, :action,  
+Routes.definition_defs_option_opts_image_path(@conn, :create, 
+@definition, @defs_option)) %>
+
+  <span>
+    <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+    conn: @conn, definition: @definition %>
+  </span>
+ <span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+
+

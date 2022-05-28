@@ -1,0 +1,14 @@
+
+<% alias Cardiofields.Canons %>
+
+<% image_count =  Canons.count_opts_images(@defs_option.id)  %>
+<span class="tag is-small is-white">Option Images</span>
+<%= if image_count > 0 do %>
+  <span class="tag is-small is-success">
+    <strong><%= image_count %></strong>
+  </span>
+<% else %>
+  <span class="tag is-small is-danger">
+    <%= image_count %>
+  </span>
+<% end %>

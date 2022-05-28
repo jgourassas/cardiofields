@@ -1,0 +1,20 @@
+<h5 class="title is-5 has-text-centered">
+ Editing Sentence  For  Field:
+ <span class ="frame_3">
+ <%= "#{@definition.name}" %>
+ </span>
+</h5>
+
+    <%= render  CardiofieldsWeb.SharedView, "_definition_info.html",
+     definition: @definition, table: @definition.table_name %>
+
+
+<%= render "form.html",
+    Map.put(assigns, :action,
+Routes.definition_path(@conn, :update,
+@definition)) %>
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>

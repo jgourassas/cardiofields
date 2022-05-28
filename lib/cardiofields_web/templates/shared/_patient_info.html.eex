@@ -1,0 +1,20 @@
+<strong style="color:white;">
+    <%= @patient.patnts_last_name %>
+</strong>
+
+<span>  </span>
+
+<%#  if(@patient.patnts_birth_dt !== "") do %>
+<strong style="color:white;" >  
+   Date Of Birth: <%= @patient.patnts_birth_dt %>
+</strong>
+<%#  end %>
+<span>  </span>
+
+     <%#  if(@patient.social_security_num !== "") do %>
+<strong style="color:white;">
+   SSN:  <%= @patient.patnts_ssn %>
+</strong>
+<%#  end %>
+
+

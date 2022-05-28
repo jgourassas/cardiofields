@@ -1,0 +1,105 @@
+ <h5 class="title is-5 has-text-centered">
+   Showing Definition
+<span class ="frame_3">
+<%= "#{@definition.name}" %>
+</span>
+</h5>
+
+       <%= render  CardiofieldsWeb.SharedView,
+    "_definition_info.html", definition: @definition %>
+
+<div class= "box  has-background-light ">
+<ul class="frame_1 list is-hoverable">
+<div class= "columns">
+<div class = "column frame_1">
+
+  <li class="list-item " >
+  <span class="frame_5">
+    <strong>Table name:</strong>
+    <%= @definition.table_name %>
+    </span>
+  </li>
+
+  <li class="list-item">
+  <span class="frame_5">
+    <strong>Field Name:</strong>
+    <%= @definition.name %>
+    </span>
+  </li>
+
+  <li  class="list-item">
+    <strong>Coding instructions:</strong>
+    <%=raw @definition.coding_instructions %>
+  </li>
+
+  <li class="list-item" >
+    <strong>Target value:</strong>
+    <%= raw @definition.target_value %>
+  </li>
+
+  <li class="list-item">
+    <strong>Short name:</strong>
+    <%= @definition.short_name %>
+  </li>
+
+  <li class="list-item" >
+    <strong>Support definition:</strong>
+    <%= raw @definition.support_definition %>
+  </li>
+
+  <li class="list-item">
+    <strong>Notes:</strong>
+    <%= raw @definition.notes %>
+  </li>
+</div><!---column------------->
+<div class="column frame_1">
+  <li class="list-item">
+    <strong>Ref:</strong>
+    <%= @definition.ref %>
+  </li>
+
+  <li class="list-item" >
+    <strong>Title name:</strong>
+    <%= @definition.title_name %>
+  </li>
+
+  <li class="list-item" >
+    <strong>Default value:</strong>
+    <%= @definition.default_value %>
+  </li>
+
+  <li class="list-item">
+    <strong>Usual range:</strong>
+    <%= @definition.usual_range %>
+  </li>
+
+  <li class="list-item">
+    <strong>Valid range:</strong>
+    <%= @definition.valid_range %>
+  </li>
+
+  <li class="list-item">
+    <strong>Data source:</strong>
+    <%= @definition.data_source %>
+  </li>
+
+  <li class="list-item">
+    <strong>Defs table:</strong>
+    <%= @definition.defs_table_id %>
+  </li>
+
+  </div><!----column-------------->
+</div><!------columns--------------->
+</ul>
+</div>
+
+<span><%= link "Edit Field",
+ to: Routes.definition_path(@conn, :edit, @definition), 
+ class: "button is-primary is-fullwidth" %>
+ </span>
+
+
+<span>
+ <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+ </span>

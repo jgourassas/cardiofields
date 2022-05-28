@@ -1,0 +1,36 @@
+<div class="title_form">
+<h5 class="title is-5 has-text-centered">
+Editing Codes For Option:
+<span class ="frame_3">
+ <%= "#{@defs_option.selection_text}" %>
+</span>
+</h5>
+
+</div>
+    <%= render  CardiofieldsWeb.SharedView,
+    "_definition_info.html", definition: @definition %>
+
+<div class="columns">
+  <div class="column">
+    <%= render "form.html", changeset: @changeset,
+    action: Routes.definition_defs_option_opts_code_path(@conn, :update, @definition, @defs_option, @opts_code) %>
+
+    <%#= link "Back To Options Codes", to:  Routes.definition_defs_option_opts_code_path(@conn, :create,
+@definition, @defs_option),
+class: "button is-danger"%>
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+<span>
+   <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, @definition , @defs_option, @opts_code), class: "button  is-success" %>
+   </span>
+</div><!-- colum -->
+
+
+
+</div><!-- columns -->

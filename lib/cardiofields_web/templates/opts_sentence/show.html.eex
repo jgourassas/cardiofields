@@ -1,0 +1,59 @@
+
+<h5 class="title is-5 has-text-centered">
+Show Sentence for Option: 
+ <span class="frame_3">
+<%= raw @defs_option.selection_text %>
+</span>
+</h5>
+    <%= render  CardiofieldsWeb.SharedView,
+    "_definition_info.html", definition: @definition %>
+
+<div class= " frame_1 box  has-background-light ">
+
+<ul class = "list  is-hoverable">
+
+  <li class= "list-item">
+    <strong>Language:</strong>
+    <%= @opts_sentence.language %>
+  </li>
+
+  <li class= "list-item">
+    <span class="frame_5">
+    <strong>Sentence:</strong>
+    <%= raw @opts_sentence.sentence %>
+  </span>
+  </li>
+
+  <li  class= "list-item">
+    <strong>Note:</strong>
+    <%= raw @opts_sentence.note %>
+  </li>
+<!--
+  <li class= "list-item has-background-info has-text-white">
+    Field Name:
+    <%#= @definition.name %>
+  </li>
+-->
+</ul>
+</div>
+
+<span>
+   <%#= link "List of  Options Sentences", to: Routes.definition_defs_option_opts_sentence_path(@conn, :index,
+   @definition, @defs_option),
+    class: "button  is-primary"%>
+</span>
+
+<span>
+   <%= link "Edit Option Sentence", to: Routes.definition_defs_option_opts_sentence_path(@conn, :edit, @definition ,
+   @defs_option, @opts_sentence), 
+   class: "button is-primary is-fullwidth" %>
+   </span>
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>

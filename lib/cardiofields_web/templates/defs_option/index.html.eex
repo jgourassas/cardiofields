@@ -1,0 +1,137 @@
+<% alias Cardiofields.Canons.Definition %>
+
+<h5 class="title is-5 has-text-centered" >
+  Listing Options  For Field
+  <span class ="frame_3">
+ <%= "#{@definition.name}" %>
+ </span>
+</h5>
+
+
+<%= render  CardiofieldsWeb.SharedView, "_definition_info.html",
+definition: @definition %>
+
+<!------
+<span class="icon">
+  <i class="fas fa-list-alt fa-2x"></i>
+</span>
+-->
+
+<div class= "frame_1 box  has-background-light ">
+<table class="table is-bordered
+                    is-striped
+                    is-full-width
+                    is-hoverable">
+
+  <thead class="thead">
+    <tr>
+      <th> Updated - Inserted</th>
+      <th>Field Name</th>
+      <th>Saved As: </th>
+       <th>Selection text</th>
+       <th>Definition</th>
+       <th>Option Sentences</th>
+      <th>Option Codes</th>
+      <th>Images</th>
+      <th>Show</th>
+      <th>Edit</th>
+
+      <th>Delete</>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for {defs_option, index} <- Enum.with_index(@defs_options) do %>
+  <%#= for defs_option <- @defs_options do %>
+  <tr>
+ 
+  <td class="first_column">
+   <span class="tag is-small is-rounded is-primary"> 
+      <i class="fa fa fa-arrow-turn-right"
+           style="font-size:16px;color:#fff;text-align:center;">
+     </i>
+      
+    <%=index + 1 %>
+    </span>
+
+  <span class="tag is-white", style="font-size: 14px;">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   Updated: <%= defs_option.updated_at %></span>
+    <br/>
+   <span class="tag is-link", style="font-size: 14px;">
+   <i class="fa fa-registered" aria-hidden="true"></i>
+      Inserted: 
+   <%= defs_option.inserted_at %></span>
+  
+   </td>
+ 
+ 
+      <td><strong><%= defs_option.name %> </strong> </td>
+      <td><%= defs_option.code %></td>
+      <td><em><%= raw defs_option.selection_text %> </em> </td>
+     <td  ><%= raw defs_option.selection_definition %>  </td>
+
+   <td >
+
+
+<%= link  to: Routes.definition_defs_option_opts_sentence_path(@conn, :index, @definition, defs_option),
+    class: "button is-primary is-small is-link is-fullwidth"  do %>
+    <%= render  CardiofieldsWeb.SharedView, "_opts_sentences_count.html", defs_option: defs_option %>
+    <%end%>
+   </td>
+
+     <td>
+
+   <%= link  to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, defs_option),
+    class: "button is-primary is-small is-link is-fullwidth"  do %>
+    <%= render  CardiofieldsWeb.SharedView, "_opts_codes_count.html", defs_option: defs_option %>
+    <%end%>
+
+</td>
+<td>
+<span>
+ <%= link to: Routes.definition_defs_option_opts_image_path(@conn, :index, @definition,
+  defs_option),
+    class: "button is-primary is-small is-link is-fullwidth"  do %>
+  
+    <%= render  CardiofieldsWeb.SharedView, "_opts_images_count.html",
+    defs_option: defs_option %>
+    <%end%>
+</span>
+
+</td>
+      <td>
+     <span><%= link "Show",
+      to: Routes.definition_defs_option_path(@conn,
+      :show, @definition,defs_option),
+      class: "button is-primary is-small is-fullwidth" %></span>
+
+      </td>
+      <td>
+
+ <span><%= link "Edit",
+ to: Routes.definition_defs_option_path(@conn,
+ :edit, @definition,defs_option), class: "button is-primary is-small is-fullwidth " %></span>
+       </td>
+                </td>
+
+
+       <td>
+    <span>
+ <%= link "Delete", to: Routes.definition_defs_option_path(@conn, :delete, @definition, defs_option), method: :delete, data: [confirm: "Are you sure?"], class: " button is-danger is-small  is-fullwidth" %>
+        </span>
+  </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+
+<span><%= link "New Option - Pick-List Element",
+      to: Routes.definition_defs_option_path(@conn, :new, @definition),
+class: "button is-info is-large is-fullwidth" %>
+</span>
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>

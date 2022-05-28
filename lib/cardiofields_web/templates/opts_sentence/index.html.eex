@@ -1,0 +1,94 @@
+<h5 class="title is-5 has-text-centered">
+Listing Sentences  For Option:
+<span class="frame_3">
+<%= "#{@defs_option.selection_text}" %>
+</sapn>
+</h5>
+ <%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
+
+<div class= "box  has-background-light ">
+
+ <table class="frame_1 table is-bordered
+is-striped
+is-narrow
+is-fullwidth
+is-hoverable">
+
+  <thead class="thead">
+
+    <tr>
+      <th>Updadated - Inserted</th>
+      <th>Language</th>
+      <th>Sentence</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for opts_sentence <- @opts_sentences do %>
+    <tr>
+
+
+<td class="has-background-primary-light">
+   <span class="tag is-secondary", style="font-size: 14px;">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   Updated: <%= opts_sentence.updated_at %></span>
+    <br/>
+   <span class="tag is-primary", style="font-size: 14px;">
+   <i class="fa fa-registered" aria-hidden="true"></i>
+      Inserted: 
+   <%= opts_sentence.inserted_at %></span>
+</td>
+
+
+      <td><%= opts_sentence.language %></td>
+      <td><%= opts_sentence.sentence %></td>
+
+
+      <td>
+<%= link "Show",
+to: Routes.definition_defs_option_opts_sentence_path(@conn, :show,
+                                @definition,
+                                @defs_option, opts_sentence),
+                            class: "button is-primary is-small is-fullwidth" %>
+
+      </td>
+      <td>
+         <%= link "Edit", to: Routes.definition_defs_option_opts_sentence_path(@conn, :edit,
+                                @definition ,
+                                @defs_option, opts_sentence),
+                            class: "button is-primary is-small is-fullwidth" %>
+
+        </td>
+        <td>
+
+<%= link "Delete", to:  Routes.definition_defs_option_opts_sentence_path(@conn, :delete,
+          @definition, @defs_option, opts_sentence), method: :delete, data: [confirm: "Are you sure?"],
+        class: "button is-small is-danger" %>
+
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+
+<span>
+     <%= link  "New Sentence For Option: " <>
+     "#{@defs_option.selection_text}",
+  to:  Routes.definition_defs_option_opts_sentence_path(@conn, :new, @definition, @defs_option),
+class: "button is-info is-large is-fullwidth"%>
+</span>
+
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+ </span>
+ 
+ <span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+ 

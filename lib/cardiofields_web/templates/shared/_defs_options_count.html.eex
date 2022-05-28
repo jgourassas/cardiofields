@@ -1,0 +1,18 @@
+<% alias Cardiofields.Canons %>
+<% options_count =  Canons.count_options(@definition.id) %>
+
+<span class="tag is-light"> Field Options:  </span>
+
+<%= if options_count> 0 do %>
+
+ <span class="tag is-small is-success">
+ <%= options_count %>
+ </span>
+
+<% else %>
+
+  <span class="tag is-small is-danger">
+    <%= options_count %>
+  </span>
+
+<% end %>

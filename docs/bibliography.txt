@@ -1,0 +1,100 @@
+
+==============BIBLIOGRAPHY THAT I HAD IN MIND=================
+
+      1. ACCF/AHA 2011 Key Data Elements and Definitions of a Base Cardiovascular
+          Vocabulary for Electronic Health Records
+            JACC Vol. 58, No. 2, 2011 July 5, 2011:202 - 22
+
+      2.  2013 ACCF/AHA Key Data Elements and Definitions for Measuring
+          the Clinical Management and Outcomes of Patients With Acute Coronary
+          Syndromes and Coronary Artery Disease
+          JACC Vol. 61, No. 9, 2013 March 5, 2013:992-1025
+
+      3. Standardized Definitions for Cardiovascular and  Stroke Endpoint
+            Events in Clinical Trials
+            Draft Definitions for CDISC August 20, 2014
+
+      4. 2014 ACC/AHA Key Data Elements and Definitions for Cardiovascular
+            Endpoint Events in Clinical Trials
+
+      5. ACC/AHA/ACR/ASE/ASNC/HRS/NASCI/RSNA/SAIP/SCAI/  SCCT/SCMR/SIR
+          2008 Key Data Elements  and Definitions for Cardiac Imaging
+          Circulation January 6/13, 2009
+
+      6. ACC/AHA/SCAI 2014 Health Policy Statement on Structured Reporting
+         for the  Cardiac Catheterization Laboratory
+           JACC Vol. 63, No. 23, 2014 June 17, 2014:2591-23
+
+
+      7. Registies - National Data Standards
+        1. CathPci - Catheterizatin and PCI
+        2. Action - Acute Coronary Treatment and Intervention Outcomes Network Registry
+        3. ICD Registry  - Generator & Leads
+        4. IMPACT -  Improving Pediatric and Adult Congenital Treatment
+        5. PINNACLE Registry - Quality Improvement solutions for outpatient setting
+        6. TVT - For Transcatheter Aortic Valve Replacement Procedures
+        7. The following Canadian Cardiovascular Society Data Dictionary
+            Standards  were reviewed.
+        1) CORE ELEMENTS AND DEMOGRAPHICS DATA ELEMENTS AND DEFINITIONS
+            ( Version 1.1   July 6, 2012 )
+        2) ACUTE CORONARY SYNDROME (ACS)  DATA ELEMENTS AND DEFINITIONS
+        3) HEART FAILURE DATA ELEMENTS AND DEFINITIONS VERSION
+                            v1.1 July 16, 2013
+        4) CORONARY ANGIOGRAPHY/ REVASCULARIZATION DATA ELEMENTS AND DEFINITIONS
+
+      8. The Society of Thoracic Surgeons Adult Cardiac Surgery Database
+               Version 2.81 April 23, 2015
+
+       9.  Standardized Cardiovascular Data for Clinical Research,  Registries,  and Patient Care
+           A Report from the Data Standards Workgroup of the National Cardiovascular Research Infrastructure Project.
+           A collaboration of the Duke Clinical Research Institute and the American College of Cardiology –
+           National Cardiovascular Data Registry
+                  J Am Coll Cardiol. 2013 May 7;61(18):1835-46.
+
+
+
+      Data for Specific area domains
+         1) Mintz and Nissen et al. ACC Clinical Expert Consensus Document on IVUS
+           JACC Vol. 37, No. 5, 2001   April 2001:1478-2
+
+         2) Key Data Elements and Definitions for Cardiac Imaging.
+              (Circulation. 2009;119:154-186. DOI: 10.1161/CIRCULATIONAHA.108.191393)
+
+         3) Achieving Door-to-Balloon Times That Meet Quality Guidelines
+                  Bradley et al.  JACC Vol. 46, No. 7, 2005 October 4, 2005:1236-41
+
+         4) The Kansas City Cardiomyopathy Questionnaire
+
+         5) BRITISH SOCIETY OF ECHOCARDIOGRAPHY -
+            Recommendations for Standard Adult Transthoracic Echocardiography (2006)
+
+         6) R Sharma and K Elton - Echotech Reporting Guidelines Version 12
+             British Society of Echocardiography
+         
+
+
+      7) Definitions and Clinical Trial Design Principles for Coronary 
+      Artery Chronic Total Occlusion Therapies: CTO-ARC Consensus Recommendations    
+      PMID: 33523728 DOI: 10.1161/CIRCULATIONAHA.120.046754
+
+     8) 2019 ACC/AHA/ASE Key Data Elements and Definitions for Transthoracic Echocardiography: 
+     A Report of the American College of Cardiology/American Heart Association Task Force 
+     on Clinical Data Standards (Writing Committee to Develop Cardiovascular Endpoints 
+     Data Standards) and the American Society of Echocardiography
+      PMID: 31233331 DOI: 10.1161/HCI.0000000000000027
+
+    9) Standardized Definitions for Evaluation of Heart Failure Therapies: 
+    Scientific Expert Panel From the Heart Failure Collaboratory 
+    and Academic Research Consortium
+    PMID: 33199251 DOI: 10.1016/j.jchf.2020.10.002
+
+  10) Diaz-Garelli J-F, Bernstam EV, Lee M, Hwang KO, Rahbar MH, Johnson TR.
+   DataGauge: A Practical Process for Systematically Designing  and 
+   Implementing Quality Assessments of Repurposed Clinical Data. eGEMs
+   Generating Evidence & Methods to improve patient outcomes).
+    2019 Jul 25;7(1):32.
+
+
+ok then
+
+John 

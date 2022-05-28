@@ -1,0 +1,73 @@
+
+<h5 class="title is-5 has-text-centered">
+Show Codes For Option:
+<span class ="frame_3">
+ <%= "#{@defs_option.selection_text}" %>
+</span>
+</h5>
+
+    <%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
+
+<ul class="frame_1">
+    <li>
+        <strong>Code system:</strong>
+        <%= @opts_code.code_system %>
+    </li>
+
+    <li>
+<span class="frame_5">
+        <strong>Option Code:</strong>
+        <%= @opts_code.code %>
+        </span>
+    </li>
+
+    <li class="item">
+        <strong>Description:</strong>
+        <%= @opts_code.description %>
+    </li>
+
+    <li class="item">
+        <strong>Note:</strong>
+        <%= @opts_code.notes %>
+    </li>
+
+
+</ul>
+
+<span>
+   <%#= link "Back Options Codes", to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, @defs_option),
+    class: "button  is-link"%>
+</span>
+
+<span>
+   <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, 
+      @definition , @defs_option, @opts_code), 
+ class: "button is-primary is-fullwidth"%>   %>
+   </span>
+   
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
+  conn: @conn, definition: @definition, defs_option: @defs_option %>
+</span>
+
+<!----
+
+<div class="stacked-for-small button-group">
+    <%#= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, @definition , @defs_option, @opts_code), class: "button" %>
+
+    <%#= link "Back Options Codes", to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, @defs_option),
+    class: "button"
+    %>
+</div>
+</div>
+
+<div class="medium-2 columns show_frame defs_frame">
+    <%#= render  CardiofieldsWeb.SharedView, "_opts_codes_info.html", definition: @definition, defs_option: @defs_option, defs_code: @defs_code %>
+</div>
+
+</div>
+--->

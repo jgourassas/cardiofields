@@ -1,0 +1,16 @@
+<div class="panel">
+    <div class="panel-heading">
+        Field
+    </div>
+        <table class="table">
+            <thead class="thead">
+                <th>Instructions</th>
+            </thead>
+            <tr >
+                <td style="word-break: break-all;">
+                <%= raw(@definition.coding_instructions) %>
+            </tr>
+        </table>
+
+
+</div><!-- panel -->

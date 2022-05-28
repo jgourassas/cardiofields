@@ -1,0 +1,186 @@
+<div class="title_form">
+<h5 class="title is-5 has-text-centered frame_1">
+  Search For A Database Table
+ </h5>
+</div><!------title form------------------->
+
+<div class="columns is-centered">
+  <div class="column is-3">
+
+    <span class="has-form">
+
+<%= form_for @conn, Routes.defs_table_path(@conn, :search_in_tables), [as: :search_in_tables], fn f -> %>
+<div class="field">
+<label class="label">Search For DB Table </label>
+  <div class="control">
+   <%= text_input f, :query, class: "input", type: "text", placeholder: "Table?"  %>
+   <%= error_tag f, :query %>
+   <p class="help"></p>
+ </div>
+  </div> <!------field------------------->
+    </span>
+
+ </div><!----column-------------------->
+   <div class="column is-2">
+<div class="field">
+
+  <label class="label">Search  </label>
+   <%= submit "Search", class: "button is-primary  is-fullwidth"  %>
+</div>
+
+<% end %>
+
+  </div><!----column-------------------->
+
+  </div><!----colimnus--------------------->
+
+
+  
+<div class= "box  has-background-light  ">
+ <h5 class="title is-5 has-text-centered frame_2">
+  Listing Suggested  Database tables
+ </h5>
+
+    <table class="frame_1 table is-bordered
+    is-striped
+    is-narrow is-fullwidth 
+    is-hoverable">
+      <thead class="thead">
+    <tr>
+     <th>Table ID </th>
+    <th>Table </th>
+   
+    <th>Number of Fields</th>
+    <th>Notes</th>
+    <th>Show</th>
+    <th>Edit</th>
+   <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for {defs_table, defs_num} <- @defs_tables do %>
+
+    <tr>
+    
+    <td class="first_column"  >
+    <%=  defs_table.id %>
+   </td>
+    
+      <td><strong><%= raw(defs_table.name) %></strong> </td>
+
+
+   <td>
+     <span class="button is-primary  is-small is-fullwidth">
+       <%= if defs_num == 0 do %>
+         <span class="tag  is-small is-danger">
+         <strong><%= defs_num %></strong>
+         </span>
+      <% else %>
+       <span class="tag  is-small is-success">
+        <strong><%= defs_num %></strong>
+        </span>
+
+       <%end %>
+    </span>
+
+
+   </td>
+
+   <td>
+   <%= raw(defs_table.note)%>
+   </td>
+
+      <td>
+        <%= link "Show", to: Routes.defs_table_path(@conn, :show, defs_table),  class: "button is-primary is-small" %>
+      </td>
+      <td>
+        <%= link "Edit", to: Routes.defs_table_path(@conn, :edit, defs_table),  class: "button is-primary is-small" %>
+        </td>
+
+        <td>
+
+ <%= link "Delete", to: Routes.defs_table_path(@conn, :delete, defs_table.id),
+method: :delete, data: [confirm: "Are you sure?" ],
+ class: "button is-small alert is-danger"  %>
+
+
+                        </td>
+
+    </tr>
+<% end %>
+  </tbody>
+  </table>
+  </div>
+
+
+  </div><!-------columns------------>
+
+
+ <span><%= link "Add A New Database  table",
+  to: Routes.defs_table_path(@conn, :new),
+  class: "button is-primary is-large is-fullwidth"  %>
+  </span>
+
+<%= if @page.total_entries == 0 do %>
+<section class="section">
+<div class="container">
+<div class="notification is-warning is-light has-text-centered is-italic">
+  <button class="delete"></button>
+ <span class="is-size-5" >   Nothing Found. Please Try Again </span>
+</div>
+</div>
+</div>
+</section>
+
+<%else%>
+<div class="element_info_title">
+Total Pages:
+<%= @page.total_pages %>
+ <span> - Records - Entries Found: </span>
+<%= @page.total_entries %>
+</div>
+<%end%>
+
+<div class="block">
+<nav class="pagination">
+<ul class="pagination-list">
+
+<%= if @page.page_number == 1 do %>
+<li>
+<span class="my-4 pagination-next" >
+<%= link "Back to Tables Index",
+ to: Routes.defs_table_path(@conn, :index) %>
+ </span>
+</li>
+<% end %>
+
+<%= if @page.page_number < @page.total_pages do %>
+<li class="my-4 pagination-next ">
+  <%= link "Next Page",
+  to: Routes.defs_table_path(@conn, :index, page: @page.page_number + 1) %>
+</li>
+<% end %>
+
+
+<%= if @page.page_number > 1 do %>
+<span   class="tags my-4">
+<%= for i <- (@page.page_number - 5)..(@page.page_number + 5), i > 0 do %>
+  <li>
+  <%= link "#{i}", class: "pagination-link",
+  to: Routes.defs_table_path(@conn, :index, page:  i) %>
+</li>
+
+<% end %>
+</span>
+
+<% end %>
+</ul>
+
+</nav>
+
+</div>
+
+<!------------------------>
+
+
+

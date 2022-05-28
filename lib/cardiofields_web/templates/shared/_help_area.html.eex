@@ -1,0 +1,11 @@
+<!-- -HELP AREA -->
+<div class="columns frame_2">
+  <div class="column">
+        <h5 class="title is-5 has-text-centered">
+        Field's Info</h5>
+        <div class="info_area"></div>
+  </div>
+  <!-----column------------>
+</div>
+<!-- colums  -->
+<!-- -END HELP AREA -->

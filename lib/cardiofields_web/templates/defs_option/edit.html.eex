@@ -1,0 +1,28 @@
+
+
+
+<h5 class="title is-5 has-text-centered">
+Editing Field Option
+<span class="has-background-light frame_3">
+<%= "#{@defs_option.selection_text}" %>
+</span>
+
+</h5>
+
+<%= render  CardiofieldsWeb.SharedView, "_definition_info.html",
+ definition: @definition %>
+
+ 
+  <%= render "form.html", changeset: @changeset, definition: @definition,
+        action: Routes.definition_defs_option_path(@conn, :update, @definition, @defs_option ) %>
+        
+  <span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>
+
+<span>
+      <%#= link "Back To Field Options  List",
+to: Routes.definition_defs_option_path(@conn, :index, @definition) ,
+class: "button is-primary "%>
+</span>

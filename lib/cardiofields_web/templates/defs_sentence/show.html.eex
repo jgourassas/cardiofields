@@ -1,0 +1,54 @@
+
+<h5 class="title is-5 has-text-centered">
+  Show Sentence  For a Field
+ <span class ="frame_3">
+ <%= "#{@definition.name}" %>
+ </span>
+</h5>
+
+
+
+     <%= render  CardiofieldsWeb.SharedView,
+    "_definition_info.html", definition: @definition %>
+
+<div class= " frame_1 box  has-background-light ">
+
+<ul  class="list is-hoverable ">
+
+  <li class="list-item">
+    <strong>Language:</strong>
+    <%= @defs_sentence.language %>
+  </li>
+
+  <li class="list-item" >
+  <span class="frame_5">
+    <strong>Field Sentence:</strong>
+    <%= raw @defs_sentence.sentence %>
+    </span>
+  </li>
+
+  <li class="list-item">
+    <strong>Note:</strong>
+    <%= raw @defs_sentence.note %>
+  </li>
+
+  <li class="list-item">
+    <strong>Definition:</strong>
+    <%= @defs_sentence.definition_id %>
+  </li>
+
+</ul>
+</div>
+
+
+<span><%= link "Edit Field Sentence", to: Routes.definition_defs_sentence_path(@conn, :edit,
+ @definition, @defs_sentence), 
+ class: "button is-primary is-fullwidth"%>
+ 
+</span>
+
+
+<span>
+  <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
+  conn: @conn, definition: @definition %>
+</span>

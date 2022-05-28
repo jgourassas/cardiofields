@@ -1,0 +1,43 @@
+/* This file is for your main application CSS */
+//@import "./phoenix.css";
+//$phoenix-orange: #f05423;
+//$primary: $phoenix-orange;
+
+@import "custom";
+//@import "sticky-table";
+//@import "bulma";
+@import "bulmaswatch.min_10.css";
+
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+// for Duotones need both files
+//@import "../node_modules/@fortawesome/fontawesome-free/scss/duotone.scss";
+//@import "../node_modules/@fortawesome/fontawesome-free/scss/_duotone-icons.scss";
+
+//@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
+@keyframes fade-in-scale-keys{
+  0% { scale: 0.95; opacity: 0; }
+  100% { scale: 1.0; opacity: 1; }
+}
+
+@keyframes fade-out-scale-keys{
+  0% { scale: 1.0; opacity: 1; }
+  100% { scale: 0.95; opacity: 0; }
+}
+
+@keyframes fade-in-keys{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out-keys{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
