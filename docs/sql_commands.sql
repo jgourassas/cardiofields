@@ -1,6 +1,7 @@
 SQL COMMANDS
 
 REINDEX DATABASE cardiofields ;
+
 #########################
 THIS IS PHP CODE
 public function sql_description_ranked($field,$text,$limit){
@@ -36,20 +37,44 @@ public function sql_description_ranked($field,$text,$limit){
     data_responsible varchar(250)
     data_owner  varchar(250)
 
+--------------------------
+ALTER TABLE icd10cms_codes ADD column  long_description_tsv type tsvector
+
 drop trigger tsv_icd10cms_codes_long_description on  icd10cms_codes;
 
   CREATE TRIGGER tsv_icd10cms_codes_long_description
     BEFORE INSERT OR UPDATE ON icd10cms_codes
     FOR EACH ROW
-    EXECUTE PROCEDURE tsvector_update_trigger('long_description_tsv', 'pg_catalog.english', 'long_description');
+    EXECUTE PROCEDURE tsvector_update_trigger('long_description_tsv', 
+    'pg_catalog.english', 'long_description');
 
-    CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
+CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
+
+-------------for definitions Fields----------------------
+BEGIN;
+ALTER TABLE definitions ADD column  notes_tsv tsvector;
+
+--drop trigger tsv_definitions_notes  on  definitions;
+
+ CREATE TRIGGER tsv_definitions_notes
+    BEFORE INSERT OR UPDATE ON definitions
+    FOR EACH ROW
+    EXECUTE PROCEDURE tsvector_update_trigger('notes_tsv', 
+    'pg_catalog.english', 'notes');
+
+CREATE INDEX definitions_notes_tsv_idx   ON definitions  
+USING gin (to_tsvector('english'::regconfig, notes_tsv::text));
+COMMIT;
+
+-------------------------------------
+
 update icd10cms_codes set long_description = trim(long_description);
+
 update definitions set table_name = trim(table_name);
 update definitions set target_value = trim(target_value);
 update definitions set coding_instructions = trim(coding_instructions);
 
-ALTER TABLE icd10cms_codes ADD column  long_description_tsv type tsvector
+
 
 
 CREATE TRIGGER tsv_icd10cms_codes_long_description
@@ -58,7 +83,7 @@ CREATE TRIGGER tsv_icd10cms_codes_long_description
     EXECUTE PROCEDURE tsvector_update_trigger('long_description_tsv', 'pg_catalog.english', 'long_description');
 
 
-   CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
+  CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
 Indexes:
     "feature_pkey" PRIMARY KEY, btree (id, f_id)
     "feature_unique" UNIQUE, btree (feature, f_class)
@@ -76,7 +101,7 @@ ORDER BY pg_total_relation_size(C.oid) ASC;
 
 ---------------------
 
-
+--find out double records-------------
 ----------------
 SELECT
     id, 
@@ -92,13 +117,13 @@ ORDER BY
 
 
 ------------ fixing primary key---------this seems to works-------
-// Login to psql and run the following
-// What is the result?
+-- Login to psql and run the following
+-- What is the result?
 SELECT MAX(id) FROM definitions;
 
-// Then run...
-// This should be higher than the last result.
+-- Then run...
+-- This should be higher than the last result.
 SELECT nextval('definitions_id_seq');
 
-// If it's not higher... run this to try and fix it. (run a quick pg_dump first...)
+-- If it's not higher... run this to try and fix it. (run a quick pg_dump first...)
 SELECT setval('definitions_id_seq', (SELECT MAX(id) FROM definitions)+1);

@@ -23,7 +23,8 @@
       "In Field Options Selection": "option_name",
       "In Field Instructions": "instruction",
       "In Field Codes":  "field_codes",
-      "Inserted After": "inserted_after"
+      "Inserted After": "inserted_after",
+      "On Notes": "on_notes"
 ],
     class: "form-control")    %>
 

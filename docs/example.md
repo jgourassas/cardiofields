@@ -59,7 +59,6 @@ def select_options(field) do
     end
 
 **the function search instructions)**
-
 def search_in_instructions(qname) do
         query =
       from(
@@ -93,7 +92,6 @@ def search_in_instructions(qname) do
     </div>
 
 **second example in the form**
-
 <% s_collat_flow_idx_method   =
         Query.select_options("collat_flow_idx_method") %>
   <% i_collat_flow_idx_method =
@@ -134,3 +132,6 @@ class: "form-control") %>
 </div>
 </div>
 
+Enjoy Profit 
+
+(John Gourassas / Gkourasas)
