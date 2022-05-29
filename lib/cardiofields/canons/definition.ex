@@ -20,6 +20,8 @@ defmodule Cardiofields.Canons.Definition do
     field(:usual_range, :string)
     field(:valid_range, :string)
     field(:vocabulary_en, :string)
+    #field(:notes_tsv, :tsvector)
+
 
     timestamps()
     has_many(:defs_sentences, Cardiofields.Canons.Defs_sentence, foreign_key: :definition_id)

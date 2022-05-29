@@ -119,11 +119,23 @@ defmodule Cardiofields.Canons do
       "instruction" -> search_an_instruction(query)
       "field_codes" -> search_a_field_code(query)
       "inserted_after" -> search_inserted_after(query)
-
+      "on_notes"  ->     search_on_notes(query)
       _ -> ""
     end
   end
   #####################
+  def search_on_notes(query) do
+    #IO.puts("----------notes--------------")
+    #IO.inspect(query)
+    from(d in Definition,
+    where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
+     limit: 250,
+     order_by: [desc: d.name]
+   
+      )
+ 
+  end
+  ########################
   def search_inserted_after(inserted_date) do
       #IO.puts("--------------updated after")
       #IO.inspect(inserted_date)
