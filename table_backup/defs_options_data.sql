@@ -5,7 +5,7 @@
 -- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
 -- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
 
--- Started on 2022-05-28 13:10:18 EEST
+-- Started on 2022-05-31 22:22:46 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -508,7 +508,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1516, 'cardiac_surg_prior_num', '3', '3', '', '', 1270, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1523, 'tmvr_reg_leaflet_flail_yn', '3', 'Bi-leaflet', '', '', 2007, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8503, 'pci_les_lesion_isr_class', '1d', 'Class I Multi-Focal', NULL, NULL, 3796, '2018-06-27 06:00:28', '2018-06-27 06:00:28', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2279, 'chordal_dis_type', '2', 'Fusion', NULL, NULL, 2638, '2016-10-08 14:52:10', '2016-10-08 14:52:10', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (797, 'operator_reason_for_tavr', '3', 'High risk (>=8% risk of 30 day mortality)', '<ul>
 	<li>Inoperable/extreme risk includes technically&nbsp;inoperable, co-morbid and debilitated pts.</li>
 </ul>
@@ -2318,7 +2317,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1144, 'generator_site_implantation', '1', 'Pectoral', '<p>The ICD was implanted in the pectoral wall.</p>
 ', '', 793, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1145, 'prasugrel_at_discharge', '2', 'Contraindicated', '', '', 1754, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3046, 'atheroma_mobility', '0', 'Immobile', NULL, NULL, 2951, '2016-10-23 05:22:49', '2016-10-23 05:22:49', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1887, 'event_has', '0', 'No', NULL, NULL, 2107, '2016-09-02 06:41:12', '2016-09-02 06:41:12', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1146, 'icd_prior_reason', '1', 'Primary prevention', '<p>Primary Prevention is an indication for an ICD to prevent sudden cardiac<br />
 death. It refers to use of ICDs in individuals who are at risk for but have<br />
@@ -2403,6 +2401,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2862, 'echo_tr_annulus_size_desc', '2', 'Dilated Mild', NULL, NULL, 2884, '2016-10-19 03:50:03', '2016-10-19 03:55:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2790, 'av_leaflet_mobility', '2', 'Reduced - Mild', NULL, NULL, 2865, '2016-10-18 14:19:20', '2022-05-27 19:52:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2789, 'av_leaflet_mobility', '1', 'Normal', NULL, NULL, 2865, '2016-10-18 14:18:54', '2022-05-27 19:52:53', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3046, 'echo_ao_atheroma_mobility', '0', 'Immobile', NULL, NULL, 2951, '2016-10-23 05:22:49', '2022-05-31 07:09:45', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2865, 'echo_tr_annulus_size_desc', '3', 'Deleted Moderate', NULL, NULL, 2884, '2016-10-19 03:56:35', '2016-10-19 03:56:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2866, 'echo_tr_annulus_size_desc', '4', 'Dilated  Severe', NULL, NULL, 2884, '2016-10-19 03:57:35', '2016-10-19 03:57:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2867, 'echo_tr_annulus_size_desc', '88', 'Other', NULL, NULL, 2884, '2016-10-19 03:58:09', '2016-10-19 03:58:09', NULL);
@@ -2435,10 +2434,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4500, 'lv_lead_action_reason', '12', 'Systemic infection / endocarditis', NULL, NULL, 469, '2017-06-30 13:23:00', '2017-06-30 13:23:00', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4502, 'lv_lead_action_reason', '88', 'Other', NULL, NULL, 469, '2017-06-30 13:23:33', '2017-06-30 13:23:33', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2275, 'leaflet_posterior_rupture', '3', 'Severe', NULL, NULL, 2637, '2016-10-08 14:49:07', '2016-10-08 14:49:07', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2277, 'chordal_dis_type', '0', 'None', NULL, NULL, 2638, '2016-10-08 14:51:34', '2016-10-08 14:51:34', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2278, 'chordal_dis_type', '1', 'Shortening', NULL, NULL, 2638, '2016-10-08 14:51:54', '2016-10-08 14:51:54', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2280, 'chordal_dis_type', '88', 'Other', NULL, NULL, 2638, '2016-10-08 14:52:25', '2016-10-08 14:52:25', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2281, 'chordal_dis_type', '99', 'Not Known', NULL, NULL, 2638, '2016-10-08 14:52:40', '2016-10-08 14:52:40', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2282, 'chordal_dis_location', '0', 'Not Applay', NULL, NULL, 2639, '2016-10-08 14:53:49', '2016-10-08 14:53:49', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2283, 'chordal_dis_location', '1', 'Involving anterior leaflet', NULL, NULL, 2639, '2016-10-08 14:54:35', '2016-10-08 14:54:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3568, 'rv_regional_wall_motion_desc', '2', 'Mild hypokinesis', NULL, NULL, 3124, '2016-12-05 10:21:47', '2016-12-05 10:21:47', NULL);
@@ -2498,6 +2493,9 @@ removed and replaced by a CRT-D.<br />
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4131, 'vt_tachy', '19', 'Adenosine-sensitive VT', NULL, NULL, 3461, '2017-03-14 05:10:39', '2017-03-14 05:10:39', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4137, 'vt_tachy', '25', 'Ventricular arrhythmias associated with long QT syndrome -  Acquired', NULL, NULL, 3461, '2017-03-14 05:13:55', '2017-03-14 05:13:55', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2984, 'thickening_has', '0', 'No Absent', NULL, NULL, 2939, '2016-10-21 16:03:17', '2016-10-21 16:03:17', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2277, 'echo_mv_chordal_dis_type', '0', 'None', NULL, NULL, 2638, '2016-10-08 14:51:34', '2022-05-31 05:17:53', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2280, 'echo_mv_chordal_dis_type', '88', 'Other', NULL, NULL, 2638, '2016-10-08 14:52:25', '2022-05-31 05:18:06', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2278, 'echo_mv_chordal_dis_type', '1', 'Shortening', NULL, NULL, 2638, '2016-10-08 14:51:54', '2022-05-31 05:18:33', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4141, 'vt_tachy', '29', 'Ventricular arrhythmias associated with short QT syndrome.  Short refractory periods', NULL, NULL, 3461, '2017-03-14 05:16:47', '2017-03-14 05:16:47', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4147, 'vt_tachy', '35', 'Outflow tract VT -  Left ventricular', NULL, NULL, 3461, '2017-03-14 05:20:21', '2017-03-14 05:20:21', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4171, 'eps_ablation_indication', '7', 'Heart failure', NULL, NULL, 3465, '2017-03-15 09:52:16', '2017-03-15 09:52:16', NULL);
@@ -2571,9 +2569,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 be considered positive or negative.<br />
 &nbsp;</p>
 ', NULL, 1112, '2016-08-25 11:50:55', '2017-06-26 08:59:26', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3047, 'atheroma_mobility', '1', 'Mobile', NULL, NULL, 2951, '2016-10-23 05:23:26', '2016-10-23 05:23:26', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3048, 'atheroma_mobility', '88', 'Other', NULL, NULL, 2951, '2016-10-23 05:25:05', '2016-10-23 05:25:05', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3049, 'atheroma_mobility', '99', 'Not Known', NULL, NULL, 2951, '2016-10-23 05:25:53', '2016-10-23 05:25:53', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3056, 'ao_graft_location', '3', 'Transverse aorta
 ', NULL, NULL, 2954, '2016-10-23 05:35:15', '2016-10-23 05:35:15', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3057, 'ao_graft_location', '4', 'Descending thoracic aorta', NULL, NULL, 2954, '2016-10-23 05:35:37', '2016-10-23 05:35:37', NULL);
@@ -2588,6 +2583,9 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 </ul>', NULL, 259, '2016-08-25 11:50:55', '2018-05-21 03:43:44', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (635, 'marital_status', 'D', 'Divorced', NULL, NULL, 369, '2016-08-25 11:50:55', '2017-02-02 15:17:50', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (732, 'thrombolytics_dose', '2', 'Reduced Dose', '', '', 1095, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3049, 'echo_ao_atheroma_mobility', '99', 'Not Known', NULL, NULL, 2951, '2016-10-23 05:25:53', '2022-05-31 07:09:12', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3048, 'echo_ao_atheroma_mobility', '88', 'Other', NULL, NULL, 2951, '2016-10-23 05:25:05', '2022-05-31 07:09:22', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3047, 'echo_ao_atheroma_mobility', '1', 'Mobile', NULL, NULL, 2951, '2016-10-23 05:23:26', '2022-05-31 07:09:33', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1738, 'uni_segments_cdisc', 'rca_prox', 'RCA Proximal', '<ul>
 <li>Proximal portion of the right coronary artery, from the ostium of the right coronary artery to the origin of the first right ventricular branch (pRCA)</li>
 </ul>', NULL, 259, '2016-08-25 11:50:55', '2018-05-21 03:43:52', NULL);
@@ -3518,8 +3516,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 ', NULL, 2692, '2016-10-10 13:24:05', '2016-10-10 13:28:05', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2403, 'mv_leaflet_calcification', '2', 'Scattered areas of brightness confined to the leaflet margins', NULL, NULL, 2695, '2016-10-10 13:35:40', '2016-10-10 13:35:40', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2405, 'mv_leaflet_calcification', '4', 'Extensive brightness throughout much of the leaflet tissue', NULL, NULL, 2695, '2016-10-10 13:36:21', '2016-10-10 13:36:21', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2407, 'subvalvular_thickening', '2', 'Thickening of chordal structures extending up to one third of the chordal length', NULL, NULL, 2647, '2016-10-10 13:40:08', '2016-10-10 13:40:08', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2409, 'subvalvular_thickening', '4', 'Extensive thickening and shortening of all chordal structures extending down to the papillary muscles', NULL, NULL, 2647, '2016-10-10 13:40:44', '2016-10-10 13:40:44', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2411, 'mv_leaflet_thickening', '1', 'Leaflets near normal in thickness (4 to 5 mm)', NULL, NULL, 2696, '2016-10-10 13:43:09', '2016-10-10 13:43:09', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2413, 'mv_leaflet_thickening', '3', 'Thickening extending through the entire leaflet (5 to 8 mm)', NULL, NULL, 2696, '2016-10-10 13:43:43', '2016-10-10 13:43:43', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3595, 'lung_uptake_has', '1', 'Yes', NULL, NULL, 3137, '2016-12-06 15:42:43', '2016-12-06 15:42:43', NULL);
@@ -3532,17 +3528,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3854, 'steering_techs', '3', 'Magnetic', NULL, NULL, 3334, '2016-12-29 05:54:21', '2016-12-29 05:54:21', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2460, 'mas_location_desc', '4', 'Atrial septum
 ', NULL, NULL, 2750, '2016-10-14 08:40:55', '2016-10-14 08:40:55', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1691, 'av_sten_stage', '7', 'Stage D3', '<p><strong>Stage D3 Of Aortic Stenosis</strong></p>
-
-<ul>
-	<li><span style="background-color:#FFFF00">Symptomatic severe low-gradient AS with normal LVEF or paradoxical low-flow severe AS&nbsp;</span></li>
-	<li>Valve area &le;1.0 cm^2 with maximum aortic velocity &lt;4 m/s or mean pressure gradient &lt;40 mmHg</li>
-	<li>Indexed valve area &le;0.6 cm^2/m^2 and stroke volume index &lt;35 mL/m^2 measured when patient is normotensive (SBP &lt;140 mmHg)</li>
-	<li>Anatomy: severe leaflet calcification with severely reduced leaflet motion&nbsp;</li>
-	<li>Haemodynamic consequences: increased LV wall thickness, small LV chamber with low stroke volume, restrictive diastolic filling, and LVEF &ge;50%&nbsp;</li>
-	<li>Symptoms of heart failure, angina, syncope or presyncope&nbsp;</li>
-</ul>
-', '', 147, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3856, 'steering_techs', '88', 'Other', NULL, NULL, 3334, '2016-12-29 05:55:06', '2016-12-29 05:55:06', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3899, 'outcome_success', '2', 'Complete', NULL, NULL, 3347, '2016-12-29 09:36:34', '2016-12-29 09:36:34', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3904, 'shock_has', '3', 'For AT/AF by catheter(s', NULL, NULL, 3348, '2016-12-29 09:42:26', '2016-12-29 09:42:26', NULL);
@@ -3644,8 +3629,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3599, 'blood_pool_activity_desc', '1', 'Normal', NULL, NULL, 3139, '2016-12-07 15:12:38', '2016-12-07 15:12:38', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2402, 'mv_leaflet_calcification', '1', 'A single area of increased echocardiographic brightness', NULL, NULL, 2695, '2016-10-10 13:35:24', '2016-10-10 13:35:24', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2404, 'mv_leaflet_calcification', '3', 'Brightness extending into the mid portion of the leaflets', NULL, NULL, 2695, '2016-10-10 13:36:04', '2016-10-10 13:36:04', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2406, 'subvalvular_thickening', '1', 'Minimal thickening just below the mitral leaflets', NULL, NULL, 2647, '2016-10-10 13:39:53', '2016-10-10 13:39:53', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2408, 'subvalvular_thickening', '3', ':Thickening extending to the distal third of the chords', NULL, NULL, 2647, '2016-10-10 13:40:27', '2016-10-10 13:40:27', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2398, 'mv_sten_grade_desc', '3', 'Severe', '<p>Severe MS :&lt;1.0 cm2</p>
 ', '<ul>
 	<li>Severe&nbsp;stenosis is defined as valve area less than 1 cm2, mean gradient&nbsp;greater than 10 mm and Pulmonary Artery Systolic Pressure&nbsp;is 30-50 mm.</li>
@@ -3949,7 +3932,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8454, 'cathr_ind_preop_t_organ', '5', 'Pancreas', NULL, NULL, 3754, '2018-06-16 05:19:03', '2018-06-16 05:19:03', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8455, 'cathr_ind_preop_t_organ', '88', 'Organ Not Listed', NULL, NULL, 3754, '2018-06-16 05:19:36', '2018-06-16 05:19:36', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4487, 'lv_lead_action', '99', 'Unknown', NULL, NULL, 913, '2017-06-30 13:16:27', '2017-06-30 13:16:27', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2400, 'mv_sten_area_method', '2', 'By Doppler pressure half-time', NULL, NULL, 2694, '2016-10-10 13:31:31', '2016-10-10 13:31:31', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3641, 'prior_imaging_studies_compare', '1', 'Agreement', NULL, NULL, 3163, '2016-12-08 15:08:37', '2016-12-08 15:08:37', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2847, 'av_reg_has', '2', 'Yes - Mild 1+', NULL, NULL, 2881, '2016-10-18 15:08:37', '2016-10-18 15:08:37', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2421, 'stroke_vol_method', '1', '2 chamber by US 2D modified single-plane calculated', NULL, NULL, 2708, '2016-10-11 15:01:15', '2016-10-11 15:03:33', NULL);
@@ -4237,36 +4219,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (871, 'pci_indication', '10', 'Rescue After Sudden Death', '''Rescue After Sudden Death', NULL, 879, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3621, 'vessel_diseased_desc', '2', 'Right coronary', NULL, NULL, 3156, '2016-12-08 08:56:13', '2016-12-08 08:56:13', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3625, 'stress_test_summary_desc', '2', 'Abnormal', NULL, NULL, 3157, '2016-12-08 12:30:12', '2016-12-08 12:30:12', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (32, 'mv_sten_stage', '2', 'Stage B: Progressive MS', '<p><strong><span style="background-color:#FFFF00">Progressive MS&nbsp;</span></strong></p>
-
-<p><strong><span style="background-color:#00FF00">Valve Anatomy&nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>&nbsp;Rheumatic valve changes with&nbsp;&nbsp;commissural fusion and&nbsp;&nbsp; diastolic doming of the mitral&nbsp;&nbsp; valve leaflets&nbsp;</li>
-	<li>Planimetered MVA &gt;1.5 cm2</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Valve Hemodynamics&nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>&nbsp;Increased transmitral flow&nbsp;&nbsp;velocities&nbsp;</li>
-	<li>MVA &gt;1.5 cm&nbsp;</li>
-	<li>Diastolic pressure half-time&nbsp;&nbsp; &lt;150 ms</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Hemodynamic Consequences &nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>Mild-to-moderate LA&nbsp;&nbsp;enlargement&nbsp;</li>
-	<li>Normal pulmonary pressure&nbsp;&nbsp;at rest</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">&nbsp;Symptoms &nbsp;</span></strong></p>
-
-<ul>
-	<li>None​</li>
-</ul>
-', '', 2331, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8462, 'pc_proc_consciousness', 'V', 'Verbal', NULL, NULL, 3774, '2018-06-25 15:04:25', '2018-06-25 15:04:25', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2077, 'abbreviations', 'erb_', 'Angiotensine Receptor Blocker', '<p>Angiotensine Receptor Blocker</p>
 ', NULL, 27, '2016-09-20 14:45:49', '2016-12-08 15:40:23', NULL);
@@ -4844,7 +4796,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (678, 'uni_segments_cdisc', 'lcx_om3_branch', 'LCX 3rd Obtuse Marginal Lateral Branch (OM3-Branch)', '<ul>
 <li>Branch of the third marginal branch</li>
 </ul>', NULL, 259, '2016-08-25 11:50:55', '2018-05-21 04:44:34', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1721, 'mv_sten_stage', '0', 'No Mitral Stenosis', '', '', 2331, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (853, 'uni_segments_cdisc', 'lad_d2_branch', 'LAD 2nd Diag Branch (D2-Branch)', '<ul>
 <li>Branch of the second diagonal branch</li>
 </ul>', NULL, 259, '2016-08-25 11:50:55', '2018-05-21 04:47:04', NULL);
@@ -4954,12 +4905,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 <p>&nbsp;</p>
 ', NULL, 62, '2016-08-31 04:28:57', '2016-09-17 13:48:16', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8580, 'pci_cto_perforation', '3', 'Stent', NULL, NULL, 3868, '2018-06-29 09:16:49', '2018-06-29 09:16:49', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (95, 'cardio_pulm_bypass_status', '1', 'Elective', '<ul>
-	<li>Cardiopulmonary bypass was planned as part of the&nbsp;procedure.</li>
-</ul>
-
-<p>&nbsp;</p>
-', '', 2089, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (96, 'nuclear_perfusion_test_results', '2', 'Abnormal low risk', '', '', 1106, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (450, 'hist_cor_tobacco_use', '1', 'Current everyday smoker - Smoker', '<p>The patient smokes tobacco daily.<br /> &nbsp;</p>', NULL, 1575, '2016-08-25 11:50:55', '2018-06-06 03:12:29', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8621, 'pci_proc_status_stemi', '0', 'N/A - No Applicable', NULL, NULL, 3786, '2018-07-04 13:00:42', '2018-07-04 13:00:42', NULL);
@@ -4983,6 +4928,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1657, 'cath_pacemaker_interv_any_yn', '4', 'Pacemaker Revision', NULL, NULL, 2326, '2016-08-25 11:50:55', '2022-05-27 19:32:20', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1656, 'cath_pacemaker_interv_any_yn', '2', 'ICD Revision', NULL, NULL, 2326, '2016-08-25 11:50:55', '2022-05-27 19:32:31', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1655, 'cath_pacemaker_interv_any_yn', '1', 'ICD Implantation', NULL, NULL, 2326, '2016-08-25 11:50:55', '2022-05-27 19:32:42', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (95, 'tvt_cardio_pulm_bypass_status', '1', 'Elective', '<ul><li>Cardiopulmonary bypass was planned as part of the&nbsp;procedure.</li></ul><p>&nbsp;</p>', NULL, 2089, '2016-08-25 11:50:55', '2022-05-29 12:51:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1690, 'av_sten_stage', '6', 'Stage D2', '<p><strong>Stage D2: Symptomatic severe low-flow/low-gradient AS with reduced LVEF&nbsp;&nbsp;</strong></p>
 
 <ul>
@@ -5340,12 +5286,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 to thrombolytics
 ', NULL, NULL, 1100, '2016-08-25 11:50:55', '2016-09-11 04:47:43', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (377, 'reperfusion_no_reason', '88', 'Other', NULL, NULL, 1092, '2016-08-25 11:50:55', '2016-09-11 04:55:01', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (831, 'cardio_pulm_bypass_status', '2', 'Emergent', '<ul>
-	<li>Cardiopulmonary bypass was unplanned, and was&nbsp;initiated during the procedure.</li>
-</ul>
-
-<p>&nbsp;</p>
-', '', 2089, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8679, 'asdcl_device_utilized_id', '2', 'Gore Helex septal occluder', NULL, NULL, 2210, '2018-10-17 11:26:07', '2018-10-17 11:26:07', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (834, 'lvef_method', '18046-3', '2D Modified', NULL, NULL, 100, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (711, 'primary_indication', '6', 'Cyanosis', '', '', 2194, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
@@ -5528,7 +5468,6 @@ atrial endocardium.<br />
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (259, 'lvef_method', '8807-0', '2D echo estimation', NULL, NULL, 100, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (264, 'meas_fs_desc', '2', 'Decreased', NULL, NULL, 98, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3811, 'ventr_stim_sites', '2', 'right ventricular outï¬‚ow tract', NULL, NULL, 3323, '2016-12-28 14:26:47', '2016-12-28 14:26:47', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2638, 'effusion_location', '99', 'Not Known', NULL, NULL, 2810, '2016-10-15 16:49:18', '2016-10-15 16:49:18', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8801, 'cor_anat_lad_d1_type', 'lad_d1_dual', 'Dual - Two Separated First Diagonals', NULL, NULL, 49, '2019-07-19 05:35:58', '2019-08-11 06:48:41', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1191, 'spect_stress_risk', '1', 'Low Risk', '<ul>
 	<li>1. Low-risk treadmill score (score &gt;=5).</li>
@@ -5962,39 +5901,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (402, 'clinical_frailty_scale_csha', '6', 'Moderately frail', '<p>Moderately frail: help is needed both with instrumental and non-instrumental activities of daily living</p>
 ', NULL, 1494, '2016-08-25 11:50:55', '2017-06-25 18:47:07', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3910, 'eps_procs_ablation_acute_compl', '3', 'Access site haematoma', NULL, NULL, 3349, '2016-12-29 09:55:14', '2016-12-29 09:55:14', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1705, 'mv_sten_stage', '3', 'Stage C: Asymptomatic severe MS
-', '<p><strong><span style="background-color:#FFFF00">Stage C: Asymptomatic&nbsp;severe MS&nbsp;</span></strong></p>
-
-<p><strong><span style="background-color:#00FF00">Valve Anatomy</span></strong></p>
-
-<ul>
-	<li>Rheumatic valve changes with&nbsp;commissural fusion and&nbsp;diastolic doming of the mitral&nbsp;valve leaflets</li>
-	<li>Planimetered MVA less or equal to&nbsp;1.5 cm2</li>
-	<li>&nbsp;(MVA &lt;=&nbsp;1.0 cm2 with very&nbsp;severe MS)</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Valve Hemodynamics</span></strong></p>
-
-<ul>
-	<li>&nbsp;MVA less or equal to 1.5 cm2&nbsp;</li>
-	<li>&nbsp;(MVA &lt;=&nbsp;1.0 cm with very&nbsp;&nbsp;severe MS)&nbsp;</li>
-	<li>&nbsp;Diastolic pressure half-time &gt;=&nbsp;150 ms&nbsp;</li>
-	<li>&nbsp;(Diastolic pressure half-time &gt;=&nbsp;220 ms with very severe MS)</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Hemodynamic Consequences</span></strong></p>
-
-<ul>
-	<li>Severe LA enlargement&nbsp;</li>
-	<li>Elevated PASP &gt;30 mm Hg</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Symptoms</span></strong></p>
-
-<ul>
-	<li>None</li>
-</ul>
-', '', 2331, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (479, 'lvef_val', '4', 'Fair function = 40%', NULL, NULL, 1064, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3900, 'outcome_success', '3', 'Unknown/indeterminate', '<p>Unknown can be used e.g. If RF delivered for very infrequent ectopics</p>
 ', NULL, 3347, '2016-12-29 09:37:55', '2016-12-29 09:37:55', NULL);
@@ -6136,33 +6042,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 ', NULL, 62, '2016-08-31 04:30:07', '2016-09-17 13:48:24', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8631, 'pci_les_status', '4', 'In stent restenosis', '<p>ISR (in stent restenosis) is defined as a<br />lesion that has had a prior stent to that site.</p>', NULL, 3935, '2018-07-05 17:30:01', '2018-07-05 17:30:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2236, 'chest_breath_sounds_deminished', '2.5', 'Left - basal', NULL, NULL, 2631, '2016-10-08 05:34:55', '2016-10-08 05:34:55', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1722, 'mv_sten_stage', '1', 'Stage A: At risk of MS', '<p><strong><span style="background-color:#FFFF00">At risk of MS&nbsp;</span></strong></p>
-
-<p><strong><span style="background-color:#00FF00">Valve Anatomy&nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>Mild valve doming during&nbsp;diastole<br />
-	&nbsp;</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Valve Hemodynamics&nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>Normal transmitral flow velocity​</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Hemodynamic Consequences</span>&nbsp;</strong></p>
-
-<ul>
-	<li>None</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Symptoms &nbsp;</span>&nbsp;</strong></p>
-
-<ul>
-	<li>None</li>
-</ul>
-', '', 2331, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2253, 'oedema_location', '2.2', 'Leg Left', NULL, NULL, 2632, '2016-10-08 05:53:21', '2016-10-08 05:53:21', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1926, 'p2y12', '3', 'Contraindicated', NULL, NULL, 2413, '2016-09-03 13:20:13', '2016-09-03 13:20:13', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8660, 'fup_primary_method', '5', 'Letter from Medical Provider', NULL, NULL, 3978, '2018-07-24 12:46:25', '2018-07-24 12:46:25', NULL);
@@ -6174,40 +6053,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 trial
 ', '', '', 2059, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8688, 'cor_anat_lad_distal_type', 'lad_distal_type_ii', 'Normal Distal LAD', 'A Common Normal default LAD', NULL, 4017, '2019-04-14 05:28:26', '2019-07-19 05:23:57', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1726, 'mv_sten_stage', '4', 'Stage D: Symptomatic severe MS
-', '<p><strong><span style="background-color:#FFFF00">Mitral Stenosis Stage D: Symptomatic Severe MS</span></strong></p>
-
-<p><strong><span style="background-color:#00FF00">Valve Anatomy</span></strong></p>
-
-<ul>
-	<li>Rheumatic valve changes with&nbsp;&nbsp; commissural fusion and&nbsp;&nbsp; diastolic doming of the mitral&nbsp;&nbsp; valve leaflets</li>
-	<li>Planimetered MVA &lt;=1.5 cm2</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Valve Hemodynamics&nbsp;</span></strong></p>
-
-<ul>
-	<li>MVA &lt;=&nbsp;1.5 cm2</li>
-	<li>(MVA &lt; =&nbsp;1.0 cm2 with very&nbsp;severe MS)</li>
-	<li>Diastolic pressure half-time &gt;&nbsp;150 ms</li>
-	<li>(Diastolic pressure half-time &gt;&nbsp;220 ms with very severe MS)<br />
-	&nbsp;</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Hemodynamic Consequences</span></strong></p>
-
-<ul>
-	<li>&nbsp;Severe LA enlargement</li>
-	<li>Elevated PASP &gt;30 mm Hg</li>
-</ul>
-
-<p><strong><span style="background-color:#00FF00">Symptoms</span></strong></p>
-
-<ul>
-	<li>&nbsp;Decreased exercise&nbsp;&nbsp;tolerance</li>
-	<li>Exertional dyspnea</li>
-</ul>
-', '', 2331, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2204, 'cle_jvp_val', '2', 'Not visible', NULL, NULL, 174, '2016-10-08 04:18:58', '2018-06-25 09:11:40', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8636, 'uni_guide_types', '3', 'Ablatz Left', NULL, NULL, 3940, '2018-07-06 05:48:01', '2018-07-06 05:48:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4435, 'rv_lead_action', '3', 'Lead replacement', NULL, NULL, 865, '2017-06-30 12:52:01', '2017-06-30 12:52:01', NULL);
@@ -6303,6 +6148,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2249, 'oedema_location', '2.1.2', 'Right Lower Leg', NULL, NULL, 2632, '2016-10-08 05:51:20', '2016-10-08 05:55:30', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2255, 'oedema_location', '2.2.2', 'Left  Lower Leg', NULL, NULL, 2632, '2016-10-08 05:57:20', '2016-10-08 05:57:20', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1936, 'status_asses_method', '2', 'Medical record', NULL, NULL, 2427, '2016-09-05 05:35:11', '2016-09-05 05:35:11', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1722, 'cath_mv_stenosis_stage', 'stage_a', 'Stage A: At risk of MS', '<p><strong><span style="background-color: #ffff00;">At risk of MS&nbsp;</span></strong></p><p><strong><span style="background-color: #00ff00;">Valve Anatomy&nbsp;</span>&nbsp;</strong></p><ul><li>Mild valve doming during&nbsp;diastole<br />&nbsp;</li></ul><p><strong><span style="background-color: #00ff00;">Valve Hemodynamics&nbsp;</span>&nbsp;</strong></p><ul><li>Normal transmitral flow velocity​</li></ul><p><strong><span style="background-color: #00ff00;">Hemodynamic Consequences</span>&nbsp;</strong></p><ul><li>None</li></ul><p><strong><span style="background-color: #00ff00;">Symptoms &nbsp;</span>&nbsp;</strong></p><ul><li>None</li></ul>', NULL, 2331, '2016-08-25 11:50:55', '2022-05-29 13:19:36', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (849, 'pci_primary_no_reason', '7', 'DNR at time of treatment decision
 ', NULL, NULL, 1099, '2016-08-25 11:50:55', '2016-09-11 05:08:27', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3610, 'perf_metab_match_size', '1', 'Small', NULL, NULL, 3145, '2016-12-08 04:49:52', '2016-12-08 04:49:52', NULL);
@@ -6994,7 +6840,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 ', NULL, 3354, '2017-01-22 07:18:38', '2017-01-22 07:18:38', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4190, 'palpitations_frequency', '2', 'Less frequent', NULL, NULL, 3468, '2017-03-15 15:01:13', '2017-03-15 15:01:13', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2399, 'mv_sten_area_method', '1', 'By planimetry', NULL, NULL, 2694, '2016-10-10 13:31:10', '2016-10-10 13:31:10', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2401, 'mv_sten_area_method', '88', 'By other method', NULL, NULL, 2694, '2016-10-10 13:32:00', '2016-10-10 13:32:00', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3601, 'metabolic_defect_location', '88', 'Use segment_17model', NULL, NULL, 3140, '2016-12-07 16:12:07', '2016-12-07 16:12:07', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3604, 'perf_metab_mismatch_size', '1', 'Small', NULL, NULL, 3142, '2016-12-08 04:21:13', '2016-12-08 04:21:13', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3628, 'lv_perfusion_summary', '2', 'Equivocal', NULL, NULL, 3158, '2016-12-08 12:44:07', '2016-12-08 12:44:07', NULL);
@@ -7232,11 +7077,9 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4572, 'eps_procs_ablation_procedure_yn', '15', 'VT - focal other site', NULL, NULL, 3531, '2017-07-01 13:55:14', '2017-07-01 13:55:14', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4575, 'eps_procs_ablation_procedure_yn', '18', 'VT - bundle branch reentry', NULL, NULL, 3531, '2017-07-01 13:56:31', '2017-07-01 13:56:31', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4585, 'mapping_anotomic_tech', '8', 'Other image fusion - CT/MRI', NULL, NULL, 3532, '2017-07-01 14:02:14', '2017-07-01 14:02:14', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2633, 'effusion_location', '1', 'Circumferential', NULL, NULL, 2810, '2016-10-15 16:46:53', '2016-10-15 16:46:53', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2635, 'effusion_location', '3', 'Localised - Near right ventricle', NULL, NULL, 2810, '2016-10-15 16:47:49', '2016-10-15 16:47:49', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2637, 'effusion_location', '5', 'Localized - Near right atrium', NULL, NULL, 2810, '2016-10-15 16:48:47', '2016-10-15 16:48:47', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2639, 'effusion_location', '88', 'Other', NULL, NULL, 2810, '2016-10-15 16:49:32', '2016-10-15 16:49:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4101, 'svt_tachy', '17', 'Inappropriate ST - Persistent', NULL, NULL, 3460, '2017-03-13 15:40:26', '2017-03-13 15:40:26', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2637, 'echo_pericardium_effusion_location', '5', 'Localized - Near right atrium', NULL, NULL, 2810, '2016-10-15 16:48:47', '2022-05-29 14:09:14', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2633, 'echo_pericardium_effusion_location', '1', 'Circumferential', NULL, NULL, 2810, '2016-10-15 16:46:53', '2022-05-29 14:10:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4110, 'svt_tachy', '26', 'Non-paroxysmal junctional tachycardia (permanent form of junctional tachycardia [PJRT]) AV
  re-entrant tachycardia (concealed bypass tract)
 ', NULL, NULL, 3460, '2017-03-13 16:01:44', '2017-03-13 16:01:44', NULL);
@@ -7244,8 +7087,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4544, 'pace_compl_tamponate', '3', 'Yes, requiring thoracotomy', NULL, NULL, 3521, '2017-06-30 15:36:23', '2017-06-30 15:36:23', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4577, 'mapping_anotomic_tech', '1', 'Conventional electrodes', NULL, NULL, 3532, '2017-07-01 13:59:35', '2017-07-01 13:59:35', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4578, 'mapping_anotomic_tech', '2', 'CARTO', NULL, NULL, 3532, '2017-07-01 13:59:50', '2017-07-01 13:59:50', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2634, 'effusion_location', '2', 'Localised -  Near left ventricle', NULL, NULL, 2810, '2016-10-15 16:47:24', '2016-10-15 16:47:24', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2636, 'effusion_location', '4', 'Localised - Near left atrium', NULL, NULL, 2810, '2016-10-15 16:48:20', '2016-10-15 16:48:20', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8444, 'cathr_ind_preop_fc', '2', '> = 4 METS with symptoms', NULL, NULL, 3752, '2018-06-16 04:53:05', '2018-06-16 04:53:05', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1614, 'proc_other_perf_concurrently', '1', 'Yes - PCI', '', '', 2106, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2887, 'leaflet_calcium', '1', 'Diffuse calcification', NULL, NULL, 2888, '2016-10-19 04:42:48', '2016-10-19 04:42:48', NULL);
@@ -7317,6 +7158,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3144, 'meds_on_test_date', '1', 'Nitrates', NULL, NULL, 2988, '2016-11-08 15:13:34', '2016-11-08 15:14:26', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2994, 'hemo_ significance_desc', '1', 'Significant', NULL, NULL, 2941, '2016-10-21 16:13:29', '2016-10-21 16:13:29', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2999, 'pulm_art_thrombus_tumour_has', '0', 'No', NULL, NULL, 2830, '2016-10-21 16:23:41', '2016-10-21 16:23:41', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2634, 'echo_pericardium_effusion_location', '2', 'Localised - Near left ventricle', NULL, NULL, 2810, '2016-10-15 16:47:24', '2022-05-29 14:09:51', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (836, 'operator_reason_for_tavr', '2', 'Intermediate Risk (4-7% risk of 30 day mortality)', '<ul>
 	<li>Intermediate risk includes patients with a predicted&nbsp;4%-7% risk of 30 day mortality based on the risk&nbsp;model developed by the Society of Thoracic&nbsp;Surgeons.</li>
 </ul>
@@ -8514,7 +8356,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1067, 'pci_lesev_dissection_type', 'e', 'type E', '<p>&nbsp;Persistent filling defect with delayed antegrade flow</p>', NULL, 1187, '2016-08-25 11:50:55', '2019-09-28 03:38:03', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1155, 'pci_lesev_dissection_type', 'a', 'Type A', '<div>Grade A: Minor radiolucencies within the lumen during contrast injection with no</div><div>persistence after dye clearance</div>', NULL, 1187, '2016-08-25 11:50:55', '2019-09-28 03:40:03', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1134, 'pci_lesev_dissection_type', 'c', 'type C', '<div>Grade C: Extraluminal cap with persistence of contrast after dye clearance from the</div><div>700 lumen</div>', NULL, 1187, '2016-08-25 11:50:55', '2019-09-28 03:43:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8332, 'uni_lesion_type_aha', 'B', 'TYPE B', '<p>Tubular (10-20 mm length)</p><p>Eccentric Moderate tortuosity of prox.seg</p><p>Moderately angulated, 45-90 deg</p><p>Irregular contour</p><p>&nbsp;</p><p>&nbsp;</p>', NULL, 3542, '2018-01-05 09:06:20', '2019-10-08 12:06:49', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8333, 'uni_lesion_type_aha', 'C', 'TYPE C', '<p><strong>TYPE C LESIONS</strong></p><p>Diffuse (&gt;2 cm length)</p><p>Extremely angulated, &gt; 90 degrees</p><p>Inability to protect major side branch</p><p>&nbsp;</p><p>&nbsp;</p>', NULL, 3542, '2018-01-05 09:08:02', '2019-10-08 13:06:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1249, 'acs_cta_study_result', '5', 'indeterminate', '<ul><li>The results of the study were&nbsp;uninterpretable due to technical or&nbsp;patient-related issues.</li></ul><p>&nbsp;</p>', NULL, 1110, '2016-08-25 11:50:55', '2019-10-09 13:31:34', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8896, 'funs_richmond_agitation_scale', '0', '<strong>Alert and calm</strong>', 'Spontaneously pays attention to caregiver', NULL, 243, '2022-05-02 13:49:24', '2022-05-02 13:49:24', NULL);
@@ -8527,6 +8368,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8895, 'funs_richmond_agitation_scale', '+1', 'Restless', 'Anxious or apprehensive but movements not aggressive or vigorous <strong>(Observation)</strong>', NULL, 243, '2022-05-02 13:48:23', '2022-05-02 14:09:30', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8897, 'funs_richmond_agitation_scale', '-1', 'Drowsy', 'Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to <strong>voice</strong>', NULL, 243, '2022-05-02 13:50:21', '2022-05-02 14:10:00', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8892, 'funs_richmond_agitation_scale', '+4', 'Combative', 'Overtly combative or violent; immediate danger to staff (<strong>Observation)</strong>', NULL, 243, '2022-05-02 13:45:52', '2022-05-02 14:10:48', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8332, 'uni_lesion_type_aha', 'B', 'TYPE B', '<p><strong>Tubular (10-20 mm length)</strong></p><p>Eccentric Moderate tortuosity of prox.seg</p><p>Moderately angulated, 45-90 deg</p><p>Irregular contour</p><p>&nbsp;</p><p>&nbsp;</p>', NULL, 3542, '2018-01-05 09:06:20', '2022-05-31 06:54:06', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (864, 'funs_cognition_level', '1', 'Normal', 'Normal changes are taking place at the molecular level<br />in the brain, but no symptoms have appeared.<br />Currently, we do not have the tools to diagnose AD at<br />this stage, but research is being done to improve our<br />diagnostic capabilities.', NULL, 1204, '2016-08-25 11:50:55', '2022-05-04 15:53:39', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (643, 'funs_cognition_level', '3', 'Mod/Severly impaired', 'At this stage, AD patients no longer have any short-<br />term memory, knowledge of time or place, or<br />understanding of how to perform simple tasks. They<br />may experience major changes in personality, sleep<br />disturbances and develop delusional or compulsive<br />behaviour patterns.', NULL, 1204, '2016-08-25 11:50:55', '2022-05-04 15:56:02', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1784, 'uni_segments_ncdr', 'rca_prox', 'RCA Proximal', '<p>Proximal right coronary artery conduit segment - pRCA</p>', 'Proximal right coronary artery conduit segment - pRCA', 1181, '2016-08-25 11:50:55', '2022-05-05 13:41:57', NULL);
@@ -8636,6 +8478,24 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (725, 'uni_segments_ncdr', 'pda_septal', 'Posterior descending septal perforators - pDSP', '<p>Posterior descending septal perforators segment</p>', NULL, 1181, '2016-08-25 11:50:55', '2022-05-28 09:50:59', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1783, 'uni_segments_ncdr', 'left_main', 'LM - Left Main', '<p>Left main coronary artery segment</p>', NULL, 1181, '2016-08-25 11:50:55', '2022-05-28 09:51:21', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1735, 'uni_segments_ncdr', 'rca_pla', 'RCA - Posterior - Lateral AV Artery &nbsp;rPAV', '<p>Right posterior atrioventricular segment&nbsp; &nbsp;rPAV</p>', NULL, 1181, '2016-08-25 11:50:55', '2022-05-28 10:05:13', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (831, 'tvt_cardio_pulm_bypass_status', '2', 'Emergent', '<ul><li>Cardiopulmonary bypass was unplanned, and was&nbsp;initiated during the procedure.</li></ul><p>&nbsp;</p>', NULL, 2089, '2016-08-25 11:50:55', '2022-05-29 12:50:39', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1721, 'cath_mv_stenosis_stage', '0', 'No Mitral Stenosis', 'No Mitral Stenosis', NULL, 2331, '2016-08-25 11:50:55', '2022-05-29 13:14:49', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1705, 'cath_mv_stenosis_stage', 'stage_c', 'Stage C: Asymptomatic severe MS', '<p><strong><span style="background-color: #ffff00;">Stage C: Asymptomatic&nbsp;severe MS&nbsp;</span></strong></p><p><strong><span style="background-color: #00ff00;">Valve Anatomy</span></strong></p><ul><li>Rheumatic valve changes with&nbsp;commissural fusion and&nbsp;diastolic doming of the mitral&nbsp;valve leaflets</li><li>Planimetered MVA less or equal to&nbsp;1.5 cm2</li><li>&nbsp;(MVA &lt;=&nbsp;1.0 cm2 with very&nbsp;severe MS)</li></ul><p><strong><span style="background-color: #00ff00;">Valve Hemodynamics</span></strong></p><ul><li>&nbsp;MVA less or equal to 1.5 cm2&nbsp;</li><li>&nbsp;(MVA &lt;=&nbsp;1.0 cm with very&nbsp;&nbsp;severe MS)&nbsp;</li><li>&nbsp;Diastolic pressure half-time &gt;=&nbsp;150 ms&nbsp;</li><li>&nbsp;(Diastolic pressure half-time &gt;=&nbsp;220 ms with very severe MS)</li></ul><p><strong><span style="background-color: #00ff00;">Hemodynamic Consequences</span></strong></p><ul><li>Severe LA enlargement&nbsp;</li><li>Elevated PASP &gt;30 mm Hg</li></ul><p><strong><span style="background-color: #00ff00;">Symptoms</span></strong></p><ul><li>None</li></ul>', NULL, 2331, '2016-08-25 11:50:55', '2022-05-29 13:18:30', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2635, 'echo_pericardium_effusion_location', '3', 'Localised - Near right ventricle', NULL, NULL, 2810, '2016-10-15 16:47:49', '2022-05-29 14:09:42', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1726, 'cath_mv_stenosis_stage', 'stage_d', 'Stage D: Symptomatic severe MS', '<p><strong><span style="background-color: #ffff00;">Mitral Stenosis Stage D: Symptomatic Severe MS</span></strong></p><p><strong><span style="background-color: #00ff00;">Valve Anatomy</span></strong></p><ul><li>Rheumatic valve changes with&nbsp;&nbsp; commissural fusion and&nbsp;&nbsp; diastolic doming of the mitral&nbsp;&nbsp; valve leaflets</li><li>Planimetered MVA &lt;=1.5 cm2</li></ul><p><strong><span style="background-color: #00ff00;">Valve Hemodynamics&nbsp;</span></strong></p><ul><li>MVA &lt;=&nbsp;1.5 cm2</li><li>(MVA &lt; =&nbsp;1.0 cm2 with very&nbsp;severe MS)</li><li>Diastolic pressure half-time &gt;&nbsp;150 ms</li><li>(Diastolic pressure half-time &gt;&nbsp;220 ms with very severe MS)<br />&nbsp;</li></ul><p><strong><span style="background-color: #00ff00;">Hemodynamic Consequences</span></strong></p><ul><li>&nbsp;Severe LA enlargement</li><li>Elevated PASP &gt;30 mm Hg</li></ul><p><strong><span style="background-color: #00ff00;">Symptoms</span></strong></p><ul><li>&nbsp;Decreased exercise&nbsp;&nbsp;tolerance</li><li>Exertional dyspnea</li></ul>', NULL, 2331, '2016-08-25 11:50:55', '2022-05-29 13:17:53', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (32, 'cath_mv_stenosis_stage', 'stage_b', 'Stage B: Progressive MS', '<p><strong><span style="background-color: #ffff00;">Progressive MS&nbsp;</span></strong></p><p><strong><span style="background-color: #00ff00;">Valve Anatomy&nbsp;</span>&nbsp;</strong></p><ul><li>&nbsp;Rheumatic valve changes with&nbsp;&nbsp;commissural fusion and&nbsp;&nbsp; diastolic doming of the mitral&nbsp;&nbsp; valve leaflets&nbsp;</li><li>Planimetered MVA &gt;1.5 cm2</li></ul><p><strong><span style="background-color: #00ff00;">Valve Hemodynamics&nbsp;</span>&nbsp;</strong></p><ul><li>&nbsp;Increased transmitral flow&nbsp;&nbsp;velocities&nbsp;</li><li>MVA &gt;1.5 cm&nbsp;</li><li>Diastolic pressure half-time&nbsp;&nbsp; &lt;150 ms</li></ul><p><strong><span style="background-color: #00ff00;">Hemodynamic Consequences &nbsp;</span>&nbsp;</strong></p><ul><li>Mild-to-moderate LA&nbsp;&nbsp;enlargement&nbsp;</li><li>Normal pulmonary pressure&nbsp;&nbsp;at rest</li></ul><p><strong><span style="background-color: #00ff00;">&nbsp;Symptoms &nbsp;</span></strong></p><ul><li>None​</li></ul>', NULL, 2331, '2016-08-25 11:50:55', '2022-05-29 13:19:05', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2638, 'echo_pericardium_effusion_location', '99', 'Not Known', NULL, NULL, 2810, '2016-10-15 16:49:18', '2022-05-29 14:08:57', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2639, 'echo_pericardium_effusion_location', '88', 'Other', NULL, NULL, 2810, '2016-10-15 16:49:32', '2022-05-29 14:09:07', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2636, 'echo_pericardium_effusion_location', '4', 'Localised - Near left atrium', NULL, NULL, 2810, '2016-10-15 16:48:20', '2022-05-29 14:09:29', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1691, 'cath_av_sten_stage', '7', 'Stage D3', '<p><strong>Stage D3 Of Aortic Stenosis</strong></p><ul><li><span style="background-color: #ffff00;">Symptomatic severe low-gradient AS with normal LVEF or paradoxical low-flow severe AS&nbsp;</span></li><li>Valve area &le;1.0 cm^2 with maximum aortic velocity &lt;4 m/s or mean pressure gradient &lt;40 mmHg</li><li>Indexed valve area &le;0.6 cm^2/m^2 and stroke volume index &lt;35 mL/m^2 measured when patient is normotensive (SBP &lt;140 mmHg)</li><li>Anatomy: severe leaflet calcification with severely reduced leaflet motion&nbsp;</li><li>Haemodynamic consequences: increased LV wall thickness, small LV chamber with low stroke volume, restrictive diastolic filling, and LVEF &ge;50%&nbsp;</li><li>Symptoms of heart failure, angina, syncope or presyncope&nbsp;</li></ul>', NULL, 147, '2016-08-25 11:50:55', '2022-05-30 15:51:10', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2279, 'echo_mv_chordal_dis_type', '2', 'Fusion', NULL, NULL, 2638, '2016-10-08 14:52:10', '2022-05-31 05:18:24', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2409, 'echo_mv_subvalvular_thickening', '4', 'Extensive&nbsp;', 'Extensive thickening and shortening of all chordal structures extending down to the papillary muscles', NULL, 2647, '2016-10-10 13:40:44', '2022-05-31 03:30:33', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2408, 'echo_mv_subvalvular_thickening', '3', 'Thickening extending to the distal third of the chords', 'Thickening extending to the distal third of the chords', NULL, 2647, '2016-10-10 13:40:27', '2022-05-31 03:31:29', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2407, 'echo_mv_subvalvular_thickening', '2', 'Thickening of chordal structures extending up to one third of the chordal length', 'Thickening of chordal structures extending up to one third of the chordal length', NULL, 2647, '2016-10-10 13:40:08', '2022-05-31 03:31:56', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2406, 'echo_mv_subvalvular_thickening', '1', 'Minimal thickening just below the mitral leaflets', 'Minimal thickening just below the mitral leaflets', NULL, 2647, '2016-10-10 13:39:53', '2022-05-31 03:32:18', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2401, 'mv_stenosis_area_method', '88', 'By other method', NULL, NULL, 2694, '2016-10-10 13:32:00', '2022-05-31 03:57:21', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2400, 'mv_stenosis_area_method', '2', 'By Doppler pressure half-time', NULL, '<strong>Pressure half-time (PHT) is defined a</strong>s the time interval in milliseconds between the maximum mitral gradient in early diastole and the time point where the gradient is half the maximum initial value. <br /><br />The decline of the velocity of diastolic transmitral blood flow is inversely proportional to valve area (cm2), and mitral valve area (MVA) is derived using an empirical formula.<br /><br />PHT is obtained by tracing the deceleration slope of the E-wave on Doppler spectral display of transmitral flow. <br /><br />The deceleration slope is sometimes bimodal, the decline of mitral flow velocity being more rapid in early diastole than during the following part of the E-wave. In these cases, it is recommended that the deceleration slope in mid-diastole rather than the early deceleration slope be traced.<br /><br />Overestimation of the MVA occurs when PHT is shortened by concomitant significant aortic insufficiency, decreased ventricular compliance, immediately after mitral balloon valvuloplasty, and atrial septal defect.<br /><br />MVA = 220 / PHT', 2694, '2016-10-10 13:31:31', '2022-05-31 04:01:16', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2281, 'echo_mv_chordal_dis_type', '99', 'Not Known', NULL, NULL, 2638, '2016-10-08 14:52:40', '2022-05-31 05:18:45', NULL);
 
 
 --
@@ -8647,7 +8507,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 SELECT pg_catalog.setval('public.defs_options_id_seq', 9028, true);
 
 
--- Completed on 2022-05-28 13:10:18 EEST
+-- Completed on 2022-05-31 22:22:46 EEST
 
 --
 -- PostgreSQL database dump complete

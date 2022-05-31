@@ -67,6 +67,24 @@ USING gin (to_tsvector('english'::regconfig, notes_tsv::text));
 COMMIT;
 
 -------------------------------------
+------------for definitions Fields----------------------
+BEGIN;
+ALTER TABLE definitions ADD column  indexing_tsv tsvector;
+
+--drop trigger tsv_definitions_notes  on  definitions;
+
+ CREATE TRIGGER tsv_definitions_indexing
+    BEFORE INSERT OR UPDATE ON definitions
+    FOR EACH ROW
+    EXECUTE PROCEDURE tsvector_update_trigger('indexing_tsv', 
+    'pg_catalog.english', 'indexing');
+
+CREATE INDEX definitions_indexing_tsv_idx   ON definitions  
+USING gin (to_tsvector('english'::regconfig, indexing_tsv::text));
+COMMIT;
+
+-------------------------------------
+
 
 update icd10cms_codes set long_description = trim(long_description);
 

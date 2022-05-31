@@ -212,8 +212,15 @@
    <p class="help"></p>
 </div>
 </div><!----column-------------------->
+
  <div class = "column">
-Aux
+<label class="label">Indexing</label>
+  <div class="control">
+   <%= text_input f, :indexing, class: "input", type: "text", 
+   placeholder: "Set Index"  %>
+   <%= error_tag f, :indexing %>
+   <p class="help"></p>
+</div>
  </div><!----column-------------------->
 
 
@@ -225,11 +232,11 @@ Aux
 <div class = "columns">
 <div class = "column">
 <div class="field">
-  <label class="label">Notes </label>
+  <label class="label">Notes / Field Indexing </label>
   <div class="control">
     <%= text_input f, :notes,
         class: "textarea",
-        type: "input", placeholder: "Text input"  %>
+        type: "input", placeholder: "Add a Note"  %>
   <p class="help"></p>
 
   </div><!---control---------->

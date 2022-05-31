@@ -58,7 +58,10 @@ CREATE TABLE public.definitions (
     defs_table_id integer,
     inserted_at timestamp(0) without time zone NOT NULL,
     updated_at timestamp(0) without time zone NOT NULL,
-    defs_table_id_multi integer[]
+    defs_table_id_multi integer[],
+    notes_tsv tsvector,
+    indexing character varying(255),
+    indexing_tsv tsvector
 );
 
 
@@ -563,6 +566,34 @@ ALTER TABLE ONLY public.opts_sentences
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: definitions_indexing_tsv_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX definitions_indexing_tsv_idx ON public.definitions USING gin (to_tsvector('english'::regconfig, (indexing_tsv)::text));
+
+
+--
+-- Name: definitions_notes_tsv_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX definitions_notes_tsv_idx ON public.definitions USING gin (to_tsvector('english'::regconfig, (notes_tsv)::text));
+
+
+--
+-- Name: definitions tsv_definitions_indexing; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER tsv_definitions_indexing BEFORE INSERT OR UPDATE ON public.definitions FOR EACH ROW EXECUTE FUNCTION tsvector_update_trigger('indexing_tsv', 'pg_catalog.english', 'indexing');
+
+
+--
+-- Name: definitions tsv_definitions_notes; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER tsv_definitions_notes BEFORE INSERT OR UPDATE ON public.definitions FOR EACH ROW EXECUTE FUNCTION tsvector_update_trigger('notes_tsv', 'pg_catalog.english', 'notes');
 
 
 --

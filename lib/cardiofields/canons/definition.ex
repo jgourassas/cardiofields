@@ -20,9 +20,8 @@ defmodule Cardiofields.Canons.Definition do
     field(:usual_range, :string)
     field(:valid_range, :string)
     field(:vocabulary_en, :string)
+    field(:indexing,  :string)
     #field(:notes_tsv, :tsvector)
-
-
     timestamps()
     has_many(:defs_sentences, Cardiofields.Canons.Defs_sentence, foreign_key: :definition_id)
     has_many(:defs_codes, Cardiofields.Canons.Defs_code, foreign_key: :definition_id)
@@ -51,6 +50,7 @@ defmodule Cardiofields.Canons.Definition do
       :usual_range,
       :valid_range,
       :data_source,
+      :indexing,
       :defs_table_id
     ])
     |> validate_required([:name])

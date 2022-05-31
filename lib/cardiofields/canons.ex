@@ -2,7 +2,6 @@ defmodule Cardiofields.Canons do
   @moduledoc """
   The Canons context.
   """
-
   import Ecto.Query, warn: false
   alias Cardiofields.Repo
 
@@ -120,6 +119,7 @@ defmodule Cardiofields.Canons do
       "field_codes" -> search_a_field_code(query)
       "inserted_after" -> search_inserted_after(query)
       "on_notes"  ->     search_on_notes(query)
+      "on_indexing"  ->     search_on_indexing(query)
       _ -> ""
     end
   end
@@ -130,11 +130,27 @@ defmodule Cardiofields.Canons do
     from(d in Definition,
     where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
      limit: 250,
-     order_by: [desc: d.name]
-   
+     #order_by: [desc: d.name]
+     order_by: fragment("ts_rank(to_tsvector(?), plainto_tsquery(?)) DESC", d.name, ^query)
       )
- 
+  
+     
+    
   end
+#################33
+def search_on_indexing(query) do
+  #IO.puts("----------notes--------------")
+  #IO.inspect(query)
+  from(d in Definition,
+  where: fragment("(?) @@ plainto_tsquery(?)", d.indexing_tsv, ^query),
+   limit: 250,
+   #order_by: [desc: d.name]
+   order_by: fragment("ts_rank(to_tsvector(?), plainto_tsquery(?)) DESC", d.name, ^query)
+    )
+
+   
+  
+end
   ########################
   def search_inserted_after(inserted_date) do
       #IO.puts("--------------updated after")

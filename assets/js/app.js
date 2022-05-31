@@ -56,19 +56,20 @@ window.onload = function() {
 tinymce.init({
     forced_root_block : "",
     selector: '.textarea',
+    themes: "modern",  
     height: 200,
     menubar: false,
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
-      'searchreplace visualblocks code fullscreen',
+      'searchreplace visualblocks code fullscreen textcolor',
       'insertdatetime media table paste code help wordcount'
     ],
     force_p_newlines: false,
     toolbar: 'undo redo | formatselect | ' +
     'bold italic backcolor | alignleft aligncenter ' +
-    'alignright alignjustify | link | link_image |bullist numlist outdent indent | ' +
-    'removeformat | help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    'alignright alignjustify | link | textcolor| table |link_image |bullist numlist outdent indent | ' +
+    'removeformat |  help',
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:18 px }'
   });
 
 

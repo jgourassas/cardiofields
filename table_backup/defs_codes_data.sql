@@ -5,7 +5,7 @@
 -- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
 -- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
 
--- Started on 2022-05-28 13:10:18 EEST
+-- Started on 2022-05-31 22:22:46 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1282,7 +1282,7 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 SELECT pg_catalog.setval('public.defs_codes_id_seq', 3018, true);
 
 
--- Completed on 2022-05-28 13:10:18 EEST
+-- Completed on 2022-05-31 22:22:46 EEST
 
 --
 -- PostgreSQL database dump complete

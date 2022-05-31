@@ -41,7 +41,8 @@
   Listing Suggested  Database tables
  </h5>
 
-    <table class="frame_1 table is-bordered
+    <table class="frame_1 
+    table is-bordered
     is-striped
     is-narrow is-fullwidth 
     is-hoverable">
