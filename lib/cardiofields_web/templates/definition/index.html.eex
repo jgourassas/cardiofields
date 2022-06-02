@@ -88,12 +88,11 @@ Total Number of Results
     is-hoverable">
       <thead class="thead">
          <tr>
-         <th> Updated - Inserted</th>
+         <th> Updated - Inserted Indexing</th>
           <th>Field Name</th>
           <th>Table</th>
           <th>Instructions 
-           Indexing
-            <i class="fa fa-wine-glass" aria-hidden="true"></i>
+           <i class="fa fa-wine-glass" aria-hidden="true"></i>
            </th>
           <th>
            <span>
@@ -134,28 +133,48 @@ Total Number of Results
    <tr>
    
    <td>
-      <span class="tag is-small is-rounded is-primary"> 
-      <i class="fa fa fa-arrow-turn-right"
-           style="font-size:16px;color:#fff;text-align:center;">
-     </i>
-      
-    <%=index + 1 %>
+   <!----
+      <span class="tag is-small is-rounded is-white"> 
+            <%#=index + 1 %>
     </span>
-
+    --->
+    <span class="button is-small is-info is-rounded">
+      <%=index + 1 %>
+      </span>
+  <div class="is-divider-horizontal" data-content="OR"></div>
+   
    <span class="tag is-white">
-   <i class="fa fa-eye" aria-hidden="true"></i>
-    Updated: 
-   <%=definition.updated_at
-   %>
+   Updated: 
+   <%=definition.updated_at %>
    </span>
 
-    
-   <span class="tag is-link">
-   <i class="fa fa-registered" aria-hidden="true"></i>
-      Inserted: 
-   <%= definition.inserted_at %></span>
+  
+   <span class="tag is-white">
+    Inserted :  
+      <%= definition.inserted_at %>
+  </span>
+
+
+
+<%= if "#{definition.indexing}" == "" do %>
+       
+       <p style="background-color:#ffd700;">
+         No Index
+        </p>
+       <% else %>
+      <p class="mr-0 pt-3">
+          <span style="background-color:#0047AB, color:ffffff;"> 
+         <em>Index: </em>
+      <strong>
+        <%= raw( definition.indexing) %>
+      </strong>
+        </span>
+      
+      </p>
+     <% end %>
+
 </td>
-      <td>
+      <td class="p-4">
         <strong><%= definition.name %>
         </strong>
        </td>
@@ -169,20 +188,7 @@ Total Number of Results
     <td>
      
       <%= raw( definition.coding_instructions) %>
-      <%= if "#{definition.indexing}" == "" do %>
-       
-       <p style="background-color:#ffd700;">
-         <i class="fa fa-syringe" aria-hidden="true"></i>
-         No Indexing
-        </p>
-       <% else %>
-      <p class="mr-0 pt-3">
-          <span style="background-color:#a7fc00;"> 
-           <i class="fa fa-wine-glass" aria-hidden="true"></i>
-         <%= raw( definition.indexing) %></span>
-          
-      </p>
-     <% end %>
+      
      
      </td>
 <td>

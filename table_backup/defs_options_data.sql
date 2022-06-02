@@ -5,7 +5,7 @@
 -- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
 -- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
 
--- Started on 2022-05-31 22:22:46 EEST
+-- Started on 2022-06-02 10:38:46 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2896,12 +2896,6 @@ college
 ', NULL, 388, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (656, 'discharge_status', '2', 'Deceased', NULL, NULL, 1128, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (657, 'hypothermia_treatment_location', '1', 'Pre-Hospital', '', '', 1076, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (658, 'cardiac_rehab_referral', '5', 'No-Patient
-Reason/Preference
-', NULL, NULL, 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (659, 'cardiac_rehab_referral', '6', 'No-Health Care
-System Reason
-', NULL, NULL, 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (660, 'discharge_location', '2', 'Extended
 Care/TCU/Rehab
 ', NULL, NULL, 1133, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
@@ -3002,6 +2996,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 
 <p>&nbsp;</p>
 ', NULL, 3457, '2017-03-12 09:47:56', '2017-03-12 09:54:41', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (658, 'acs_cardiac_rehab_referral', '5', 'No-PatientReason/Preference', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:50:14', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4075, 'av_node_function', '12', 'Pre-excitation (Delta wave)', NULL, NULL, 3458, '2017-03-12 13:22:17', '2017-03-12 13:22:17', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4065, 'av_node_function', '2', 'Short PR interval', '<p>PR interval &lt;&nbsp;120 ms.</p>
 ', NULL, 3458, '2017-03-12 13:18:36', '2017-03-12 13:23:39', NULL);
@@ -3887,13 +3882,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2248, 'oedema_location', '2.1.1', 'In the Thigh of Right  Leg', NULL, NULL, 2632, '2016-10-08 05:50:56', '2016-10-08 05:59:05', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2259, 'flail_posterior_degree', '0', 'None', NULL, NULL, 2635, '2016-10-08 14:41:11', '2016-10-08 14:41:11', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1233, 'shape_pseudo_aneurism_desc', '4', 'Inferior wall segments', NULL, NULL, 351, '2016-08-25 11:50:55', '2016-10-17 05:27:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1258, 'cardiac_rehab_referral', '3', 'Ineligible', '<ul>
-	<li>Ineligible may be selected for patients&nbsp;considered ineligible based on patient&nbsp;oriented barriers (patient refusal, for&nbsp;example), provider-oriented criteria&nbsp;(patient deemed to have a high-risk&nbsp;condition or contraindication to exercise&nbsp;such as dementia, homebound, long-&nbsp;term nursing home placement &gt;60&nbsp;days, for example), or health care&nbsp;system barriers (financial barriers or&nbsp;lack of cardiac rehab programs near a&nbsp;patient&#39;s home, for example)</li>
-</ul>
-
-<p>&nbsp;</p>
-', '<p>Retired effective v2.4.</p>
-', 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1259, 'stroke_ischemic_has', '2', 'atherosclerosis of the intracranial vessels', '<p>Large artery atherosclerosis of the intracranial vessels (e.g., middle cerebral artery stenosis)</p>
 ', '<p>Large artery atherosclerosis of the intracranial vessels (e.g., middle cerebral artery stenosis)</p>
 ', 1379, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
@@ -5243,9 +5231,6 @@ aneurysm
 ', NULL, NULL, 1100, '2016-08-25 11:50:55', '2016-09-11 04:49:01', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (449, 'reperfusion_no_reason', '3', 'MI diagnosis unclear', NULL, NULL, 1092, '2016-08-25 11:50:55', '2016-09-11 04:54:07', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (468, 'arterial_access_attempted', 'rl.s', 'Radial Left Success', NULL, NULL, 1380, '2016-08-25 11:50:55', '2016-09-15 14:42:22', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (590, 'cardiac_rehab_referral', '1', 'No Referral', NULL, NULL, 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (591, 'cardiac_rehab_referral', '2', 'Yes', NULL, NULL, 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (592, 'cardiac_rehab_referral', '4', 'No-Medical Reason', NULL, NULL, 1132, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (600, 'chf_etiology', '2', 'Valvular', '', '', 1586, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1643, 'func_katz_index', '6', 'Independent in all but bathing, dressing, toileting, transferring, and one additional function', '<p>F &ndash; Independent in all but bathing, dressing, toileting, transferring, and one additional function&nbsp;</p>', NULL, 1493, '2016-08-25 11:50:55', '2018-06-20 14:54:08', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8434, 'cath_cl_arrest_first_rhythm', '2', 'Not Shockable', NULL, NULL, 3747, '2018-06-15 08:47:50', '2018-06-15 08:47:50', NULL);
@@ -5360,6 +5345,9 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2039, 'av_reg_degree_pre_reinterv', '1', 'Trace/Trivial', NULL, NULL, 2485, '2016-09-09 07:17:26', '2016-09-09 07:17:26', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2086, 'abbreviations', 'reg', 'Regurgitation', '<p>Regurgitation</p>
 ', NULL, 27, '2016-09-20 14:52:46', '2016-12-08 15:38:06', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (592, 'acs_cardiac_rehab_referral', '4', 'No-Medical Reason', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:50:35', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (591, 'acs_cardiac_rehab_referral', '2', 'Yes', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:53:06', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (590, 'acs_cardiac_rehab_referral', '1', 'No Referral', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:53:29', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1989, 'tvr_echo_grade', '2', 'Mild', NULL, NULL, 2465, '2016-09-07 16:17:00', '2016-09-12 06:06:07', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1990, 'tvr_echo_grade', '3', 'Moderate', NULL, NULL, 2465, '2016-09-07 16:17:22', '2016-09-12 06:06:17', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1991, 'tvr_echo_grade', '4', 'Severe', NULL, NULL, 2465, '2016-09-07 16:17:47', '2016-09-12 06:06:26', NULL);
@@ -8496,6 +8484,8 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2401, 'mv_stenosis_area_method', '88', 'By other method', NULL, NULL, 2694, '2016-10-10 13:32:00', '2022-05-31 03:57:21', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2400, 'mv_stenosis_area_method', '2', 'By Doppler pressure half-time', NULL, '<strong>Pressure half-time (PHT) is defined a</strong>s the time interval in milliseconds between the maximum mitral gradient in early diastole and the time point where the gradient is half the maximum initial value. <br /><br />The decline of the velocity of diastolic transmitral blood flow is inversely proportional to valve area (cm2), and mitral valve area (MVA) is derived using an empirical formula.<br /><br />PHT is obtained by tracing the deceleration slope of the E-wave on Doppler spectral display of transmitral flow. <br /><br />The deceleration slope is sometimes bimodal, the decline of mitral flow velocity being more rapid in early diastole than during the following part of the E-wave. In these cases, it is recommended that the deceleration slope in mid-diastole rather than the early deceleration slope be traced.<br /><br />Overestimation of the MVA occurs when PHT is shortened by concomitant significant aortic insufficiency, decreased ventricular compliance, immediately after mitral balloon valvuloplasty, and atrial septal defect.<br /><br />MVA = 220 / PHT', 2694, '2016-10-10 13:31:31', '2022-05-31 04:01:16', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2281, 'echo_mv_chordal_dis_type', '99', 'Not Known', NULL, NULL, 2638, '2016-10-08 14:52:40', '2022-05-31 05:18:45', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (659, 'acs_cardiac_rehab_referral', '6', 'No-Health CareSystem Reason', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:49:49', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1258, 'acs_cardiac_rehab_referral', '3', 'Ineligible', 'Retired effective v2.4.', '<p>Retired effective v2.4.</p>Ineligible may be selected for patients&nbsp;considered ineligible based on patient&nbsp;oriented barriers (patient refusal, for&nbsp;example), provider-oriented criteria&nbsp;(patient deemed to have a high-risk&nbsp;condition or contraindication to exercise&nbsp;such as dementia, homebound, long-&nbsp;term nursing home placement &gt;60&nbsp;days, for example), or health care&nbsp;system barriers (financial barriers or&nbsp;lack of cardiac rehab programs near a&nbsp;patient''s home, for example)<br /><p>&nbsp;</p>', 1132, '2016-08-25 11:50:55', '2022-06-02 02:52:27', NULL);
 
 
 --
@@ -8507,7 +8497,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 SELECT pg_catalog.setval('public.defs_options_id_seq', 9028, true);
 
 
--- Completed on 2022-05-31 22:22:46 EEST
+-- Completed on 2022-06-02 10:38:46 EEST
 
 --
 -- PostgreSQL database dump complete

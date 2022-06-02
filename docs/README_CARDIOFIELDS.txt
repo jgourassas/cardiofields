@@ -8,7 +8,7 @@ NOTES:
   Before to use it Please verify the accuracy and/or usefulness.
   Some data are not fully completed
 
-  Correct - update - Change - Add any disagreements in definitions and controlled vocabularies 
+  Correct - update - Change - Add any disagreements in Fields / Definitions and controlled vocabularies 
   to suite your needs.
 
 

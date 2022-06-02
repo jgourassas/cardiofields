@@ -5,7 +5,7 @@
 -- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
 -- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
 
--- Started on 2022-05-31 22:22:46 EEST
+-- Started on 2022-06-02 10:38:47 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -181,8 +181,8 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (932, NULL, NULL, NULL, NULL, NULL, 'covid', 'To select Covid-19 data', NULL, '2022-05-11 08:47:13', '2022-05-11 08:47:13', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (933, NULL, NULL, NULL, NULL, NULL, 'cor_revascularization', '2020 AHA/ACC Key Data Elements and Definitions for Coronary Revascularization', NULL, '2022-05-21 07:53:14', '2022-05-21 07:53:14', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (934, NULL, NULL, NULL, NULL, NULL, 'social_histories', 'social_histories', NULL, '2022-05-21 14:58:00', '2022-05-21 14:58:00', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (682, NULL, NULL, NULL, NULL, NULL, 'acs_iv_meds', '<p>This is table belong to Acute Coronary Syndoms.</p><p>Contains the Intravenous Medications given or use during the Hospital Stay. <br /><br />Mainly is the same as in ACTION Registry</p>', NULL, '2016-09-14 15:57:00', '2022-05-27 18:57:13', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (930, NULL, NULL, NULL, NULL, NULL, 'bio__valve_dysfunc', '<strong>Structural valve deterioration</strong> <br />includes permanent intrinsic changes of the valve (i.e. leaflet tear, calcification, pannus eposition, flail, or fibrotic leaflet) leading to degeneration and/or dysfunction, which in turn may result in stenosis or intra-prosthetic regurgitation', NULL, '2022-05-01 15:10:49', '2022-05-27 18:58:38', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (682, NULL, NULL, NULL, NULL, NULL, 'acs_iv_meds', '<p>This is table belong to Acute Coronary Syndoms.</p><p>Contains the Intravenous Medications given or use during the Hospital Stay. <br /><br /></p>', NULL, '2016-09-14 15:57:00', '2022-06-02 03:29:56', NULL);
 
 
 --
@@ -194,7 +194,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 SELECT pg_catalog.setval('public.defs_tables_id_seq', 934, true);
 
 
--- Completed on 2022-05-31 22:22:46 EEST
+-- Completed on 2022-06-02 10:38:47 EEST
 
 --
 -- PostgreSQL database dump complete

@@ -37,18 +37,6 @@ public function sql_description_ranked($field,$text,$limit){
     data_responsible varchar(250)
     data_owner  varchar(250)
 
---------------------------
-ALTER TABLE icd10cms_codes ADD column  long_description_tsv type tsvector
-
-drop trigger tsv_icd10cms_codes_long_description on  icd10cms_codes;
-
-  CREATE TRIGGER tsv_icd10cms_codes_long_description
-    BEFORE INSERT OR UPDATE ON icd10cms_codes
-    FOR EACH ROW
-    EXECUTE PROCEDURE tsvector_update_trigger('long_description_tsv', 
-    'pg_catalog.english', 'long_description');
-
-CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
 
 -------------for definitions Fields----------------------
 BEGIN;
@@ -67,7 +55,7 @@ USING gin (to_tsvector('english'::regconfig, notes_tsv::text));
 COMMIT;
 
 -------------------------------------
-------------for definitions Fields----------------------
+------------for definitions Fields INDEXING----------------------
 BEGIN;
 ALTER TABLE definitions ADD column  indexing_tsv tsvector;
 
@@ -86,28 +74,9 @@ COMMIT;
 -------------------------------------
 
 
-update icd10cms_codes set long_description = trim(long_description);
-
 update definitions set table_name = trim(table_name);
 update definitions set target_value = trim(target_value);
 update definitions set coding_instructions = trim(coding_instructions);
-
-
-
-
-CREATE TRIGGER tsv_icd10cms_codes_long_description
-    BEFORE INSERT OR UPDATE ON icd10cms_codes
-    FOR EACH ROW
-    EXECUTE PROCEDURE tsvector_update_trigger('long_description_tsv', 'pg_catalog.english', 'long_description');
-
-
-  CREATE INDEX icd10cms_codes_long_description_tsv_idx   ON icd10cms_codes  USING gin (to_tsvector('english'::regconfig, long_description_tsv::text));
-Indexes:
-    "feature_pkey" PRIMARY KEY, btree (id, f_id)
-    "feature_unique" UNIQUE, btree (feature, f_class)
-    "feature_constraint" UNIQUE CONSTRAINT, btree (feature, f_class)
-
-To drop the UNIQUE CONSTRAINT, you would use ALTER TABLE:
 
 SELECT 'REINDEX TABLE CONCURRENTLY ' || quote_ident(relname) || ' /*' || pg_size_pretty(pg_total_relation_size(C.oid)) || '*/;'
 FROM pg_class C

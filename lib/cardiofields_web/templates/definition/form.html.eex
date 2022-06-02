@@ -29,13 +29,16 @@
  <div class = "column">
 
 <div class="field">
-     <label class="label">Section - Table Name </label>
-     <div class="control">
-    <div class="select is-primary">
+     <label class="label">Table Name  - Select</label>
+     <div class="control has-icons-left">
+    <div class="select is-primary is-normal is-hovered  ">
   <%= select(f, :defs_table_id, @defs_tables, class: "form-control")    %>
-      <option>Select Table</option>
-
-    </div><!--select---->
+      <option> - </option>
+        </div><!--select---->
+         <div class="icon is-normal is-right is-primary">
+         <i class="fa fa-globe"></i>
+       </div>
+     
      </div><!--control---->
   </div><!---field--->
 
