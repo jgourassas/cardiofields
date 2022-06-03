@@ -179,16 +179,21 @@ color: #000;
 .table th {
   font-size: 18px;
   background-color: #d9d9d6;//#adbad4;
-  //color: #ffff;
+    
 }
-
-
+.table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: #d0fffd;
+}
+.table__wrapper {
+  overflow-x: auto;
+}
 
 .fa-code, .fa-search {
   margin-right: 0.5vw;
 }
 
 .footer{
-  background-color: #D6DFFF;
+  background-color: #dde2d7;
+  color:#07084b;
 }
-//$fullhd-enabled: false
+

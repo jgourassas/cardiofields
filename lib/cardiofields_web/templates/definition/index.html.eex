@@ -81,14 +81,15 @@ Total Number of Results
 <div class="table-container">
 
 
- <table class="table is-bordered
+ <table class="table 
+    is-bordered
     is-striped
     is-narrow 
     is-fullwidth 
-    is-hoverable">
+    is-hoverable ">
       <thead class="thead">
          <tr>
-         <th> Updated - Inserted Indexing</th>
+         <th> Updated - Inserted - <em>Indexing</em></th>
           <th>Field Name</th>
           <th>Table</th>
           <th>Instructions 
@@ -133,11 +134,6 @@ Total Number of Results
    <tr>
    
    <td>
-   <!----
-      <span class="tag is-small is-rounded is-white"> 
-            <%#=index + 1 %>
-    </span>
-    --->
     <span class="button is-small is-info is-rounded">
       <%=index + 1 %>
       </span>
@@ -223,7 +219,7 @@ class: "button is-info is-small is-rounded is-fullwidth "  do %>
       </td>
 
       <td>
-        <%= link "Edit", to: Routes.definition_path(@conn, :edit, definition) , class: "button is-primary is-small" %>
+        <%= link "Edit", to: Routes.definition_path(@conn, :edit, definition) , class: "button is-primary is-small is-fullwidth " %>
       </td>
 
       <td>

@@ -53,6 +53,24 @@ window.onload = function() {
 */
 /////////////////
 
+///////////@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+//import tinymce from '../node_modules/tinymce/tinymce.min.js';
+
+//import './node_modules/tinymce/themes/silver/theme.min.js';
+//import 'tinymce/plugins/advlist';
+////import 'tinymce/plugins/colorpicker';
+//import 'tinymce/plugins/textcolor';
+//import 'tinymce/plugins/paste';
+//import 'tinymce/plugins/link';
+//import 'tinymce/skins/lightgray/skin.min.css';
+//import 'tinymce/skins/ui/oxide-dark/skin.min.css';
+ //import 'tinymce/skins/ui/oxide/skin.min.css';
+
+////////////////////////////
+//////////////////////////////
+
+
 tinymce.init({
     forced_root_block : "",
     selector: '.textarea',
@@ -69,9 +87,8 @@ tinymce.init({
     'bold italic backcolor | alignleft aligncenter ' +
     'alignright alignjustify | link | textcolor| table |link_image |bullist numlist outdent indent | ' +
     'removeformat |  help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:18 px }'
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:18px }'
   });
-
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})

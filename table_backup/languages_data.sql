@@ -5,7 +5,7 @@
 -- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
 -- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
 
--- Started on 2022-06-02 10:38:47 EEST
+-- Started on 2022-06-03 11:58:22 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -219,7 +219,7 @@ INSERT INTO public.languages (id, alpha2, english) VALUES (184, 'zu', 'Zulu');
 SELECT pg_catalog.setval('public.languages_id_seq', 184, true);
 
 
--- Completed on 2022-06-02 10:38:47 EEST
+-- Completed on 2022-06-03 11:58:22 EEST
 
 --
 -- PostgreSQL database dump complete
