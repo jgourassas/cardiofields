@@ -61,7 +61,9 @@ CREATE TABLE public.definitions (
     defs_table_id_multi integer[],
     notes_tsv tsvector,
     indexing character varying(255),
-    indexing_tsv tsvector
+    indexing_tsv tsvector,
+    inserted_by character varying(255),
+    updated_by character varying(255)
 );
 
 

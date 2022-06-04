@@ -73,6 +73,34 @@
 
 <!---------end start------------------------------------>
 
+<!---------start----------------------------------->
+<div class = "columns">
+
+<div class = "column">
+<label class="label">Inserted By </label>
+  <div class="control">
+   <%= text_input f, :inserted_by, class: "input", type: "text", 
+   placeholder: "Inserted By"  %>
+  </div>
+   <%= error_tag f, :inserted_by %>
+   <p class="help">Who Has Inserted the Field</p>
+
+</div><!----column-------------------->
+
+<div class = "column">
+ <label class="label">Updated By </label>
+  <div class="control">
+   <%= text_input f, :updated_by, class: "input", type: "text", 
+   placeholder: "Updated By"  %>
+  </div>
+   <%= error_tag f, :updated_by %>
+   <p class="help"></p>
+</div><!----column-------------------->
+
+
+</div><!----columns--------------------------->
+
+<!---------end start------------------------------------>
 
 <!---------start----------------------------------->
 <div class = "columns">
@@ -231,6 +259,8 @@
 </div><!----columns--------------------------->
 
 <!---------end start------------------------------------>
+
+
 <!---------start----------------------------------->
 <div class = "columns">
 <div class = "column">

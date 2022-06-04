@@ -41,6 +41,16 @@
     <strong class="frame_3" >Indexing:</strong>
     <%= @definition.indexing %>
   </li>
+  <li class="list-item ">
+    <strong class="frame_3" >Inserted By</strong>
+    <%= @definition.inserted_by %>
+  </li>
+  
+ <li class="list-item ">
+    <strong class="frame_3" >Updated By</strong>
+    <%= @definition.updated_by %>
+  </li>
+  
 </div><!----column end----------------->
 <div class="column frame_1">
 
