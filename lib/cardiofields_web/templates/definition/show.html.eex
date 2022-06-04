@@ -28,17 +28,17 @@
   </li>
 
   <li  class="list-item">
-    <strong>Coding instructions:</strong>
+    <strong class="frame_3">Coding instructions:</strong>
     <%=raw @definition.coding_instructions %>
   </li>
 
   <li class="list-item" >
-    <strong>Support definition:</strong>
+    <strong class="frame_3" >Support definition:</strong>
     <%= raw @definition.support_definition %>
   </li>
 
-    <li class="list-item">
-    <strong>Indexing:</strong>
+    <li class="list-item ">
+    <strong class="frame_3" >Indexing:</strong>
     <%= @definition.indexing %>
   </li>
 </div><!----column end----------------->
@@ -52,20 +52,28 @@
   <li class="list-item" >
     <strong>Target value:</strong> 
     <% string_len = to_string(@definition.target_value) %>
-   <% if String.length(string_len) === 0 do  %>
-    <span> No Completed </span>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Empty Field Data </span>
    <% else %>
     <%= raw @definition.target_value %>
     <%end %>
   </li>
 
-  <li class="list-item">
-    <strong>Short name:</strong>
-    <%= @definition.short_name %>
-  </li>
-  <li class="list-item">
 
-    <strong>Ref:</strong>
+<li class="list-item" >
+    <strong>Short name</strong> 
+    <% string_len = to_string(@definition.short_name) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.short_name %>
+    <%end %>
+  </li>
+
+  
+
+  <li class="list-item">
+    <strong>Referrence:</strong>
     <%= @definition.ref %>
   </li>
 
@@ -97,7 +105,7 @@
 
 
   <li class="list-item">
-    <strong>Defs table:</strong>
+    <strong>Field table ID:</strong>
     <%= @definition.defs_table_id %>
   </li>
 

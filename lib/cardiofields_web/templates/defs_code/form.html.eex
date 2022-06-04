@@ -31,13 +31,14 @@
 
 
 
-    <div class="columns frame_1">
-  <div class="column is-4 " >
+    <div class="columns">
+  <div class="column is-3 frame_3 " >
 <div class="field">
      <label class="label">Select Coding System </label>
      <div class="control">
     <div class="select is-primary">
-  <%= select(f, :code_system, coding_systems, prompt: "---Select---",
+  <%= select(f, :code_system, coding_systems, 
+  prompt: "---Select---",
  class: "form-control")    %>
       
     </div><!--select---->
@@ -45,9 +46,9 @@
   </div><!---field--->
 
   </div><!----column------>
-<div class="column is-4">
+<div class="column is-4 frame_3">
  <div class="field">
-  <label class="label">Code</label>
+  <label class="label">Code </label>
   <div class="control">
     <%= text_input f, :code,
         class: "input",
@@ -58,14 +59,14 @@
 %>
   <%= error_tag f, :code %>
 
-  <p class="help"></p>
+  <p class="help">( Required )</p>
 
   </div><!---control---------->
    </div><!-------field-------->
 
 
   </div><!----column------>
- <div class="column">
+ <div class="column frame_3 is-4">
    <div class="field">
   <label class="label">Description </label>
   <div class="control">

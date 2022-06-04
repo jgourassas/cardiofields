@@ -245,6 +245,8 @@ class: "button is-info is-small is-rounded is-fullwidth "  do %>
 
 
 
+
+
 <%= if @page.total_entries == 0 do %>
 <section class="section">
 <div class="container">
@@ -266,48 +268,55 @@ Total Pages:
 
 <div class="block">
 <nav class="pagination">
-<ul class="pagination-list">
 
-<%= if @page.page_number > 1 do %>
+ <span class="has-text-centered">
+    <%= render  CardiofieldsWeb.SharedView,
+   "_pagination.html", conn: @conn, page: @page %>
+   </span>
+
+<!---
+<%#= if @page.page_number > 1 do %>
 <li>
 <span class="pagination-previous" , >
-  <%= link "Previous Page",
+  <%#= link "Previous Page",
           to: Routes.definition_path(@conn, :index, page: @page.page_number - 1) %>
 </span>
 </li>
-<% end %>
+<%# end %>
 
 
-<%= if @page.page_number == 1 do %>
+
+<%#= if @page.page_number == 1 do %>
 <li>
-<span class="my-4 pagination-next"> <%= link "Back To Fields List",
+<span class="my-4 pagination-next"> 
+<%#= link "Back To Fields List",
  to: Routes.definition_path(@conn, :index)  %>
  </span>
 </li>
-<% end %>
+<%# end %>
 
-<%= if @page.page_number < @page.total_pages do %>
+<%#= if @page.page_number < @page.total_pages do %>
 <li>
 <span class="my-4 pagination-next">
-  <%= link "Next Page",
+  <%#= link "Next Page",
   to: Routes.definition_path(@conn, :index, page: @page.page_number + 1) %>
 </span>
 </li>
-<% end %>
+<%# end %>
 
-<%= if @page.page_number > 1 do %>
+<%#= if @page.page_number > 1 do %>
 <span   class="tags m y-4">
-<%= for i <- (@page.page_number - 5)..(@page.page_number + 5), i > 0 do %>
+<%#= for i <- (@page.page_number - 5)..(@page.page_number + 5), i > 0 do %>
   <li>
-  <%= link "#{i}", class: "pagination-link",
+  <%#= link "#{i}", class: "pagination-link",
   to: Routes.definition_path(@conn, :index, page:  i) %>
 </li>
-<% end %>
+<%# end %>
 
 </span>
-<% end %>
+<%# end %>
+-->
 
-</ul>
 
 </nav>
  </div>

@@ -16,6 +16,7 @@ defmodule CardiofieldsWeb.DefinitionController do
       |> Repo.paginate(params)
 
     render(conn, "index.html", definitions: page.entries, page: page)
+    
   end
 
   def new(conn, _params) do

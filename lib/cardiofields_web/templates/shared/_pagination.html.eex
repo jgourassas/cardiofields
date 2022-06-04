@@ -1,0 +1,41 @@
+<ul class="pagination-list">
+ <%= if @page.page_number == 1 do %>
+<li>
+  <span class="my-4 pagination-previous "> 
+    <%= link "Back To Fields List",
+ to: Routes.definition_path(@conn, :index)  %>
+ </span>
+</li>
+<% end %>
+
+<%= if @page.page_number > 2 do %>
+<li>
+<span class="pagination-previous" , >
+  <%= link "Previous Page",
+          to: Routes.definition_path(@conn, :index, page: @page.page_number - 1) %>
+</span>
+</li>
+<% end %>
+
+
+<%= if @page.page_number < @page.total_pages do %>
+<li>
+<span class="my-4 pagination-next">
+  <%= link "Next Page",
+  to: Routes.definition_path(@conn, :index, page: @page.page_number + 1) %>
+</span>
+</li>
+<% end %>
+
+<%= if @page.page_number > 1 do %>
+<span   class="tags m y-4">
+<%= for i <- (@page.page_number - 3)..(@page.page_number + 3), i > 0 do %>
+  <li>
+  <%= link "#{i}", class: "pagination-link",
+  to: Routes.definition_path(@conn, :index, page:  i) %>
+</li>
+<% end %>
+
+</span>
+<% end %>
+</ul>

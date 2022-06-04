@@ -235,7 +235,7 @@
 <div class = "columns">
 <div class = "column">
 <div class="field">
-  <label class="label">Notes / Field Indexing </label>
+  <label class="label"> My Private Notes</label>
   <div class="control">
     <%= text_input f, :notes,
         class: "textarea",

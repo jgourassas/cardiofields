@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
--- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
+-- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
+-- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-03 11:58:22 EEST
+-- Started on 2022-06-04 15:31:14 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2266,7 +2266,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4228, 'death_primary_cause', '22', 'Sudden cardiac death', NULL, NULL, 127, '2017-06-26 14:15:00', '2017-06-26 14:15:00', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3863, 'anticoagulation_during', '99', 'No Record - Unknown', NULL, NULL, 3335, '2016-12-29 07:33:03', '2016-12-29 07:33:03', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3979, 'cmed_given_route', 'IB', 'Intrabursal', NULL, NULL, 3247, '2017-02-05 09:22:21', '2018-06-12 09:11:53', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3998, 'contrast_agents_classes', '2', 'Gadolinium compound', NULL, NULL, 3373, '2017-02-07 15:49:46', '2017-02-07 15:49:46', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2813, 'echo_av_veg_yn', '5', 'Yes In RCC + LCC', NULL, NULL, 2869, '2016-10-18 14:38:03', '2016-10-18 14:38:03', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4002, 'icd_proc_type', '2', 'Generator change', '<p>The patient already has an ICD and is receiving a<br />
 generator that is an upgrade or a change from one<br />
@@ -8432,7 +8431,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4211, 'acs_he_arrest_in_facility_yn', '1', 'Yes', NULL, NULL, 930, '2017-06-26 06:12:48', '2022-05-25 18:54:52', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1151, 'acs_anticoagulants', '2', 'Contraindicated', NULL, NULL, 1563, '2016-08-25 11:50:55', '2022-05-25 19:00:45', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1150, 'acs_anticoagulants', '1', 'Yes', NULL, NULL, 1563, '2016-08-25 11:50:55', '2022-05-25 19:01:06', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8988, 'aaa_fake', '1', 'aaa_fake option 1', NULL, NULL, 303, '2022-05-25 19:09:48', '2022-05-25 19:09:48', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8989, 'soh_illicit_drug_yn', '1', 'Current user', NULL, NULL, 384, '2022-05-26 07:45:55', '2022-05-26 07:45:55', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8990, 'soh_illicit_drug_yn', '2', 'Recent user (within 1 y but not current)', NULL, NULL, 384, '2022-05-26 07:46:30', '2022-05-26 07:46:30', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8991, 'soh_illicit_drug_yn', '3', 'Former user (&gt;1 y)', NULL, NULL, 384, '2022-05-26 07:46:54', '2022-05-26 07:46:54', NULL);
@@ -8444,6 +8442,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9016, 'heart_failure_stage', 'stage_d', 'Stage D', 'Refractory HF requiring specialized interventions.', NULL, 4078, '2022-05-26 09:07:33', '2022-05-26 09:07:33', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9017, 'heart_failure_stage', '88', 'Unknown', 'A proper value is applicable but not known.', NULL, 4078, '2022-05-26 09:08:34', '2022-05-26 09:08:34', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (41, 'coh_diabetes_therapy', '99', 'Unknown - No Record', 'Unknown - No Record', NULL, 1378, '2016-08-25 11:50:55', '2022-05-26 19:13:13', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8988, 'aaa_fake', '1', 'aaa_fake option 1', 'check it', NULL, 303, '2022-05-25 19:09:48', '2022-06-03 12:09:08', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9018, 'coh_diabetes_therapy', '1', 'coh_diabetes_therapy_with_sgtl-2', NULL, '<br /><br />Added as a separate class of oral agents because of their effect on&nbsp;<br />cardiovascular outcomes.<br /><br />SGLT2 inhibitors are medications that have a unique mechanism of action and that lower glucose independent of insulin. <br /><br />Given the recent findings on efficacy and benefits, these agents are rapidly establishing their role in the treatment of diabetes. <br /><br />Especially in patients with type 2 diabetes not willing or not ready to start insulin, SGLT2 inhibitors may be another option in those patients requiring additional glucose lowering and in those with acceptable risk factor profiles.<br /><br />Although there appears to be some positive benefits in cardiovascular endpoints, more research on the long term outcomes in people taking SGLT2 inhibitors is warranted.<br /><br /><strong>Medications</strong><br /><br />Dapagliflozin Canagliflozin Empagliflozin Ertugliflozin Ipragliflozin Sotagliflozin Luseogliflozin<br /><br />&Pi;&eta;&gamma;ή: &Gamma;&alpha;&lambda;&eta;&nu;ό&sigmaf; &Omicron;&delta;&eta;&gamma;ό&sigmaf; &Phi;&alpha;&rho;&mu;ά&kappa;&omega;&nu;', 1378, '2022-05-26 19:19:28', '2022-05-26 19:24:12', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1658, 'cath_pacemaker_interv_any_yn', '3', 'Pacemaker Impanted', NULL, NULL, 2326, '2016-08-25 11:50:55', '2022-05-27 19:31:48', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8716, 'cath_care_facility', 'B', 'Facility B', NULL, NULL, 3551, '2019-05-22 16:27:07', '2022-05-27 19:38:54', NULL);
@@ -8486,6 +8485,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2281, 'echo_mv_chordal_dis_type', '99', 'Not Known', NULL, NULL, 2638, '2016-10-08 14:52:40', '2022-05-31 05:18:45', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (659, 'acs_cardiac_rehab_referral', '6', 'No-Health CareSystem Reason', NULL, NULL, 1132, '2016-08-25 11:50:55', '2022-06-02 02:49:49', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1258, 'acs_cardiac_rehab_referral', '3', 'Ineligible', 'Retired effective v2.4.', '<p>Retired effective v2.4.</p>Ineligible may be selected for patients&nbsp;considered ineligible based on patient&nbsp;oriented barriers (patient refusal, for&nbsp;example), provider-oriented criteria&nbsp;(patient deemed to have a high-risk&nbsp;condition or contraindication to exercise&nbsp;such as dementia, homebound, long-&nbsp;term nursing home placement &gt;60&nbsp;days, for example), or health care&nbsp;system barriers (financial barriers or&nbsp;lack of cardiac rehab programs near a&nbsp;patient''s home, for example)<br /><p>&nbsp;</p>', 1132, '2016-08-25 11:50:55', '2022-06-02 02:52:27', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3998, 'contrast_agents_classes', '2', 'Gadolinium compound', NULL, 'Gadolinium contrast agents are given to patients during body scans to help obtain a clear image of the inside of the body.<br /><br />It is known that small amounts of gadolinium may remain in the brain after a scan with these agents, although there is currently no evidence that these small amounts cause any harm.<br /><br />As a precaution, doctors will stop using some contrast agents given into the vein while some others will only be used when other agents are not suitable (e.g. for liver scans).<br /><br />Gadolinium contrast agents are essential for diagnosing a wide range of life-threatening and debilitating diseases.<br /><br />If you need a scan with a gadolinium contrast agent to help in your treatment, your doctor will use the lowest dose required for a clear image.', 3373, '2017-02-07 15:49:46', '2022-06-04 04:00:09', NULL);
 
 
 --
@@ -8497,7 +8497,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 SELECT pg_catalog.setval('public.defs_options_id_seq', 9028, true);
 
 
--- Completed on 2022-06-03 11:58:22 EEST
+-- Completed on 2022-06-04 15:31:14 EEST
 
 --
 -- PostgreSQL database dump complete

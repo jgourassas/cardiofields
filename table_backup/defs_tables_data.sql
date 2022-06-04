@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
--- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
+-- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
+-- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-03 11:58:22 EEST
+-- Started on 2022-06-04 15:31:15 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -134,7 +134,6 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (695, NULL, NULL, NULL, NULL, NULL, 'asd_closures', 'Data for Atrial Septal Defect Interventions', NULL, '2016-09-14 15:57:00', '2016-09-15 16:02:12', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (813, NULL, NULL, NULL, NULL, NULL, 'cath_labs', '<p>PCI: Biomarkers, Creatine, Hb Before and Post Procedure</p>', NULL, '2016-09-14 15:57:00', '2018-06-14 07:13:49', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (785, NULL, NULL, NULL, NULL, NULL, 'tavr_fups', 'For Transcatheter Aortic Valve Replacement Procedures. . FOLLOW-UP (30 DAYS, 1 YEAR FROM DATE OF PROCEDURE)', NULL, '2016-09-14 15:57:00', '2016-09-21 05:28:37', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (821, NULL, NULL, NULL, NULL, NULL, 'acs_pre_admissions', '	Acute Coronary Syndromes.All Events before Admission', NULL, '2016-09-14 15:57:00', '2016-09-26 15:32:09', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (759, NULL, NULL, NULL, NULL, NULL, 'pci_images', 'Multi Media for PCI pocedures', NULL, '2016-09-14 15:57:00', '2016-09-14 15:56:26', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (756, NULL, NULL, NULL, NULL, NULL, 'patient_proc_codes', 'Codes For patient Procedures. The Codes can be ICD10-PCS, SNOMED-CT or whatever.  Fields contained code_id, coding_system coding_date,', NULL, '2016-09-14 15:57:00', '2016-09-20 15:29:00', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (805, NULL, NULL, NULL, NULL, NULL, 'tmvr_pre_proc', 'Transcatheter Mitral Valve Procedures â Leaflet Clip.  REASONS/INDICATIONS', NULL, '2016-09-14 15:57:00', '2017-06-29 05:23:18', NULL);
@@ -179,6 +178,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (929, NULL, NULL, NULL, NULL, NULL, 'proc_episodes', 'Holds Data for the Details of Coronary Angio procedure. Catheters...', NULL, '2019-09-17 04:50:32', '2019-09-17 04:50:32', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (931, NULL, NULL, NULL, NULL, NULL, 'chest_pain', 'Chest Pain Registry', NULL, '2022-05-04 17:29:44', '2022-05-04 17:29:44', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (932, NULL, NULL, NULL, NULL, NULL, 'covid', 'To select Covid-19 data', NULL, '2022-05-11 08:47:13', '2022-05-11 08:47:13', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (821, NULL, NULL, NULL, NULL, NULL, 'acs_pre_admissions', 'Acute Coronary Syndromes. All Events before Admission', NULL, '2016-09-14 15:57:00', '2022-06-04 05:31:01', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (933, NULL, NULL, NULL, NULL, NULL, 'cor_revascularization', '2020 AHA/ACC Key Data Elements and Definitions for Coronary Revascularization', NULL, '2022-05-21 07:53:14', '2022-05-21 07:53:14', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (934, NULL, NULL, NULL, NULL, NULL, 'social_histories', 'social_histories', NULL, '2022-05-21 14:58:00', '2022-05-21 14:58:00', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (930, NULL, NULL, NULL, NULL, NULL, 'bio__valve_dysfunc', '<strong>Structural valve deterioration</strong> <br />includes permanent intrinsic changes of the valve (i.e. leaflet tear, calcification, pannus eposition, flail, or fibrotic leaflet) leading to degeneration and/or dysfunction, which in turn may result in stenosis or intra-prosthetic regurgitation', NULL, '2022-05-01 15:10:49', '2022-05-27 18:58:38', NULL);
@@ -194,7 +194,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 SELECT pg_catalog.setval('public.defs_tables_id_seq', 934, true);
 
 
--- Completed on 2022-06-03 11:58:22 EEST
+-- Completed on 2022-06-04 15:31:15 EEST
 
 --
 -- PostgreSQL database dump complete
