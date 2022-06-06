@@ -124,6 +124,53 @@ defmodule Cardiofields.Canons do
     end
   end
   #####################
+ ##############################
+ def search_definition_name(qname) do
+  IO.puts("--------1111 search defintion-------------------")
+  IO.inspect(qname)
+  
+  _query =
+    from(
+      d in Definition,
+      where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
+      # where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
+      limit: 250,
+      order_by: [asc: d.name, asc: d.table_name]
+    )
+end
+#############################
+def search_definition_name_1(qname, criteria)   do
+IO.puts("--------2222 search defintion-------------------")
+IO.inspect(criteria)
+#Enum.reduce([1, 2, 3], 0, fn x, acc -> x + acc end)
+page = String.to_integer(criteria["page"] || "1")
+per_page = String.to_integer(criteria["per_page"] || "5")
+
+query =
+  from(
+    d in Definition
+       )
+   
+   # Enum.reduce(criteria, query, fn {:paginate, % {page: page, per_page: per_page } },
+   #    query ->
+   #    from q in query,
+   #    offset: ^((page - 1) * per_page),
+   #    limit: ^per_page
+    # end  
+   #  )
+    # |> Repo.all()
+
+  #Enum.reduce(criteria, query, fn {:paginate,%{page: page, per_page: per_page } },
+  #    query ->
+  #    from q in query,
+  #    offset: ^((page - 1) * per_page),
+  #    limit: ^per_page
+  #  end  
+  #  )
+  #  |> Repo.all()
+
+end
+  ######################3
   def search_on_notes(query) do
     #IO.puts("----------notes--------------")
     #IO.inspect(query)
@@ -180,18 +227,7 @@ def search_a_field_code(qcode) do
     limit: 250
   )
 end
-  ##############################
-  def search_definition_name(qname) do
-    _query =
-      from(
-        d in Definition,
-        where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
-        # where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
-        limit: 250,
-        order_by: [asc: d.name, asc: d.table_name]
-      )
-  end
-
+ 
   ######################################
   @spec search_an_instruction(any) :: Ecto.Query.t()
   def search_an_instruction(qname) do

@@ -42,13 +42,24 @@
     <%= @definition.indexing %>
   </li>
   <li class="list-item ">
-    <strong class="frame_3" >Inserted By</strong>
+    <strong>Inserted By</strong>
     <%= @definition.inserted_by %>
+    <em >
+    <span > On:
+    <%= @definition.inserted_at %>
+     </span>
+  </em>
   </li>
   
  <li class="list-item ">
-    <strong class="frame_3" >Updated By</strong>
+    <strong>Updated By</strong>
     <%= @definition.updated_by %>
+     <em>
+     <span > On: 
+    <%= @definition.updated_at %>
+     </sapn>
+
+    </em>
   </li>
   
 </div><!----column end----------------->

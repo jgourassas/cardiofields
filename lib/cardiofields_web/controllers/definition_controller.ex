@@ -16,7 +16,7 @@ defmodule CardiofieldsWeb.DefinitionController do
       |> Repo.paginate(params)
 
     render(conn, "index.html", definitions: page.entries, page: page)
-    
+
   end
 
   def new(conn, _params) do
@@ -162,15 +162,30 @@ defmodule CardiofieldsWeb.DefinitionController do
       ) do
     trim_query = String.trim(query)
 
-    page =
-      Canons.search_a_definition(trim_query, selection)
-      |> Repo.paginate(page: params["page"], page_size: 260)
 
-    # IO.puts("----------------")
-    # IO.inspect(page.total_entries)
-    render(conn, "index.html", definitions: page.entries, page: page)
+   page =
+     Canons.search_a_definition(trim_query, selection)
+      |> Repo.paginate(page: params["page"], page_size: 5)
+        render(conn, "index.html", definitions: page.entries, page: page)
   end
+############################
 
+def search_definitions_1(
+  conn,
+  %{"search_definitions" => %{"query" => query, "selection" => selection}} = params
+) do
+
+
+  trim_query = String.trim(query)
+  paginate_options = %{page: 1, per_page: 5}
+
+page =
+Canons.search_a_definition(trim_query, selection, paginate_options)
+#|> Repo.paginate(page: params["page"], per_page: 10)
+|> Repo.paginate(paginate_options)
+
+render(conn, "index.html", definitions: page.entries, page: page)
+end
   ## end of search_definitions################3
 
   ######### end of controller#########

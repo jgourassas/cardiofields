@@ -138,19 +138,16 @@ Total Number of Results
       <%=index + 1 %>
       </span>
   <div class="is-divider-horizontal" data-content="OR"></div>
-   
+   <span class="tag is-white">
+    Inserted :  
+      <%= definition.inserted_at %>
+  </span>
    <span class="tag is-white">
    Updated: 
    <%=definition.updated_at %>
    </span>
 
-  
-   <span class="tag is-white">
-    Inserted :  
-      <%= definition.inserted_at %>
-  </span>
-
-
+   
 
 <%= if "#{definition.indexing}" == "" do %>
        
@@ -173,6 +170,44 @@ Total Number of Results
       <td class="p-4">
         <strong><%= definition.name %>
         </strong>
+  <br/>
+  
+<%= if "#{definition.inserted_by}" == "" do %>
+       <p style="color:#c4aead;">
+         Inserted by: No Data 
+            </p>
+       <% else %>
+      <p class="mr-0 pt-3">
+          <span style="color:#707070;"> 
+         <em>Inserted By: </em>
+      
+      <em>
+        <%= raw( definition.inserted_by) %>
+      </em>
+       </span>
+      
+      </p>
+     <% end %>
+
+ 
+<%= if "#{definition.updated_by}" == "" do %>
+       
+       <p style="color:#c4aead;">
+         Updated by: No Data 
+            </p>
+       <% else %>
+      <p class="mr-0 pt-3">
+          <span style="color:#707070;"> 
+         <em>Last Updated By: </em>
+      <em>
+        <%= raw( definition.updated_by) %>
+      </em>
+        </span>
+      
+      </p>
+     <% end %>
+
+
        </td>
 
       <td>

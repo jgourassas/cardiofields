@@ -184,7 +184,7 @@ color: #000;
     
 }
 .table tbody tr:hover td, .table tbody tr:hover th {
-  background-color: #d0fffd;
+  background-color:#E0E0E0//gray 300//#d0fffd;
 }
 .table__wrapper {
   overflow-x: auto;
@@ -193,9 +193,17 @@ color: #000;
 .fa-code, .fa-search {
   margin-right: 0.5vw;
 }
-
+.footer{
+  border-top: 2px solid #f5f5f5; 
+  background: #b2b4c7;//#fafafa;
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+/*
 .footer{
   background-color: #d9dad0;
   color:#07084b;
 }
 
+*/
