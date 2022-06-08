@@ -1,5 +1,9 @@
+<h5 class="is-5">The Current Page Is: <%=  @page.page_number %> </h5>
+
+<nav class="pagination is-rounded is-medium">
 <ul class="pagination-list">
  <%= if @page.page_number == 1 do %>
+
 <li>
   <span class="my-4 pagination-previous "> 
     <%= link "Back To Fields List",
@@ -30,7 +34,7 @@
 <%= if @page.page_number > 1 do %>
 <span   class="tags m y-4">
 <%= for i <- (@page.page_number - 3)..(@page.page_number + 3), i > 0 do %>
-  <li>
+   <li>
   <%= link "#{i}", class: "pagination-link",
   to: Routes.definition_path(@conn, :index, page:  i) %>
 </li>
@@ -39,3 +43,4 @@
 </span>
 <% end %>
 </ul>
+</nav>

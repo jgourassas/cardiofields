@@ -6,8 +6,8 @@ defmodule CardiofieldsWeb.DefinitionController do
   import Ecto.Query, warn: false
 
   plug(:scrub_params, "definition" when action in [:create, :update])
-
   plug(:load_defs_tables when action in [:new, :create, :edit, :update])
+
 
   def index(conn, params) do
     page =
@@ -15,8 +15,10 @@ defmodule CardiofieldsWeb.DefinitionController do
       |> Definition.order_by_name()
       |> Repo.paginate(params)
 
-    render(conn, "index.html", definitions: page.entries, page: page)
-
+      render(conn, "index.html", definitions: page.entries,
+    page: page, total_pages: page.total_pages)
+    #render(conn, "index.html", definitions: page.entries,
+    # page: page)
   end
 
   def new(conn, _params) do
@@ -152,40 +154,27 @@ defmodule CardiofieldsWeb.DefinitionController do
     assign(conn, :defs_tables, defs_tables)
   end
 
-  ###################################
-
-  #################
+   #################
 
   def search_definitions(
         conn,
         %{"search_definitions" => %{"query" => query, "selection" => selection}} = params
       ) do
     trim_query = String.trim(query)
+    page_size = 260
 
-
-   page =
+    page =
      Canons.search_a_definition(trim_query, selection)
-      |> Repo.paginate(page: params["page"], page_size: 5)
-        render(conn, "index.html", definitions: page.entries, page: page)
+      |> Repo.paginate(page: params["page"], page_size: page_size)
+        render(conn, "index.html", definitions: page.entries, page: page, page_size: page_size)
   end
-############################
+###############################################
 
-def search_definitions_1(
-  conn,
-  %{"search_definitions" => %{"query" => query, "selection" => selection}} = params
-) do
+ 
 
+##################
+ 
 
-  trim_query = String.trim(query)
-  paginate_options = %{page: 1, per_page: 5}
-
-page =
-Canons.search_a_definition(trim_query, selection, paginate_options)
-#|> Repo.paginate(page: params["page"], per_page: 10)
-|> Repo.paginate(paginate_options)
-
-render(conn, "index.html", definitions: page.entries, page: page)
-end
   ## end of search_definitions################3
 
   ######### end of controller#########
