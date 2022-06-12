@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-08 18:46:11 EEST
+-- Started on 2022-06-12 15:55:16 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1271,6 +1271,8 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3015, '112000001982', 'ACC-NCDR', NULL, NULL, 248, '2022-05-11 09:07:05', '2022-05-11 09:07:05');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3017, ' C93040', 'NCIT', NULL, NULL, 346, '2022-05-21 14:46:45', '2022-05-21 14:46:45');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3018, '84114007', 'SNOMED-CT', NULL, NULL, 303, '2022-05-25 19:10:19', '2022-05-25 19:10:19');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3019, '29434-8', 'LOINC', NULL, NULL, 436, '2022-06-11 09:39:28', '2022-06-11 09:39:28');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3020, '29436-3', 'LOINC', 'Left ventricular Internal diameter minor axis diastole by US', NULL, 2459, '2022-06-12 04:13:50', '2022-06-12 04:13:50');
 
 
 --
@@ -1279,10 +1281,10 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 -- Name: defs_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_codes_id_seq', 3018, true);
+SELECT pg_catalog.setval('public.defs_codes_id_seq', 3020, true);
 
 
--- Completed on 2022-06-08 18:46:11 EEST
+-- Completed on 2022-06-12 15:55:16 EEST
 
 --
 -- PostgreSQL database dump complete

@@ -37,10 +37,21 @@
     <%= raw @definition.support_definition %>
   </li>
 
-    <li class="list-item ">
-    <strong class="frame_3" >Indexing:</strong>
-    <%= @definition.indexing %>
+
+
+  <li class="list-item" >
+    <strong class="frame_3">Indexing:</strong> 
+    <% string_len = to_string(@definition.indexing) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Empty Field Data </span>
+   <% else %>
+    <%= raw @definition.indexing %>
+    <%end %>
   </li>
+
+   
+
+
   <li class="list-item ">
     <strong>Inserted By</strong>
     <%= @definition.inserted_by %>
@@ -91,36 +102,71 @@
     <%end %>
   </li>
 
-  
-
-  <li class="list-item">
-    <strong>Referrence:</strong>
-    <%= @definition.ref %>
+<li class="list-item" >
+    <strong>Referrence</strong> 
+    <% string_len = to_string(@definition.ref) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.ref %>
+    <%end %>
   </li>
 
   <li class="list-item" >
-    <strong>Title name:</strong>
-    <%= @definition.title_name %>
+    <strong>Title name</strong> 
+    <% string_len = to_string(@definition.title_name) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.title_name %>
+    <%end %>
   </li>
+
+
+
+
 
   <li class="list-item" >
-    <strong>Default value:</strong>
-    <%= @definition.default_value %>
+    <strong>Default value</strong> 
+    <% string_len = to_string(@definition.default_value) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.default_value  %>
+    <%end %>
   </li>
 
-  <li class="list-item">
-    <strong>Usual range:</strong>
-    <%= @definition.usual_range %>
+
+  <li class="list-item" >
+    <strong>Usual range</strong> 
+    <% string_len = to_string(@definition.usual_range) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.usual_range  %>
+    <%end %>
   </li>
 
-  <li class="list-item">
-    <strong>Valid range:</strong>
-    <%= @definition.valid_range %>
+
+  <li class="list-item" >
+    <strong>Valid range</strong> 
+    <% string_len = to_string(@definition.valid_range) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.valid_range  %>
+    <%end %>
   </li>
 
-  <li class="list-item">
-    <strong>Data source:</strong>
-    <%= @definition.data_source %>
+
+  <li class="list-item" >
+    <strong>Data source</strong> 
+    <% string_len = to_string(@definition.data_source) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @definition.data_source  %>
+    <%end %>
   </li>
 
 

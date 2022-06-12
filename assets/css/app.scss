@@ -4,6 +4,7 @@
 //$primary: $phoenix-orange;
 
 @import "custom";
+//@import "labreport.css";
 //@import "sticky-table";
 //@import "bulma";
 @import "bulmaswatch.min_10.css";
@@ -13,6 +14,8 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+
 
 // for Duotones need both files
 //@import "../node_modules/@fortawesome/fontawesome-free/scss/duotone.scss";

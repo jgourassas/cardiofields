@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-08 18:46:11 EEST
+-- Started on 2022-06-12 15:55:16 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -239,6 +239,9 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (192, 'ACC-NCDR', '100014009', NULL, NULL, NULL, 8970, '2022-05-14 13:29:51', '2022-05-14 13:29:51');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (193, 'SNOMED-CT', '12000000154', NULL, NULL, NULL, 8973, '2022-05-19 15:11:01', '2022-05-19 15:11:01');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (194, 'SNOMED-CT', '12000000154', NULL, NULL, NULL, 8988, '2022-05-28 02:40:41', '2022-05-28 02:40:41');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (195, 'LOINC', '20234-1', 'Left ventricular Maximum diastole [Volume] by US 2D bullet calculated', NULL, NULL, 2098, '2022-06-12 04:30:26', '2022-06-12 04:30:26');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (196, 'LOINC', ' 20236-6', 'Left ventricular Maximum diastole [Volume] by US 2D modified biplane ellipse calculated', NULL, NULL, 2097, '2022-06-12 04:44:56', '2022-06-12 04:44:56');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (197, 'SNOMED-CT', '1111111 33333', NULL, NULL, NULL, 9032, '2022-06-12 05:12:01', '2022-06-12 05:12:01');
 
 
 --
@@ -247,10 +250,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 -- Name: opts_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_codes_id_seq', 194, true);
+SELECT pg_catalog.setval('public.opts_codes_id_seq', 197, true);
 
 
--- Completed on 2022-06-08 18:46:12 EEST
+-- Completed on 2022-06-12 15:55:16 EEST
 
 --
 -- PostgreSQL database dump complete

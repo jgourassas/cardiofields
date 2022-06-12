@@ -1,0 +1,85 @@
+////////////////////
+@mixin easy_gradient($bg, $alpha: false) {
+    @if ($alpha) {
+        $bg: rgba($bg, $alpha);
+    }
+    $top: lighten($bg, 5);
+    $bottom: darken($bg, 5);
+    @include background-image(
+    linear-gradient($top, $bottom)
+  )
+}
+/////////////////////////
+@mixin letter_press($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+//////////////////////
+//--------------------------------
+// Photoshop Drop Shadow
+//--------------------------------
+@mixin photoshop_drop_shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000, $inner: false) {
+$angle: (180 - $angle) * pi() / 180; // convert to radians
+$h-shadow: round(cos($angle) * $distance);
+$v-shadow: round(sin($angle) * $distance);
+$css-spread: $size * $spread/100;
+$blur: ($size - $css-spread);
+$inset: if($inner != false, 'inset', '');
+@include box-shadow($h-shadow $v-shadow $blur $css-spread $color unquote($inset));
+}
+//--------------------------------
+// Photoshop Inner Shadow
+//--------------------------------
+@mixin photoshop_inner_shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000) {
+@include photoshop_drop_shadow ($angle, $distance, $spread, $size, $color, true);
+}
+
+//////////////////////
+@mixin td_transform {
+    font-weight: bold;
+    @include letter_press(0.9); 
+    
+    //@include transform(rotate(6deg) skewY(-3deg));
+    //@include transform(skew(0deg, 30deg));
+    //@include transform(translateY(-10%));
+ }
+//////////////////////////
+@mixin placeholder($color){
+&::-webkit-input-placeholder {
+color: $color;
+}
+ 
+&:-moz-placeholder { /* Firefox 18- */
+color: $color;
+}
+ 
+&::-moz-placeholder { /* Firefox 19+ */
+color: $color;
+}
+ 
+&:-ms-input-placeholder {
+color: $color;
+}
+}
+///////////////////////
+%codes_button {
+  cursor: pointer;
+}
+//////////////////////////
+@mixin adjust_fonts{
+        @include adjust-font-size-to($small_font_size);
+        
+         @include breakpoint($small){
+            @include adjust-font-size-to($small_font_size);
+             
+         }//break
+
+        @include breakpoint($medium){
+            @include adjust-font-size-to($medium_font_size);
+             }//break
+        
+        @include breakpoint($large){
+            @include adjust-font-size-to($large_font_size);
+            }//break
+
+}//adjust_fonts
+

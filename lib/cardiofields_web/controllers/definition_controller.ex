@@ -166,7 +166,7 @@ defmodule CardiofieldsWeb.DefinitionController do
     page =
      Canons.search_a_definition(trim_query, selection)
       |> Repo.paginate(page: params["page"], page_size: page_size)
-        render(conn, "index.html", definitions: page.entries, page: page, page_size: page_size)
+       render(conn, "index.html", definitions: page.entries, page: page, page_size: page_size)
   end
 ###############################################
 

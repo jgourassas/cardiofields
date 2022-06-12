@@ -79,13 +79,13 @@ Total Number of Results
 <div class= "box  has-background-light ">
 
 <div class="table-container">
-
  <table class="table 
     is-bordered
     is-striped
     is-narrow 
     is-fullwidth 
     is-hoverable ">
+
       <thead class="thead">
          <tr>
          <th> Updated - Inserted - <em>Indexing</em></th>

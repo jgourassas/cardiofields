@@ -34,29 +34,30 @@ Show Field  Pick-Lists Option
   
 
   <li class="list-item ">
-    <strong>Selection definition:</strong>
+    <strong class="frame_3">Selection definition:</strong>
     <%= raw @defs_option.selection_definition %>
 
   </li>
   </div>
   <div class="column frame_1">
   <li class="list-item">
-    <strong>Notes:</strong>
+    <strong class="frame_3" >Notes:</strong>
+    <br/>
     <%= raw  @defs_option.selection_notes %>
   </li>
   <li class="list-item">
-    <strong>Option Reference</strong>
+    <strong class="frame_3" >Option Reference</strong>
     <%=  @defs_option.selection_reference %>
   </li>
 
 
   <li class="list-item">
-    <strong> Defs Option ID :</strong>
+    <strong class="frame_3"> Defs Option ID :</strong>
     <%= @defs_option.id %>
   </li>
 
 <li class="list-item">
-    <strong>Definition ID:</strong>
+    <strong class="frame_3" >Definition ID:</strong>
     <%=  @defs_option.definition_id %>
   </li>
 

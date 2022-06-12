@@ -125,6 +125,8 @@ defmodule Cardiofields.Canons do
     end
   end
   
+  ######################3
+  
   
   #####################
    def search_definition_name(qname) do
@@ -133,17 +135,15 @@ defmodule Cardiofields.Canons do
     _query =
       from(
         d in Definition,
-        where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
-        # where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
+        #where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
+         where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
         limit: 250,
-        #offset: (^(1  * page_size)),
-        #offset: (^(page*per_size)),
         order_by: [asc: d.name, asc: d.table_name]
       )
+      
   end
   ################3
-  
-  ###################### 3
+    ###################### 3
   def search_on_notes(query) do
     from(d in Definition,
       where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
@@ -155,8 +155,6 @@ defmodule Cardiofields.Canons do
 
   ################# 33
   def search_on_indexing(query) do
-    # IO.puts("----------notes--------------")
-    # IO.inspect(query)
     from(d in Definition,
       where: fragment("(?) @@ plainto_tsquery(?)", d.indexing_tsv, ^query),
       limit: 250,
