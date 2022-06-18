@@ -29,13 +29,16 @@
  <div class = "column">
 
 <div class="field">
-     <label class="label">Section - Table Name </label>
-     <div class="control">
-    <div class="select is-primary">
+     <label class="label">Table Name  - Select</label>
+     <div class="control has-icons-left">
+    <div class="select is-primary is-normal is-hovered  ">
   <%= select(f, :defs_table_id, @defs_tables, class: "form-control")    %>
-      <option>Select Table</option>
-
-    </div><!--select---->
+      <option> - </option>
+        </div><!--select---->
+         <div class="icon is-normal is-right is-primary">
+         <i class="fa fa-globe"></i>
+       </div>
+     
      </div><!--control---->
   </div><!---field--->
 
@@ -70,6 +73,34 @@
 
 <!---------end start------------------------------------>
 
+<!---------start----------------------------------->
+<div class = "columns">
+
+<div class = "column">
+<label class="label">Inserted By </label>
+  <div class="control">
+   <%= text_input f, :inserted_by, class: "input", type: "text", 
+   placeholder: "Inserted By"  %>
+  </div>
+   <%= error_tag f, :inserted_by %>
+   <p class="help">Who Has Inserted the Field</p>
+
+</div><!----column-------------------->
+
+<div class = "column">
+ <label class="label">Updated By </label>
+  <div class="control">
+   <%= text_input f, :updated_by, class: "input", type: "text", 
+   placeholder: "Updated By"  %>
+  </div>
+   <%= error_tag f, :updated_by %>
+   <p class="help"></p>
+</div><!----column-------------------->
+
+
+</div><!----columns--------------------------->
+
+<!---------end start------------------------------------>
 
 <!---------start----------------------------------->
 <div class = "columns">
@@ -212,8 +243,15 @@
    <p class="help"></p>
 </div>
 </div><!----column-------------------->
+
  <div class = "column">
-Aux
+<label class="label">Indexing</label>
+  <div class="control">
+   <%= text_input f, :indexing, class: "input", type: "text", 
+   placeholder: "Set Index"  %>
+   <%= error_tag f, :indexing %>
+   <p class="help"></p>
+</div>
  </div><!----column-------------------->
 
 
@@ -221,15 +259,17 @@ Aux
 </div><!----columns--------------------------->
 
 <!---------end start------------------------------------>
+
+
 <!---------start----------------------------------->
 <div class = "columns">
 <div class = "column">
 <div class="field">
-  <label class="label">Notes </label>
+  <label class="label"> My Private Notes</label>
   <div class="control">
     <%= text_input f, :notes,
         class: "textarea",
-        type: "input", placeholder: "Text input"  %>
+        type: "input", placeholder: "Add a Note"  %>
   <p class="help"></p>
 
   </div><!---control---------->

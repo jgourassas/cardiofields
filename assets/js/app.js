@@ -32,7 +32,9 @@ window.jQuery = $;
 window.$ = $;
 
 //import './check_load';
-
+//import Alpine from "alpinejs";
+//window.Alpine = Alpine;
+//Alpine.start();
 /*
 if ($('body')) {
   console.log('jquery works!');
@@ -53,28 +55,63 @@ window.onload = function() {
 */
 /////////////////
 
+///////////@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+//import tinymce from '../node_modules/tinymce/tinymce.min.js';
+
+//import './node_modules/tinymce/themes/silver/theme.min.js';
+//import 'tinymce/plugins/advlist';
+////import 'tinymce/plugins/colorpicker';
+//import 'tinymce/plugins/textcolor';
+//import 'tinymce/plugins/paste';
+//import 'tinymce/plugins/link';
+//import 'tinymce/skins/lightgray/skin.min.css';
+//import 'tinymce/skins/ui/oxide-dark/skin.min.css';
+ //import 'tinymce/skins/ui/oxide/skin.min.css';
+
+////////////////////////////
+//////////////////////////////
+
+
 tinymce.init({
     forced_root_block : "",
     selector: '.textarea',
+    themes: "modern",  
     height: 200,
     menubar: false,
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
-      'searchreplace visualblocks code fullscreen',
+      'searchreplace visualblocks code fullscreen textcolor',
       'insertdatetime media table paste code help wordcount'
     ],
     force_p_newlines: false,
     toolbar: 'undo redo | formatselect | ' +
     'bold italic backcolor | alignleft aligncenter ' +
-    'alignright alignjustify | link | link_image |bullist numlist outdent indent | ' +
-    'removeformat | help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    'alignright alignjustify | link | textcolor| table |link_image |bullist numlist outdent indent | ' +
+    'removeformat |  help',
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:18px }'
   });
-
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
-
+// after all the imports
+/*
+window.Alpine = Alpine;
+Alpine.start();
+let hooks = {};
+let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
+let liveSocket = new LiveSocket("/live", Socket, {
+  params: { _csrf_token: csrfToken },
+  hooks: hooks,
+  dom: {
+    onBeforeElUpdated(from, to) {
+      if (from._x_dataStack) {
+        window.Alpine.clone(from, to);
+      }
+    },
+  },
+});
+*/
 // Show progress bar on live navigation and form submits
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
 window.addEventListener("phx:page-loading-start", info => topbar.show())

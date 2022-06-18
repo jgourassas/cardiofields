@@ -8,23 +8,26 @@
 
 
   <div class="columns">
-  <div class="column frame_1">
+
+  <div class="column frame_3 is-4">
     <%= if assigns[:languages] do %>
 <div class="field">
-  <label class="label">Language of Sentence</label>
+  <label class="label">Language</label>
   <div class="control">
+  <div class="select is-primary">
           <%=  select(f, :language, @languages,
          prompt: "----Select----", 
-class: "form-control 
-        button secondary dropdown f-dropdown"  ) %>
-<%= error_tag f, :language %>
-  </div>
+        class: "form-control"  ) %>
+</div><!--select---->
+  <%= error_tag f, :language %>
+ 
+  </div><!------control---------->
 
 <% end %>
- </div>
+ </div><!-------field--------------->
   </div><!--column--->
  
- <div class="column frame_1">
+ <div class="column frame_3 is-4">
   <div class="field">
   <label class="label">Sentence </label>
   <div class="control">
@@ -44,7 +47,7 @@ class: "form-control
   
 
  
- <div class ="column frame_1">
+ <div class ="column frame_3 is-3">
 <div class="field">
   <label class="label">Notes </label>
   <div class="control">

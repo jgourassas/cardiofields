@@ -20,9 +20,11 @@ defmodule Cardiofields.Canons.Definition do
     field(:usual_range, :string)
     field(:valid_range, :string)
     field(:vocabulary_en, :string)
+    field(:indexing,  :string)
+    field(:inserted_by,  :string)
+    field(:updated_by,  :string)
+    
     #field(:notes_tsv, :tsvector)
-
-
     timestamps()
     has_many(:defs_sentences, Cardiofields.Canons.Defs_sentence, foreign_key: :definition_id)
     has_many(:defs_codes, Cardiofields.Canons.Defs_code, foreign_key: :definition_id)
@@ -51,16 +53,14 @@ defmodule Cardiofields.Canons.Definition do
       :usual_range,
       :valid_range,
       :data_source,
+      :indexing,
+      :inserted_by,
+      :updated_by,
       :defs_table_id
     ])
     |> validate_required([:name])
-     # definitions_pkey (unique_constraint)
-     #drop index definitions_name_index;
-
-    #  |> unique_constraint(:name)
-    #  |> foreign_key_constraint(:name)
-    #  |> unique_constraint(:name, name: :definitions_pkey,
-    #  message: "Opps Dublicate Field Name......")
+      |> unique_constraint(:name, name: :name_constrain_idx,
+      message: "Opps Dublicate Field Name......")
   end
 
   def order_by_name(query) do

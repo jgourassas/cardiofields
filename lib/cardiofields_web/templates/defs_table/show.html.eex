@@ -6,22 +6,33 @@
  </h5>
 
 <div class= "box  has-background-light ">
-<ul class="frame_1 list is-hoverable">
-  
+<ul class="list is-hoverable">
+ <div class="columns">
+<div class="column frame_3">
+
    <li class="list-item">
   <span class="frame_5">
     <strong>Table Name:</strong>
     <em> <%= @defs_table.name %></em>
     </span>
   </li>
+<li  class="list-item">
+    <strong>Code system:</strong>
+    <%= @defs_table.code_system %>
+  </li>
 
+  <li  class="list-item" >
+    <strong>Code system name:</strong>
+    <%= @defs_table.code_system_name %>
+  </li>
   <li class="list-item">
    <span >
     <strong>Note:</strong>
     <%= raw @defs_table.note %>
     </span>
   </li>
-
+</div><!-----column 1-------------->
+<div class="column frame_3">
   <li class="list-item">
     <strong>Cda xml:</strong>
     <%= @defs_table.cda_xml %>
@@ -32,33 +43,23 @@
     <%= @defs_table.code %>
   </li>
 
-  <li  class="list-item">
-    <strong>Code system:</strong>
-    <%= @defs_table.code_system %>
-  </li>
-
-  <li  class="list-item" >
-    <strong>Code system name:</strong>
-    <%= @defs_table.code_system_name %>
-  </li>
+  
 
   <li class="list-item">
     <strong>Display name:</strong>
     <%= @defs_table.display_name %>
   </li>
 
- 
-
-
   <li class="list-item">
     <strong>Template:</strong>
     <%= @defs_table.template_id %>
   </li>
-
+  </div><!-------column----------------------->
+</div><!------columns----------------->
 </ul>
 </div>
 
-<span><%= link "Edit DB Tables", to: Routes.defs_table_path(@conn, :edit, @defs_table), 
-class: "button is-success" %></span>
+<span><%= link "Edit DataBase Tables", to: Routes.defs_table_path(@conn, :edit, @defs_table), 
+class: "button is-info" %></span>
 
 <span><%= link "Back To DB Tables List", to: Routes.defs_table_path(@conn, :index), class: "button is-primary" %></span>

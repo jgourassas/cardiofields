@@ -23,8 +23,15 @@ config :cardiofields, CardiofieldsWeb.Endpoint,
   render_errors: [view: CardiofieldsWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Cardiofields.PubSub,
   live_view: [signing_salt: "Kx0vTQKp"]
+  
+  #config :absinthe_extra,
+  #endpoint: CardiofieldsWeb.Endpoint,
+  #path: "/graphql",
+  #complexity: 5,
+  #schema: CardiofieldsWeb.Schema
 
-# Configures the mailer
+
+  # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
 # locally. You can see the emails in your browser, at "/dev/mailbox".
@@ -61,7 +68,14 @@ config :esbuild,
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 
+#  config :absinthe_extra,
+#  endpoint: Web.Endpoint,
+#  path: "/graphql",
+#  complexity: 5,
+#  schema: Web.Schema
+
 # Configures Elixir's Logger
+
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]

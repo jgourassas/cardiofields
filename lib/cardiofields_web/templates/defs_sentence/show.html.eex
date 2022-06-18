@@ -5,10 +5,7 @@
  <%= "#{@definition.name}" %>
  </span>
 </h5>
-
-
-
-     <%= render  CardiofieldsWeb.SharedView,
+   <%= render  CardiofieldsWeb.SharedView,
     "_definition_info.html", definition: @definition %>
 
 <div class= " frame_1 box  has-background-light ">
@@ -16,8 +13,10 @@
 <ul  class="list is-hoverable ">
 
   <li class="list-item">
+   <span class="frame_5">
     <strong>Language:</strong>
     <%= @defs_sentence.language %>
+    </span>
   </li>
 
   <li class="list-item" >
@@ -33,7 +32,7 @@
   </li>
 
   <li class="list-item">
-    <strong>Definition:</strong>
+    <strong>Field Definition ID:</strong>
     <%= @defs_sentence.definition_id %>
   </li>
 

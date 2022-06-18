@@ -2,7 +2,6 @@ defmodule Cardiofields.Canons do
   @moduledoc """
   The Canons context.
   """
-
   import Ecto.Query, warn: false
   alias Cardiofields.Repo
 
@@ -112,71 +111,87 @@ defmodule Cardiofields.Canons do
 
   #############
   def search_a_definition(query, selection) do
+
     case selection do
       "name" -> search_definition_name(query)
       "table_name" -> search_a_table_name(query)
       "option_name" -> search_a_option_name(query)
       "instruction" -> search_an_instruction(query)
       "field_codes" -> search_a_field_code(query)
+      "field_option_codes" -> search_a_field_option_code(query)
       "inserted_after" -> search_inserted_after(query)
-      "on_notes"  ->     search_on_notes(query)
+      "on_notes" -> search_on_notes(query)
+      "on_indexing" -> search_on_indexing(query)
       _ -> ""
     end
   end
+  
+  ######################3
+  
+  
   #####################
-  def search_on_notes(query) do
-    #IO.puts("----------notes--------------")
-    #IO.inspect(query)
-    from(d in Definition,
-    where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
-     limit: 250,
-     order_by: [desc: d.name]
-   
-      )
- 
-  end
-  ########################
-  def search_inserted_after(inserted_date) do
-      #IO.puts("--------------updated after")
-      #IO.inspect(inserted_date)
-
-      # Get all items published since the last month
-        #from p in Post, where: p.published_at >
-        #datetime_add(^NaiveDateTime.utc_now(), -1, "month")
-      #_query = 
-      from(d in Definition,
-      # where: d.updated_at < datetime_add(^NaiveDateTime.utc_now(), -1, "month"),
-      where: d.inserted_at > ^inserted_date,  
-      limit: 250,
-       order_by: [desc: d.inserted_at]
-    
-      )
- 
-
-end
-############################
-def search_a_field_code(qcode) do
-  from(
-    p in Definition,
-    join: c in Defs_code,
-    where: c.definition_id == p.id and c.code == ^qcode
-      and not is_nil(c.code),
-    limit: 250
-  )
-end
-  ##############################
-  def search_definition_name(qname) do
-    _query =
+   def search_definition_name(qname) do
+      _query =
       from(
         d in Definition,
-        where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
-        # where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
+        #where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
+         where: fragment("to_tsvector(?) @@ plainto_tsquery(?)", d.name,   ^qname),
         limit: 250,
         order_by: [asc: d.name, asc: d.table_name]
       )
+      
+  end
+  ################3
+    ###################### 3
+  def search_on_notes(query) do
+    from(d in Definition,
+      where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
+      limit: 250,
+      # order_by: [desc: d.name]
+      order_by: fragment("ts_rank(to_tsvector(?), plainto_tsquery(?)) DESC", d.name, ^query)
+    )
   end
 
-  ######################################
+  ################# 33
+  def search_on_indexing(query) do
+    from(d in Definition,
+      where: fragment("(?) @@ plainto_tsquery(?)", d.indexing_tsv, ^query),
+      limit: 250,
+      # order_by: [desc: d.name]
+      order_by: fragment("ts_rank(to_tsvector(?), plainto_tsquery(?)) DESC", d.name, ^query)
+    )
+  end
+
+  ########################
+  def search_inserted_after(inserted_date) do
+    # IO.puts("--------------updated after")
+    # IO.inspect(inserted_date)
+
+    # Get all items published since the last month
+    # from p in Post, where: p.published_at >
+    # datetime_add(^NaiveDateTime.utc_now(), -1, "month")
+    # _query = 
+    from(d in Definition,
+      # where: d.updated_at < datetime_add(^NaiveDateTime.utc_now(), -1, "month"),
+      where: d.inserted_at > ^inserted_date,
+      limit: 250,
+      order_by: [desc: d.inserted_at]
+    )
+  end
+
+  ############################
+  def search_a_field_code(qcode) do
+    from(
+      p in Definition,
+      join: c in Defs_code,
+      where:
+        c.definition_id == p.id and c.code == ^qcode and
+          not is_nil(c.code),
+      limit: 250
+    )
+  end
+###########################33
+
   @spec search_an_instruction(any) :: Ecto.Query.t()
   def search_an_instruction(qname) do
     _query =
@@ -512,7 +527,12 @@ end
 
   """
   def list_defs_options(conn) do
-    Cardiofields.Repo.all(Ecto.assoc(conn.assigns[:definition], :defs_options))
+    
+    Cardiofields.Repo.all(Ecto.assoc(conn.assigns[:definition], 
+    :defs_options))
+    |> Defs_option.order_by_code()
+  
+  
   end
 
   @doc """
@@ -747,7 +767,37 @@ end
   def defs_codes(definition_id) do
     from(dr in Defs_code, where: dr.definition_id == ^definition_id)
   end
+###############################
+  def search_a_field_option_code(qcode) do
+    
+    query =from(
+        d in Definition,
+        right_join: p  in Defs_option,
+        right_join:  c in  Opts_code,
+        where:
+          d.id == p.definition_id 
+          and c.defs_option_id == p.id  
+          and c.code == ^qcode 
+          and  not is_nil(c.code),
+          limit: 250
+    )
+  res = Cardiofields.Repo.all(query)
+  #res_len = length(res)
+  # not working
 
+  #title = "<div class='title_form'> "
+  #<> "<h5 class='title is-5 has-text-centered frame_2'>"
+  #<> "Option Codes"
+  #<> "<h5/>"
+   #if res_len > 0 do
+   # IO.puts("-------title--------------------------------")
+   # require EEx
+   # EEx.eval_string "Hi, <%= @title %>", assigns: [title: "<%=title%>"]
+  #end
+ query
+    
+  end
+    ######################################
   ##############
   def count_codes(id) do
     Cardiofields.Repo.one(
@@ -793,6 +843,7 @@ end
       )
 
     ids = Cardiofields.Repo.all(query_a)
+    
     total_ids = length(ids)
 
     # id_num =

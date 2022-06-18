@@ -57,10 +57,10 @@ defmodule Cardiofields.MixProject do
       {:arc, "~> 0.11.0", override: true},
       {:arc_ecto, "~> 0.11.3", override: true},
       {:timex, "~> 3.7"},
-      # {:absinthe, " ~> 1.4"},
-      # {:absinthe_ecto, "~> 0.1.3"},
-      # {:absinthe_plug, "~> 1.5.8"},
-
+      {:absinthe_extra, "~> 0.1.0"},
+      #{:absinthe, "~> 1.3.2"},
+      #{:absinthe_ecto, "~> 0.1.3"},
+      #{:absinthe_plug, "~>  1.5.8"},
       {:plug_cowboy, "~> 2.5"}
     ]
   end

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
--- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
+-- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
+-- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-05-28 13:10:18 EEST
+-- Started on 2022-06-18 05:53:20 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1271,6 +1271,18 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3015, '112000001982', 'ACC-NCDR', NULL, NULL, 248, '2022-05-11 09:07:05', '2022-05-11 09:07:05');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3017, ' C93040', 'NCIT', NULL, NULL, 346, '2022-05-21 14:46:45', '2022-05-21 14:46:45');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3018, '84114007', 'SNOMED-CT', NULL, NULL, 303, '2022-05-25 19:10:19', '2022-05-25 19:10:19');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3019, '29434-8', 'LOINC', NULL, NULL, 436, '2022-06-11 09:39:28', '2022-06-11 09:39:28');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3020, '29436-3', 'LOINC', 'Left ventricular Internal diameter minor axis diastole by US', NULL, 2459, '2022-06-12 04:13:50', '2022-06-12 04:13:50');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3022, '5370000', 'SNOMED-CT', 'For flutter', NULL, 1581, '2022-06-12 13:38:02', '2022-06-12 13:38:35');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3021, '49436004', 'SNOMED-CT', 'For Atrial Fib', NULL, 1581, '2022-06-12 13:34:28', '2022-06-12 13:39:04');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3023, '10001424808', 'ACC-NCDR', 'Indicate if a cardiac arrest event occurred outside of any healthcare facility.', NULL, 3745, '2022-06-16 09:10:06', '2022-06-16 09:10:46');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3024, '100001201', 'ACC-NCDR', 'In order to <strong>code as ''Yes''</strong> when PCI is performed during the same cath lab visit, coronary angiography is understood to reflect the<br />patient''s initial evaluation within the last 30 days.<br /><br />Diagnostic coronary angiography is defined as the passage of a catheter into the aortic root or other great vessels for the purpose of angiography of the native coronary arteries or bypass grafts supplying native coronary arteries.<br /><br /><br /><strong>Code ''No''</strong> if the patient presents for a staged PCI.', NULL, 1067, '2022-06-16 14:34:51', '2022-06-16 14:36:36');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3025, '252425004', 'SNOMED-CT', NULL, 'A cardiac electrophysiology study (EP) is a minimally invasive procedure that tests the electrical conduction system of the heart to assess the electrical activity and<br />conduction pathways of the heart. <br /><br />The study is indicated to investigate the cause, location of origin, and best treatment for various abnormal heart rhythms.<br /><br />This type of study is performed by an electrophysiologist and using a single or multiple catheters situated within the heart through a vein or<br />artery. <br /><br />If at any step during the EP study the electrophysiologist finds the source of the abnormal electrical activity, he/she may try to ablate the cells that<br />are misfiring. <br /><br />This is done using high-energy radio&nbsp; frequencies (similar to microwaves) to effectively', 3531, '2022-06-16 14:46:30', '2022-06-16 14:46:30');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3026, '100014079', 'ACC-NCDR', NULL, NULL, 135, '2022-06-16 14:56:49', '2022-06-16 14:56:49');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3027, '100014077', 'ACC-NCDR', NULL, NULL, 1488, '2022-06-16 15:06:46', '2022-06-16 15:06:46');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3028, '80242-1', 'LOINC', NULL, NULL, 363, '2022-06-16 15:09:04', '2022-06-16 15:09:04');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3029, '100000994', 'ACC-NCDR', NULL, 'Dose Area Product is the integral of air kerma (the energy extracted from an x-ray beam per unit mass of air in a small irradiated air<br />volume; for diagnostic x-rays, the dose delivered to that volume of air) across the entire x-ray beam emitted from the x-ray tube. It is<br />a surrogate measure of the amount of energy delivered to the patient.<br />Also known as KAP (Kerma Area Product).', 1466, '2022-06-16 15:20:58', '2022-06-16 15:20:58');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3030, '372603003', 'SNOMED-CT', NULL, NULL, 2312, '2022-06-17 17:14:28', '2022-06-17 17:14:28');
 
 
 --
@@ -1279,10 +1291,10 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 -- Name: defs_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_codes_id_seq', 3018, true);
+SELECT pg_catalog.setval('public.defs_codes_id_seq', 3030, true);
 
 
--- Completed on 2022-05-28 13:10:18 EEST
+-- Completed on 2022-06-18 05:53:21 EEST
 
 --
 -- PostgreSQL database dump complete

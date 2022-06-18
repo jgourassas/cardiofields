@@ -33,11 +33,12 @@ defmodule Cardiofields.Canons.Defs_option do
       :selection_reference
     ])
     |> validate_required([])
-
-    # |> order_by_code()
+   # |> order_by_code()
   end
 
   def order_by_code(query) do
-    _results = from(q in query, order_by: [desc: q.code])
+    _results = from(q in query, order_by: [asc: q.code])
+    #NaturalSort.sort(["x2-y7", "x8-y8", "x2-y08", "x2-g8" ])
+    #Enum.sort(["b", "aaa", "cc"])
   end
 end

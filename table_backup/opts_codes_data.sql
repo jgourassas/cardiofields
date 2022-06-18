@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.5 (Debian 13.5-0+deb11u1)
--- Dumped by pg_dump version 13.5 (Debian 13.5-0+deb11u1)
+-- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
+-- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-05-28 13:10:18 EEST
+-- Started on 2022-06-18 05:53:21 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -77,7 +77,6 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (47, 'SNOMED-CT', '91758003', '2nd Left Posterolateral Coronary Artery', NULL, NULL, 1695, '2017-01-03 07:29:35', '2017-01-03 07:29:35');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (48, 'SNOMED-CT', '56322004', 'Left Posterior Descending Artery', NULL, NULL, 104, '2017-01-03 07:31:39', '2017-01-03 07:31:39');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (124, 'HL7-SET', '2047-9', NULL, NULL, NULL, 404, '2018-06-06 02:04:41', '2018-06-06 02:04:41');
-INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (126, 'HL7-SET', '2076-8', NULL, NULL, NULL, 113, '2018-06-06 02:06:08', '2018-06-06 02:06:08');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (149, 'ACC-NCDR', '100014013', NULL, NULL, NULL, 8435, '2018-06-16 12:25:02', '2018-06-16 12:25:02');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (151, 'ACC-NCDR', '100013037', NULL, NULL, NULL, 8439, '2018-06-16 12:33:09', '2018-06-16 12:33:09');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (53, 'SNOMED-CT', '426722004', NULL, NULL, NULL, 3997, '2017-02-07 15:51:11', '2017-02-07 15:51:11');
@@ -110,7 +109,6 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (77, 'ACC-NCDR', '100001135', 'LV epicardial', NULL, NULL, 4021, '2017-03-04 04:27:46', '2017-03-04 04:27:46');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (78, 'SNOMED-CT', '304059001', 'RV endocardial', NULL, NULL, 4022, '2017-03-04 04:28:26', '2017-03-04 04:28:26');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (127, 'HL7-SET', '2079-2', NULL, NULL, NULL, 8391, '2018-06-06 02:09:15', '2018-06-06 02:09:15');
-INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (128, 'HL7-SET', '2086-7', NULL, NULL, NULL, 121, '2018-06-06 02:10:19', '2018-06-06 02:10:19');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (154, 'SNOMED-CT', '70536003', NULL, NULL, NULL, 8451, '2018-06-16 12:44:16', '2018-06-16 12:44:16');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (79, 'ACC-NCDR', '100001137', 'Superior Vena
 Cava/subclavian
@@ -182,7 +180,6 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (130, 'HL7-SET', '2500-7', NULL, NULL, NULL, 123, '2018-06-06 02:14:54', '2018-06-06 02:14:54');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (131, 'HL7-SET', '2135-2', NULL, NULL, NULL, 117, '2018-06-06 02:15:19', '2018-06-06 02:15:19');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (132, 'HL7-SET', '2148-5', NULL, NULL, NULL, 126, '2018-06-06 02:15:53', '2018-06-06 02:15:53');
-INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (133, 'HL7-SET', '2180-8', NULL, NULL, NULL, 127, '2018-06-06 02:16:19', '2018-06-06 02:16:19');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (134, 'ACC-NCDR', '100001131', NULL, NULL, NULL, 128, '2018-06-06 02:17:36', '2018-06-06 02:17:36');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (135, 'HL7-SET', '2182-4', NULL, NULL, NULL, 8392, '2018-06-06 02:19:08', '2018-06-06 02:19:08');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (136, 'SNOMED-CT', '266919005', NULL, NULL, NULL, 893, '2018-06-06 03:08:07', '2018-06-06 03:08:07');
@@ -196,7 +193,6 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (144, 'SNOMED-CT', '713914004', NULL, NULL, NULL, 8396, '2018-06-06 14:32:40', '2018-06-06 14:32:40');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (145, 'SNOMED-CT', '428061000124105', NULL, NULL, NULL, 8398, '2018-06-07 08:42:35', '2018-06-07 08:42:35');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (146, 'SNOMED-CT', '428071000124103', NULL, NULL, NULL, 8399, '2018-06-07 08:42:58', '2018-06-07 08:42:58');
-INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (148, 'NCDR-SEQ', '100013035', NULL, NULL, NULL, 8434, '2018-06-16 12:24:28', '2018-06-16 12:24:28');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (150, 'ACC-NCDR', '100013036', NULL, NULL, NULL, 8438, '2018-06-16 12:32:47', '2018-06-16 12:32:47');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (152, 'ACC-NCDR', '100013038', NULL, NULL, NULL, 8440, '2018-06-16 12:33:26', '2018-06-16 12:33:26');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (153, 'SNOMED-CT', '32413006', NULL, NULL, NULL, 8450, '2018-06-16 12:43:56', '2018-06-16 12:43:56');
@@ -212,6 +208,7 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (164, 'ACC-NCDR', '100000351', NULL, NULL, NULL, 8662, '2018-07-24 12:47:54', '2018-07-24 12:47:54');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (165, 'SNOMED-CT', '438949009', NULL, NULL, NULL, 674, '2018-07-24 12:52:14', '2018-07-24 12:52:14');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (166, 'SNOMED-CT', '399307001', NULL, NULL, NULL, 8663, '2018-07-24 12:52:47', '2018-07-24 12:52:47');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (148, 'ACC-NCDR', '100013035', NULL, NULL, NULL, 8434, '2018-06-16 12:24:28', '2022-06-16 09:16:34');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (168, 'NDC-DRUG', '123456', NULL, NULL, NULL, 8717, '2019-06-09 06:45:59', '2019-06-09 06:45:59');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (169, 'SNOMED-CT', '12345678', 'jgour Description Field', 'My Notes on Option Codes', NULL, 8882, '2019-09-23 13:03:54', '2019-10-09 14:24:06');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (170, 'SNOMED-CT', '222222 ', NULL, NULL, NULL, 8891, '2022-04-29 16:28:40', '2022-04-29 16:28:40');
@@ -239,6 +236,28 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (192, 'ACC-NCDR', '100014009', NULL, NULL, NULL, 8970, '2022-05-14 13:29:51', '2022-05-14 13:29:51');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (193, 'SNOMED-CT', '12000000154', NULL, NULL, NULL, 8973, '2022-05-19 15:11:01', '2022-05-19 15:11:01');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (194, 'SNOMED-CT', '12000000154', NULL, NULL, NULL, 8988, '2022-05-28 02:40:41', '2022-05-28 02:40:41');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (195, 'LOINC', '20234-1', 'Left ventricular Maximum diastole [Volume] by US 2D bullet calculated', NULL, NULL, 2098, '2022-06-12 04:30:26', '2022-06-12 04:30:26');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (196, 'LOINC', ' 20236-6', 'Left ventricular Maximum diastole [Volume] by US 2D modified biplane ellipse calculated', NULL, NULL, 2097, '2022-06-12 04:44:56', '2022-06-12 04:44:56');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (197, 'SNOMED-CT', '1111111 33333', NULL, NULL, NULL, 9032, '2022-06-12 05:12:01', '2022-06-12 05:12:01');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (198, 'ICD10-CM', 'I20.0', 'Unstable angina incT', NULL, NULL, 1363, '2022-06-16 03:19:59', '2022-06-16 03:23:26');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (200, 'ICD10-CM', ' I20.8', 'Other forms of angina pectoris', NULL, NULL, 1363, '2022-06-16 03:20:55', '2022-06-16 03:27:02');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (199, 'ICD10-CM', 'I20.1', 'Angina pectoris with documented spasm incT', NULL, NULL, 1363, '2022-06-16 03:20:31', '2022-06-16 03:28:18');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (201, 'ICD10-CM', 'I20.9', 'Angina pectoris, unspecified incT', NULL, NULL, 1363, '2022-06-16 03:33:39', '2022-06-16 03:33:39');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (202, 'ICD10-CM', 'I25.10', 'Atherosclerotic heart disease NOS', NULL, NULL, 1363, '2022-06-16 03:35:59', '2022-06-16 03:35:59');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (128, 'HL7-SET', '2086-7', 'Having origins in any of the original peoples of the Mariana Islands or the island of Guam.', NULL, NULL, 121, '2018-06-06 02:10:19', '2022-06-16 05:06:36');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (203, 'HL7-SET', '2079-8', 'Having origins in any of the original peoples of the islands of Hawaii.', NULL, NULL, 113, '2022-06-16 05:05:17', '2022-06-16 05:11:20');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (133, 'HL7-SET', '2180-8', 'Having origins in any of the original peoples of Puerto Rico.', 'If the patient has multiple hispanic or latin ethnicity, specify them using the other ethnicity selections in addition to this one.', NULL, 127, '2018-06-06 02:16:19', '2022-06-16 05:13:55');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (204, 'ACC-NCDR', '1000142382', NULL, 'CHSA Clinical Frailty<br />Scale 1: Very Fit - People who are robust, active, energetic and motivated. <br /><br />These people commonly exercise regularly. They are among the<br />fittest for their age.', NULL, 969, '2022-06-16 14:26:07', '2022-06-16 14:26:07');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (205, 'ACC-NCDR', '1000142383', NULL, '<strong>CHSA Clinical Frailty Scale 2:</strong><br /><br />Well - People who have no active disease symptoms but are less fit than category 1.<br /><br />Often, they exercise or are very active occasionally, e.g. seasonally.', NULL, 970, '2022-06-16 14:27:23', '2022-06-16 14:27:23');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (206, 'ACC-NCDR', '1000142390', NULL, 'CHSA Clinical Frailty Scale 9:<br />Terminally Ill - Approaching the end of life.<br /><br />This category applies to people with a life expectancy &lt;6 months, who are not otherwise evidently frail.', NULL, 929, '2022-06-16 14:30:59', '2022-06-16 14:30:59');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (207, 'ACC-NCDR', '1000142386', 'CHSA Clinical Frailty Scale 5: Mildly Frail - These peo<br />often have more evident slowing, and need help in hi<br />order IADLs (finances, transportation, heavy<br />housework, medications). Typically, mild frailty<br />progressively impairs shopping and walking outside<br />alone, meal preparation and housework.', 'CHSA Clinical Frailty Scale 5: Mildly Frail - These peo<br />often have more evident slowing, and need help in hi<br />order IADLs (finances, transportation, heavy<br />housework, medications). Typically, mild frailty<br />progressively impairs shopping and walking outside<br />alone, meal preparation and housework.', NULL, 928, '2022-06-16 14:31:57', '2022-06-16 14:31:57');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (208, 'SNOMED-CT', '17137000', NULL, NULL, NULL, 61, '2022-06-16 14:59:58', '2022-06-16 14:59:58');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (209, 'SNOMED-CT', '45631007', 'Radial', NULL, NULL, 467, '2022-06-16 15:01:06', '2022-06-16 15:01:06');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (210, 'SNOMED-CT', '45631007', NULL, NULL, NULL, 751, '2022-06-16 15:02:25', '2022-06-16 15:02:25');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (211, 'SNOMED-CT', '420300004', NULL, NULL, NULL, 1951, '2022-06-16 15:25:25', '2022-06-16 15:25:25');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (212, 'SNOMED-CT', '421704003', NULL, NULL, NULL, 1952, '2022-06-16 15:26:10', '2022-06-16 15:26:10');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (213, 'SNOMED-CT', '420913000', NULL, NULL, NULL, 1953, '2022-06-16 15:26:49', '2022-06-16 15:26:49');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (214, 'SNOMED-CT', '422293003', NULL, NULL, NULL, 1954, '2022-06-16 15:27:32', '2022-06-16 15:27:32');
 
 
 --
@@ -247,10 +266,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 -- Name: opts_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_codes_id_seq', 194, true);
+SELECT pg_catalog.setval('public.opts_codes_id_seq', 214, true);
 
 
--- Completed on 2022-05-28 13:10:19 EEST
+-- Completed on 2022-06-18 05:53:21 EEST
 
 --
 -- PostgreSQL database dump complete

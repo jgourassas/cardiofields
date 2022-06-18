@@ -1,0 +1,10 @@
+INDEXING NOTES
+The purpose of the index is to give the reader an informative, balanced portrait of what is in the book and a concise,
+useful guide to all pertinent facts in the book.
+
+These facts, in the form of an alphabetically ordered list of main entries
+and subentries, will include both proper names and subjects.
+
+After completing the task of marking up the page proofs, 
+the indexer uses a spreadsheet program such as Excel—using
+column A for main entries, column B for subentries, and so on—and enters

@@ -1,4 +1,4 @@
-<h4 class="title is-4">Edit Defs table</h4>
+<h4 class="title is-4">Edit Fields table</h4>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.defs_table_path(@conn, :update, @defs_table)) %>
 

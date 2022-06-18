@@ -13,15 +13,11 @@ pg_dump --attribute-inserts  --no-owner --data-only --no-privileges  -v cardiofi
 pg_dump --attribute-inserts  --no-owner --data-only --no-privileges  -v cardiofields_dev -t opts_sentences >  opts_sentences_data.sql
 pg_dump --attribute-inserts  --no-owner --data-only --no-privileges  -v cardiofields_dev -t defs_tables >  defs_tables_data.sql
 pg_dump --attribute-inserts  --no-owner --data-only --no-privileges  -v cardiofields_dev -t languages >  languages_data.sql 
-pg_dump --attribute-inserts  --no-owner --data-only --no-privileges  -v cardiofields_dev -t countries >  countries_data.sql 
-cd ../
 
 DATE=`date +%Y%m%d`
-tar -cvf tables_backup.tar tables_backup
-gzip -9 tables_backup.tar
-mv tables_backup.tar.gz cardiofields_tables_backup-$DATE.tar.gz
-rm ../tables_backup-*
+tar -cvf table_backup.tar table_backup
+gzip -9 table_backup.tar
+mv table_backup.tar.gz cardiofields_tables_backup-$DATE.tar.gz
 
-mv cardiofields_tables_backup-$DATE.tar.gz ../
 
 

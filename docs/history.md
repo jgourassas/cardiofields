@@ -44,5 +44,6 @@ Many years ago it was written
   (human interpretable) meaning while achieving computational interoperability.
 
 J Gourassas/ Gkourasas Old MD
-  Enjoy
+ jgourassas at gmail com
+ Enjoy
  Profit !!

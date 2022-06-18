@@ -3,11 +3,12 @@
 <% definitions_count = Canons.count_definitions()  %>
 <span></span>
     <%= if definitions_count > 0 do %>
-        <span class="tag is-small is-success">
+          <span class="button is-small is-primary">
+            <span> Total  Number of  fields: </span>
              <strong><%= definitions_count %></strong>
         </span>
     <% else %>
-        <span class="tag is-small is-danger">
+        <span class="button is-small is-danger">
             <%= definitions_count %>
            </span>
     <% end %>

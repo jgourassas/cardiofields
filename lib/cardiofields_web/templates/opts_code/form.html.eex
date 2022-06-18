@@ -47,6 +47,7 @@
    class: "form-control")    %>
 
     </div><!--select---->
+     <p class="help">( Required )</p>
      </div><!--control---->
   </div><!---field--->
 
@@ -64,9 +65,7 @@ type: "text", placeholder: "code",
      required: true
 %>
   <%= error_tag f, :code %>
-
-  <p class="help"></p>
-
+  <p class="help">( Required )</p>
   </div><!---control---------->
    </div><!-------field-------->
 
