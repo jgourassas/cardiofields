@@ -26,8 +26,8 @@ Show Field  Pick-Lists Option
     </span>
   </li>
 
-  <li class="list-item">
-    <strong>Saved In Database as Code : </strong>
+  <li class="list-item ">
+    <strong class="frame_3" >Saved In Database as Code : </strong>
     <%= @defs_option.code %>
   </li>
 

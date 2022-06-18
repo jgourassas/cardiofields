@@ -118,6 +118,7 @@ defmodule Cardiofields.Canons do
       "option_name" -> search_a_option_name(query)
       "instruction" -> search_an_instruction(query)
       "field_codes" -> search_a_field_code(query)
+      "field_option_codes" -> search_a_field_option_code(query)
       "inserted_after" -> search_inserted_after(query)
       "on_notes" -> search_on_notes(query)
       "on_indexing" -> search_on_indexing(query)
@@ -130,9 +131,7 @@ defmodule Cardiofields.Canons do
   
   #####################
    def search_definition_name(qname) do
-   
-
-    _query =
+      _query =
       from(
         d in Definition,
         #where: fragment("(?) @@ plainto_tsquery(?)", d.name, ^qname),
@@ -191,8 +190,8 @@ defmodule Cardiofields.Canons do
       limit: 250
     )
   end
+###########################33
 
-  ######################################
   @spec search_an_instruction(any) :: Ecto.Query.t()
   def search_an_instruction(qname) do
     _query =
@@ -528,7 +527,12 @@ defmodule Cardiofields.Canons do
 
   """
   def list_defs_options(conn) do
-    Cardiofields.Repo.all(Ecto.assoc(conn.assigns[:definition], :defs_options))
+    
+    Cardiofields.Repo.all(Ecto.assoc(conn.assigns[:definition], 
+    :defs_options))
+    |> Defs_option.order_by_code()
+  
+  
   end
 
   @doc """
@@ -763,7 +767,37 @@ defmodule Cardiofields.Canons do
   def defs_codes(definition_id) do
     from(dr in Defs_code, where: dr.definition_id == ^definition_id)
   end
+###############################
+  def search_a_field_option_code(qcode) do
+    
+    query =from(
+        d in Definition,
+        right_join: p  in Defs_option,
+        right_join:  c in  Opts_code,
+        where:
+          d.id == p.definition_id 
+          and c.defs_option_id == p.id  
+          and c.code == ^qcode 
+          and  not is_nil(c.code),
+          limit: 250
+    )
+  res = Cardiofields.Repo.all(query)
+  #res_len = length(res)
+  # not working
 
+  #title = "<div class='title_form'> "
+  #<> "<h5 class='title is-5 has-text-centered frame_2'>"
+  #<> "Option Codes"
+  #<> "<h5/>"
+   #if res_len > 0 do
+   # IO.puts("-------title--------------------------------")
+   # require EEx
+   # EEx.eval_string "Hi, <%= @title %>", assigns: [title: "<%=title%>"]
+  #end
+ query
+    
+  end
+    ######################################
   ##############
   def count_codes(id) do
     Cardiofields.Repo.one(
@@ -809,6 +843,7 @@ defmodule Cardiofields.Canons do
       )
 
     ids = Cardiofields.Repo.all(query_a)
+    
     total_ids = length(ids)
 
     # id_num =

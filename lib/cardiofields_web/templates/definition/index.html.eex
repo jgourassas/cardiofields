@@ -20,7 +20,8 @@
       "In Tables": "table_name",
       "In Field Options Selection": "option_name",
       "In Field Instructions": "instruction",
-      "In Field Codes":  "field_codes",
+      "In Field Codes - Any ":  "field_codes",
+      "In Field Options Codes - Any ":  "field_option_codes",
       "Inserted After": "inserted_after",
       "On Notes": "on_notes",
       "On Indexing":  "on_indexing"
@@ -89,13 +90,12 @@ Total Number of Results
       <thead class="thead">
          <tr>
          <th> Updated - Inserted - <em>Indexing</em></th>
-          <th>Field Name</th>
-          <th class="is-narrow">Table
-          
-          </th>
+          <th>Field Name - Table Name</th>
+        
           <th>Instructions 
            <i class="fa fa-wine-glass" aria-hidden="true"></i>
            </th>
+
           <th>
            <span>
          <i class="fas fa-list-ol"
@@ -169,10 +169,17 @@ Total Number of Results
 
 </td>
       <td class="p-4">
-        <strong><%= definition.name %>
+        <strong>
+       <%= definition.name %>
         </strong>
   <br/>
-  
+  <span style="color:#000080;">  
+    Table : 
+    <%= definition.table_name %>
+   
+    </span>
+
+
 <%= if "#{definition.inserted_by}" == "" do %>
        <p style="color:#c4aead;">
          Inserted by: No Data 
@@ -207,21 +214,18 @@ Total Number of Results
       
       </p>
      <% end %>
+      
+       
      </td>
 
-      <td>
-        <em>
-          <%= definition.table_name %>
-        </em>
-    </td>
-
+    
     <td>
       <%= raw( definition.coding_instructions) %>
      </td>
 
   <td>
   <%= link  to: Routes.definition_defs_option_path(@conn, :index, definition),
-           class: "button is-info is-small  is-rounded  is-fullwidth"  do %>
+           class: "button is-primary is-small  is-rounded  is-fullwidth"  do %>
         <%= render  CardiofieldsWeb.SharedView, "_defs_options_count.html", definition: definition %>
 
            <%end%>
@@ -230,7 +234,7 @@ Total Number of Results
 
            <td>
              <%= link   to: Routes.definition_defs_sentence_path(@conn, :index, definition),
-class: "button is-info is-small is-rounded is-fullwidth" do   %>
+class: "button is-primary is-small is-rounded is-fullwidth" do   %>
    <%= render  CardiofieldsWeb.SharedView, "_defs_phrases_count.html", definition: definition %>
 
            <%end%>
@@ -238,7 +242,7 @@ class: "button is-info is-small is-rounded is-fullwidth" do   %>
            </td>
             <td>
              <%= link   to: Routes.definition_defs_code_path(@conn, :index, definition),
-class: "button is-info is-small is-rounded is-fullwidth "  do %>
+class: "button is-primary  is-small is-rounded is-fullwidth "  do %>
   <%= render  CardiofieldsWeb.SharedView, "_defs_codes_count.html", definition: definition %>
 
            <%end%>

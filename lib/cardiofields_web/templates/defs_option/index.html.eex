@@ -128,7 +128,7 @@ definition: @definition %>
 
 <span><%= link "New Option - Pick-List Element",
       to: Routes.definition_defs_option_path(@conn, :new, @definition),
-class: "button is-info is-large is-fullwidth" %>
+class: "button is-primary is-medium is-fullwidth" %>
 </span>
 
 <span>

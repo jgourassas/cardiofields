@@ -13,27 +13,27 @@ Showing Code For Field:
 <ul class="frame_1  list is-hoverable">
 
   <li class="list-item">
-    <strong>Code system:</strong>
+    <strong class="frame_3">Code system:</strong>
     <%= @defs_code.code_system %>
   </li>
 
   <li class="list-item">
-    <strong>Code:</strong>
+    <strong class="frame_3">Code:</strong>
     <%= @defs_code.code %>
   </li>
 
   <li class="list-item">
-    <strong>Description:</strong>
-    <%= raw @defs_code.description %>
-  </li>
+    <strong class="frame_3">Description:</strong>
+       <%= raw @defs_code.description %>
+     </li> 
 
   <li class="list-item">
-    <strong>Note:</strong>
+    <strongclass="frame_3" >Note:</strong>
     <%= raw @defs_code.note %>
   </li>
 
   <li class="list-item">
-    <strong>Definition ID:</strong>
+    <strong class="frame_3">Definition ID:</strong>
     <%= @defs_code.definition_id %>
   </li>
 

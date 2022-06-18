@@ -47,6 +47,7 @@
    class: "form-control")    %>
 
     </div><!--select---->
+     <p class="help">( Required )</p>
      </div><!--control---->
   </div><!---field--->
 
