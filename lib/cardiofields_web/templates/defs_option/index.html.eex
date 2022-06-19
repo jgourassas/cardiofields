@@ -46,10 +46,6 @@ definition: @definition %>
  
   <td class="first_column">
    <span class="tag is-small is-rounded is-primary"> 
-      <i class="fa fa fa-arrow-turn-right"
-           style="font-size:16px;color:#fff;text-align:center;">
-     </i>
-      
     <%=index + 1 %>
     </span>
 

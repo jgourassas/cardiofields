@@ -135,20 +135,18 @@ Total Number of Results
    <tr>
    
    <td>
-    <span class="button is-small is-info is-rounded">
-      <%=index + 1 %>
-      </span>
-  <div class="is-divider-horizontal" data-content="OR"></div>
-   <span class="tag is-white">
-    Inserted :  
-      <%= definition.inserted_at %>
-  </span>
-   <span class="tag is-white">
-   Updated: 
-   <%=definition.updated_at %>
-   </span>
-
    
+
+<span class="tag is-white", style="font-size: 14px;">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   Updated: <%= definition.updated_at %></span>
+    <br/>
+   <span class="tag is-link", style="font-size: 14px;">
+   <i class="fa fa-registered" aria-hidden="true"></i>
+      Inserted: 
+   <%= definition.inserted_at %></span>
+
+ 
 
 <%= if "#{definition.indexing}" == "" do %>
        
@@ -173,7 +171,7 @@ Total Number of Results
        <%= definition.name %>
         </strong>
   <br/>
-  <span style="color:#000080;">  
+  <span style="color:#990000;//336600;//009900;//000080;">  
     Table : 
     <%= definition.table_name %>
    
@@ -183,13 +181,12 @@ Total Number of Results
 <%= if "#{definition.inserted_by}" == "" do %>
        <p style="color:#c4aead;">
          Inserted by: No Data 
-            </p>
+        </p>
        <% else %>
       <p class="mr-0 pt-3">
           <span style="color:#707070;"> 
          <em>Inserted By: </em>
-      
-      <em>
+        <em>
         <%= raw( definition.inserted_by) %>
       </em>
        </span>
