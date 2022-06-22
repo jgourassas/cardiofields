@@ -273,7 +273,7 @@ class: "button is-primary  is-small is-rounded is-fullwidth "  do %>
 
 <span><%= link "Add A New Field",
  to: Routes.definition_path(@conn, :new), 
- class: "button is-primary is-large is-fullwidth"  %>
+ class: "button is-info is-medium is-fullwidth"  %>
   </span>
 
 

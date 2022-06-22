@@ -78,7 +78,7 @@ is-hoverable">
 
 <span><%= link "New Code For Field",
       to: Routes.definition_defs_code_path(@conn, :new, @definition),
-class: "button is-primary is-large is-fullwidth" %>
+class: "button is-info is-medium is-fullwidth" %>
 </span>
 </span>
 
@@ -88,4 +88,4 @@ class: "button is-primary is-large is-fullwidth" %>
 </span>
 
 
-<span><%#= link "New Defs code", to: Routes.defs_code_path(@conn, :new) %></span>
+

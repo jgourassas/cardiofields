@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-18 05:53:21 EEST
+-- Started on 2022-06-22 08:49:55 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -238,8 +238,8 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (194, 'SNOMED-CT', '12000000154', NULL, NULL, NULL, 8988, '2022-05-28 02:40:41', '2022-05-28 02:40:41');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (195, 'LOINC', '20234-1', 'Left ventricular Maximum diastole [Volume] by US 2D bullet calculated', NULL, NULL, 2098, '2022-06-12 04:30:26', '2022-06-12 04:30:26');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (196, 'LOINC', ' 20236-6', 'Left ventricular Maximum diastole [Volume] by US 2D modified biplane ellipse calculated', NULL, NULL, 2097, '2022-06-12 04:44:56', '2022-06-12 04:44:56');
-INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (197, 'SNOMED-CT', '1111111 33333', NULL, NULL, NULL, 9032, '2022-06-12 05:12:01', '2022-06-12 05:12:01');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (198, 'ICD10-CM', 'I20.0', 'Unstable angina incT', NULL, NULL, 1363, '2022-06-16 03:19:59', '2022-06-16 03:23:26');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (217, 'ACC-NCDR', '100013026', 'Indicate the patient''s response to the Rose Dyspnea Scale Questionnaire<br />Question 3 "Do you get short of breath when walking at your own pace on level ground?"', NULL, NULL, 8985, '2022-06-21 15:20:50', '2022-06-21 15:20:50');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (200, 'ICD10-CM', ' I20.8', 'Other forms of angina pectoris', NULL, NULL, 1363, '2022-06-16 03:20:55', '2022-06-16 03:27:02');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (199, 'ICD10-CM', 'I20.1', 'Angina pectoris with documented spasm incT', NULL, NULL, 1363, '2022-06-16 03:20:31', '2022-06-16 03:28:18');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (201, 'ICD10-CM', 'I20.9', 'Angina pectoris, unspecified incT', NULL, NULL, 1363, '2022-06-16 03:33:39', '2022-06-16 03:33:39');
@@ -258,6 +258,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (212, 'SNOMED-CT', '421704003', NULL, NULL, NULL, 1952, '2022-06-16 15:26:10', '2022-06-16 15:26:10');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (213, 'SNOMED-CT', '420913000', NULL, NULL, NULL, 1953, '2022-06-16 15:26:49', '2022-06-16 15:26:49');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (214, 'SNOMED-CT', '422293003', NULL, NULL, NULL, 1954, '2022-06-16 15:27:32', '2022-06-16 15:27:32');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (197, 'SNOMED-CT', '1111111 33333', 'Editing Codes', NULL, NULL, 9032, '2022-06-12 05:12:01', '2022-06-19 01:17:14');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (215, 'ACC-NCDR', '100013024', 'Indicate the patient''s response to the Rose Dyspnea Scale Questionnaire<br />Question 1 "Do you get short of breath when hurrying on level ground<br />or walking up a slight hill?"', NULL, NULL, 8984, '2022-06-21 15:16:13', '2022-06-21 15:17:49');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (216, 'ACC-NCDR', '100013025', NULL, NULL, NULL, 8987, '2022-06-21 15:19:35', '2022-06-21 15:19:35');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (218, 'ACC-NCDR', '100013027', 'Indicate the patient''s response to the Rose Dyspnea Scale Questionnaire <br />Question 4 "Do you get short of breath when washing or dressing?"', NULL, NULL, 8986, '2022-06-21 15:22:07', '2022-06-21 15:22:07');
 
 
 --
@@ -266,10 +270,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 -- Name: opts_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_codes_id_seq', 214, true);
+SELECT pg_catalog.setval('public.opts_codes_id_seq', 218, true);
 
 
--- Completed on 2022-06-18 05:53:21 EEST
+-- Completed on 2022-06-22 08:49:55 EEST
 
 --
 -- PostgreSQL database dump complete

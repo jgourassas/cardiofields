@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-18 05:53:21 EEST
+-- Started on 2022-06-22 08:49:55 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -101,6 +101,7 @@ INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, 
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (89, 'en', 'Tocilizumab', NULL, NULL, '2022-05-28 07:59:32', '2022-05-28 07:59:32', 8941);
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (90, 'en', 'Left ventricular Maximum diastole [Volume] by US 2D modified biplane ellipse calculated was', NULL, NULL, '2022-06-12 04:50:26', '2022-06-12 04:50:26', 2097);
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (91, 'en', 'Unstable Angina', NULL, NULL, '2022-06-16 03:39:12', '2022-06-16 03:39:12', 1363);
+INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (92, 'aa', ' Option Sentence', NULL, NULL, '2022-06-19 01:14:49', '2022-06-19 01:14:49', 9032);
 
 
 --
@@ -109,10 +110,10 @@ INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, 
 -- Name: opts_sentences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_sentences_id_seq', 91, true);
+SELECT pg_catalog.setval('public.opts_sentences_id_seq', 92, true);
 
 
--- Completed on 2022-06-18 05:53:21 EEST
+-- Completed on 2022-06-22 08:49:55 EEST
 
 --
 -- PostgreSQL database dump complete
