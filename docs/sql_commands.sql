@@ -103,6 +103,21 @@ ORDER BY
     id;
 
 
+--find out double records-------------
+----------------
+SELECT
+    name, 
+    COUNT(name)
+FROM
+    definitions
+GROUP BY
+    name
+HAVING
+    COUNT( name )> 1
+ORDER BY
+    name;
+
+
 ------------ fixing primary key---------this seems to works-------
 -- Login to psql and run the following
 -- What is the result?

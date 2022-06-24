@@ -9,11 +9,11 @@
 
    * Fields (~ 3000 entries). Contains Field Name, Coding Instructions, Range  and some  extensive and important Notes About the entity
    * Pick-List Items (For integration with select option widget)
-   * Field Sentences. Sentences In Defferent Languages - Add your own
-   * Field Codes can be saved as: SNOMED-CT - Loinc -  RxNorm - HL7 - RadLex
+   * Field Sentences. Sentences In deferent Languages - Add your own
+   * Field Codes can be saved as: SNOMED-CT - Loinc -  RxNorm - HL7 - RadLex (Uncompleted )
   
    * Pick-List Items Sentences for the reports in your Language
-   * Pick-List Items Codes
+   * Pick-List Items Codes (Uncompleted)
    * Pick-List Items Images (Very Simple)
    
  

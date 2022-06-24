@@ -76,7 +76,8 @@ is-hoverable">
 </table>
 </div>
 
-<span><%= link "New Code For Field",
+<span><%= link "Enter a New Code For Field: " <>
+"#{@definition.name}",
       to: Routes.definition_defs_code_path(@conn, :new, @definition),
 class: "button is-info is-medium is-fullwidth" %>
 </span>

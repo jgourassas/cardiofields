@@ -89,18 +89,7 @@ is-hoverable">
 <span>
 <%= link "New Phrase - Sentence For Field",
       to: Routes.definition_defs_sentence_path(@conn, :new, @definition),
-class: "button is-primary is-medium is-fullwidth" %>
-</span>
-
-<span>
-<%#= link "Back  to  List of Fields", to: Routes.definition_path(@conn, :index),
-       class: "button is-link"  %>
-</span>
-
-<span>
-  <%#= link "To Field Options List",
-to: Routes.definition_defs_option_path(@conn, :index,@definition),
-       class: "button is-success"  %>
+class: "button is-info is-medium is-fullwidth" %>
 </span>
 
 <span>

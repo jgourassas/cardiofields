@@ -122,9 +122,10 @@ definition: @definition %>
 </table>
 </div>
 
-<span><%= link "New Option - Pick-List Element",
+<span><%= link "Enter a New Option  for Field: " <>
+ "#{@definition.name}",
       to: Routes.definition_defs_option_path(@conn, :new, @definition),
-class: "button is-primary is-medium is-fullwidth" %>
+class: "button is-info is-medium is-fullwidth" %>
 </span>
 
 <span>

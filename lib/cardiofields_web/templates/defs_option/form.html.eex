@@ -134,7 +134,7 @@ type: "text", placeholder: "code",  required: true
 
 
 <div>
-     <%= submit "Save Option Item", class: "button is-primary is-medium is-fullwidth " %>
+     <%= submit "Save Option Item", class: "button is-info is-medium is-fullwidth " %>
 
   </div>
 

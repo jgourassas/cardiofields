@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-22 08:49:55 EEST
+-- Started on 2022-06-24 18:38:55 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -262,6 +262,9 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (215, 'ACC-NCDR', '100013024', 'Indicate the patient''s response to the Rose Dyspnea Scale Questionnaire<br />Question 1 "Do you get short of breath when hurrying on level ground<br />or walking up a slight hill?"', NULL, NULL, 8984, '2022-06-21 15:16:13', '2022-06-21 15:17:49');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (216, 'ACC-NCDR', '100013025', NULL, NULL, NULL, 8987, '2022-06-21 15:19:35', '2022-06-21 15:19:35');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (218, 'ACC-NCDR', '100013027', 'Indicate the patient''s response to the Rose Dyspnea Scale Questionnaire <br />Question 4 "Do you get short of breath when washing or dressing?"', NULL, NULL, 8986, '2022-06-21 15:22:07', '2022-06-21 15:22:07');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (219, 'ACC-NCDR', '100013094', NULL, NULL, NULL, 1094, '2022-06-23 08:46:26', '2022-06-23 08:46:26');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (220, 'ACC-NCDR', '100013093', NULL, NULL, NULL, 9045, '2022-06-23 08:48:45', '2022-06-23 08:48:45');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (221, 'ACC-NCDR', '100013083', NULL, NULL, NULL, 9044, '2022-06-23 08:49:17', '2022-06-23 08:49:17');
 
 
 --
@@ -270,10 +273,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 -- Name: opts_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_codes_id_seq', 218, true);
+SELECT pg_catalog.setval('public.opts_codes_id_seq', 221, true);
 
 
--- Completed on 2022-06-22 08:49:55 EEST
+-- Completed on 2022-06-24 18:38:55 EEST
 
 --
 -- PostgreSQL database dump complete

@@ -126,7 +126,7 @@ type: "text", placeholder: "code",
 
 
   <div class="form-group">
-    <%= submit "Submit - Save Record", class: "button is-info is-large is-fullwidth" %>
+    <%= submit "Submit - Save Record", class: "button is-info is-medium is-fullwidth" %>
   </div>
 
 <% end %>

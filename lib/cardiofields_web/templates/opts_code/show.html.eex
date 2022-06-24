@@ -8,8 +8,10 @@ Show Codes For Option:
 
     <%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
 
-<ul class="frame_1">
-    <li>
+<ul class="list  is-hoverable">
+<div class="columns">
+<div class="column frame_1">
+    <li  class="list-item">
         <strong>Code system:</strong>
         <%= @opts_code.code_system %>
     </li>
@@ -21,23 +23,33 @@ Show Codes For Option:
         </span>
     </li>
 
-    <li class="item">
+    <li  class="list-item">
         <strong>Description:</strong>
         <%= @opts_code.description %>
     </li>
+</div><!-------column----------------------->
 
-    <li class="item">
-        <strong>Note:</strong>
-        <%= @opts_code.notes %>
-    </li>
 
+
+<div class="column frame_1">
+
+
+<li class="list-item" >
+    <strong>Note </strong> 
+    <% string_len = to_string(@opts_code.notes) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @opts_code.notes %>
+    <%end %>
+  </li>
+
+
+
+</div><!---column-------------------->
+</div><!-----columns-------------------------->
 
 </ul>
-
-<span>
-   <%#= link "Back Options Codes", to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, @defs_option),
-    class: "button  is-link"%>
-</span>
 
 <span>
    <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, 
@@ -54,19 +66,3 @@ Show Codes For Option:
   conn: @conn, definition: @definition, defs_option: @defs_option %>
 </span>
 
-<!----
-
-<div class="stacked-for-small button-group">
-    <%#= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, @definition , @defs_option, @opts_code), class: "button" %>
-
-    <%#= link "Back Options Codes", to: Routes.definition_defs_option_opts_code_path(@conn, :index, @definition, @defs_option),
-    class: "button"%>
-</div>
-</div>
-
-<div class="medium-2 columns show_frame defs_frame">
-    <%#= render  CardiofieldsWeb.SharedView, "_opts_codes_info.html", definition: @definition, defs_option: @defs_option, defs_code: @defs_code %>
-</div>
-
-</div>
---->

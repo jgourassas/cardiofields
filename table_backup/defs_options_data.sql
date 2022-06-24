@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-22 08:49:55 EEST
+-- Started on 2022-06-24 18:38:55 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1302,7 +1302,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (905, 'arthritis_collagen_disease', '99', 'Unknown', '', '', 2323, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (893, 'hist_cor_tobacco_use', '4', 'Never smoker', '<p>The patient has never been a tobacco smoker.</p>', NULL, 1575, '2016-08-25 11:50:55', '2018-06-06 03:10:50', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3503, 'prior_comparison', '2', 'New functional abnormality', NULL, NULL, 3099, '2016-11-29 07:29:51', '2016-11-29 07:29:51', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (926, 'stress_test_result', '2', 'Abnormal', '', '', 1086, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (922, 'car_dose_meas_method', '2', 'Biplane', NULL, NULL, 1491, '2016-08-25 11:50:55', '2018-06-08 02:19:18', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8416, 'car_area_product_units', 'uGy-M2', 'uGy-M2', NULL, NULL, 3709, '2018-06-08 02:32:25', '2018-06-08 02:32:25', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8417, 'cath_direct_thrombin', '3', 'Dabigatran', NULL, NULL, 756, '2018-06-12 14:24:47', '2018-06-12 14:24:47', NULL);
@@ -1352,6 +1351,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1829, 'sleep_apnea_has', '1a', 'Yes - Central', NULL, NULL, 24, '2016-08-25 17:14:25', '2016-08-25 17:14:25', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3559, 'global_rv_function_desc', '2', 'Abnormal', NULL, NULL, 3119, '2016-12-05 08:10:32', '2016-12-05 08:10:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1984, 'mv_eroa_area _method', '88', 'Other', NULL, NULL, 2454, '2016-09-07 15:26:50', '2016-09-07 15:26:50', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (926, 'acs_stress_test_result', 'Unavailable', 'Unavailable', 'The results of the study were not available.', NULL, 1086, '2016-08-25 11:50:55', '2022-06-23 08:50:30', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8630, 'pci_les_status', '3', 'Stent thrombosis', '<p>Indicate if the previously treated &amp; stented<br />lesion is being treated because of the<br />presence of a thrombus in the stent (or within<br />5mm of the prior stent edge). A thombus is<br />suggested by certain angiograph features,<br />haziness, reduced contrast, density or<br />contrast persistence, irregular lesion<br />contours or globular filling defects.</p>', NULL, 3935, '2018-07-05 17:29:32', '2018-07-05 17:29:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4113, 'vt_tachy', '1', 'Normal (no history of VT)', NULL, NULL, 3461, '2017-03-13 16:36:17', '2017-03-13 16:36:17', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1980, 'tmvr_echo_fup_reg_grade', '5', '4+/Severe', NULL, NULL, 2452, '2016-09-07 15:16:08', '2016-09-07 15:16:08', NULL);
@@ -2852,7 +2852,7 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 college, CEGEP, school of nursing, theological college or private
 college
 ', NULL, 388, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (656, 'discharge_status', '2', 'Deceased', NULL, NULL, 1128, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (656, 'acs_discharge_status', '2', 'Deceased', NULL, NULL, 1128, '2016-08-25 11:50:55', '2022-06-24 15:38:11', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (657, 'hypothermia_treatment_location', '1', 'Pre-Hospital', '', '', 1076, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (660, 'discharge_location', '2', 'Extended
 Care/TCU/Rehab
@@ -3361,7 +3361,6 @@ the left main coronary artery and
 >=50% stenosis in the right coronary
 artery).
 ', NULL, 888, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (851, 'stress_test_result', '1', 'Normal', '', '', 1086, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4014, 'lead_location', '6', 'Subcutaneous ICD', '<p>A defibrillation lead placed subcutaneously.</p>
 ', NULL, 3421, '2017-03-02 18:11:10', '2017-03-02 18:11:10', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8307, 'lad_distal_type', 'lad_distal_type_ii', 'Type ii', NULL, NULL, 44, '2017-12-21 04:35:39', '2017-12-21 04:38:44', NULL);
@@ -5312,7 +5311,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 ', '<p>If the patient has multiple race origins, specify them using the other race selections in addition to this one.</p>
 ', 272, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (733, 'cad_presentation_type', '1', 'No Symptoms - No Angina', 'No symptoms, No angina.', NULL, 603, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (734, 'discharge_status', '1', 'Alive', NULL, NULL, 1128, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8436, 'cath_cl_arrest_loc', '1', 'At transferring facility', NULL, NULL, 3748, '2018-06-15 08:49:52', '2018-06-15 08:49:52', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (795, 'mech_assist_at_start_proc', '1', 'Yes - IABP', '<ul>
 	<li>Intra-aortic balloon pump in place at the start of the&nbsp;procedure.</li>
@@ -5374,6 +5372,7 @@ atrial endocardium.<br />
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (259, 'lvef_method', '8807-0', '2D echo estimation', NULL, NULL, 100, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (264, 'meas_fs_desc', '2', 'Decreased', NULL, NULL, 98, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1827, 'coh_chf_prior_yn', '0', 'No', NULL, NULL, 1580, '2016-08-25 16:40:13', '2022-06-12 14:33:03', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (734, 'acs_discharge_status', '1', 'Alive', NULL, NULL, 1128, '2016-08-25 11:50:55', '2022-06-24 15:38:02', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3811, 'ventr_stim_sites', '2', 'right ventricular outï¬‚ow tract', NULL, NULL, 3323, '2016-12-28 14:26:47', '2016-12-28 14:26:47', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (8801, 'cor_anat_lad_d1_type', 'lad_d1_dual', 'Dual - Two Separated First Diagonals', NULL, NULL, 49, '2019-07-19 05:35:58', '2019-08-11 06:48:41', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1191, 'spect_stress_risk', '1', 'Low Risk', '<ul>
@@ -7313,7 +7312,6 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1091, 'tavr_proc_aborted_action', '3', 'Conversion to open
 heart surgery
 ', '', '', 2084, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
-INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1094, 'stress_test_result', '3', 'Indeterminate', '', '', 1086, '2016-08-25 11:50:55', '2016-08-25 11:51:32', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3510, 'nuclear_lv_func_desc', '99', 'Unknown', NULL, NULL, 3100, '2016-11-29 08:33:59', '2016-11-29 08:33:59', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1847, 'lm_sten_more_50', '0', 'No', NULL, NULL, 1956, '2016-08-30 15:01:29', '2016-08-30 15:01:29', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1099, 'tavr_proc_aborted_reason', '6', 'Consent issue', '<ul>
@@ -8426,6 +8424,9 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (3009, 'echo_ao_dilatation_loc', '0', 'No Dilatation', NULL, NULL, 2943, '2016-10-23 04:40:30', '2022-06-16 18:55:50', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (4218, 'uni_death_cause', '12', 'Non-infectious (e.g., systemic inflammatory response syndrome (SIRS))', NULL, NULL, 127, '2017-06-26 14:09:00', '2022-06-16 19:30:18', NULL);
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (109, 'pci_lesev_perforation_treat', '3', 'PTFE Stent  and then Emergency CABG', NULL, NULL, 1194, '2016-08-25 11:50:55', '2022-06-17 17:02:41', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (1094, 'acs_stress_test_result', 'Indeterminate', 'Indeterminate', NULL, 'The results of the study were uninterpretable.<br />They <span style="text-align: justify;">cannot be considered to be positive or negative.</span>', 1086, '2016-08-25 11:50:55', '2022-06-23 08:49:42', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9044, 'acs_stress_test_result', 'Negative', 'Negative', NULL, '<strong>Stress Test: Exercise Stress Test</strong> (w/o imaging)<br />&bull; A stress test is negative when the electrocardiogram<br />(ECG) is normal or not suggestive of ischemia. ECGs<br />are not suggestive of ischemia when &lt; 1 mm of<br />horizontal or downsloping ST-segment depression or<br />elevation for &gt;= 60-80 milliseconds after the end of the<br />QRS complex, either during or after exercise.<br /><br /><strong>Stress Test: Stress Echocardiogram</strong><br />The imaging study was normal. There was no change<br />n wall motion during the procedure.<br /><br /><strong>Stress Test: Stress Nuclear</strong><br />&bull; The results of the imaging study revealed no<br />myocardial perfusion defects.<br /><br /><br /><strong>Stress Test: Stress Imaging with CMR</strong><br />&bull; The results of the imaging study revealed no<br />myocardial perfusion defects.<br /><br />', 1086, '2022-06-23 08:38:33', '2022-06-23 08:50:05', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9045, 'acs_stress_test_result', 'Positive', 'Positive', 'Positive', '<strong>Stress Test: Exercise Stress Tes</strong>t (w/o imaging)<br />&bull; A stress test is positive when the electrocardiogram<br />(ECG) suggests ischemia. ECGs suggestive of<br />ischemia can be described as having &gt;= 1 mm of<br />horizontal or downsloping ST-segment depression or<br />elevation for &gt;= 60-80 milliseconds after the end of the<br />QRS complex, either during or after exercise. It is also<br />be suggestive of ischemia if the patient had symptoms<br />of ischemia (i.e.chest pain), arrhythmias, and/or a fall in<br />blood pressure during or immediately after the<br />procedure.<br /><br /><strong>Stress Test: Stress Echocardiogram</strong><br />&bull; The imaging study was abnormal. There were<br />changes that reflected wall motion abnormalities during<br />the procedure.<br /><br /><br /><strong>Stress Test: Stress Nuclear</strong><br />&bull; The result of the imaging study revealed one or more<br />stress-induced myocardial perfusion defects.<br /><br /><br /><strong>Stress Test: Stress Imaging with CMR</strong><br />&bull; The result of the imaging study revealed one or more<br />stress-induced myocardial perfusion defects.<br />Stress Test: Stress Nuclear<br />&bull; The result of the imaging study revealed one or more<br />stress-induced myocardial perfusion defects.<br />Stress Test: Stress Imaging with CMR<br />&bull; The result of the imaging study revealed one or more<br />stress-induced myocardial perfusion defects.', 1086, '2022-06-23 08:41:29', '2022-06-23 08:50:52', NULL);
 
 
 --
@@ -8434,10 +8435,10 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 -- Name: defs_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_options_id_seq', 9043, true);
+SELECT pg_catalog.setval('public.defs_options_id_seq', 9045, true);
 
 
--- Completed on 2022-06-22 08:49:55 EEST
+-- Completed on 2022-06-24 18:38:55 EEST
 
 --
 -- PostgreSQL database dump complete

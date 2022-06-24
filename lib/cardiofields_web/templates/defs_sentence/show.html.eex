@@ -11,6 +11,8 @@
 <div class= " frame_1 box  has-background-light ">
 
 <ul  class="list is-hoverable ">
+<div class="columns">
+<div class="column frame_1">
 
   <li class="list-item">
    <span class="frame_5">
@@ -26,6 +28,9 @@
     </span>
   </li>
 
+</div><!-------column----------------------->
+<div class="column frame_1">
+
   <li class="list-item">
     <strong>Note:</strong>
     <%= raw @defs_sentence.note %>
@@ -35,7 +40,8 @@
     <strong>Field Definition ID:</strong>
     <%= @defs_sentence.definition_id %>
   </li>
-
+</div><!---column-------------------->
+</div><!-----columns-------------------------->
 </ul>
 </div>
 
