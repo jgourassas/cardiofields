@@ -19,6 +19,16 @@ IN BULMA CCS
 </div><!----columns--------------------------->
 
 <!---------end start------------------------------------>
+check version
+mix phx.new -v
+Phoenix installer v1.6.7
+-----------------------------
+ elixir -v
+ Erlang/OTP 24 [erts-12.3.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit]
+Elixir 1.14.0-dev (73d3f7d) (compiled with Erlang/OTP 24)
+---------------------
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+-----------------------
 
 create table(:documents) do
   add :title, :string
@@ -38,7 +48,23 @@ create table(:documents) do
 end
 create_if_not_exists table(:documents) do: ... end
 
+------------------------------
 
+
+config :absinthe,
+ schema: CorvesWeb.Schema
+
+mix do app.start, absinthe.schema.json jg_notes/schema.json --pretty
+---------------------------
+add :mime_type, :string
+      add :mime_size, :string
+      add :radlex_id, :string
+      add :dicom_reference, :string
+      add :dicom_size, :string
+      add :data_responsible, :string
+      add :data_owner, :string
+    --------------------------------
 ffmpeg -i in.avi out.mp4
   # ffmpeg -i in.avi out.ogv
-  # ffmpeg -i input.avi -acodec libfaac -b:a 128k -vcodec mpeg4 -b:v 1200k -flags +aic+mv4 output.mp4
+  # ffmpeg -i input.avi -acodec libfaac -b:a 128k 
+            -vcodec mpeg4 -b:v 1200k -flags +aic+mv4 output.mp4

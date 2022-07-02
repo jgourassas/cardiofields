@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-18 05:53:20 EEST
+-- Started on 2022-07-02 15:38:46 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -672,6 +672,7 @@ INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, 
 INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at) VALUES (724, 'el', '&Upsilon;&pi;&omicron;&theta;&epsilon;&rho;&mu;ί&alpha;', NULL, 3749, '2022-05-20 04:28:33', '2022-05-20 04:28:33');
 INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at) VALUES (726, 'en', 'Field Instructions : aaa fake Table: aaa_fake', NULL, 303, '2022-05-25 19:10:40', '2022-05-25 19:10:40');
 INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at) VALUES (727, 'en', 'Covid therapies', NULL, 249, '2022-05-28 07:58:27', '2022-05-28 07:58:27');
+INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at) VALUES (728, 'af', 'Sentence', NULL, 303, '2022-06-19 01:15:24', '2022-06-19 01:15:54');
 
 
 --
@@ -680,10 +681,10 @@ INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, 
 -- Name: defs_sentences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_sentences_id_seq', 727, true);
+SELECT pg_catalog.setval('public.defs_sentences_id_seq', 728, true);
 
 
--- Completed on 2022-06-18 05:53:20 EEST
+-- Completed on 2022-07-02 15:38:46 EEST
 
 --
 -- PostgreSQL database dump complete

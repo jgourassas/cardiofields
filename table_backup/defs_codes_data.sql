@@ -5,7 +5,7 @@
 -- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
 -- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
 
--- Started on 2022-06-18 05:53:20 EEST
+-- Started on 2022-07-02 15:38:47 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -955,7 +955,6 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2541, '9090', 'NCDR-SEQ', NULL, NULL, 936, '2016-09-14 15:57:00', '2016-09-29 06:29:38');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2542, '10345', 'NCDR-SEQ', NULL, NULL, 2458, '2016-09-14 15:57:00', '2016-09-14 15:56:26');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2543, '7325', 'NCDR-SEQ', NULL, NULL, 1896, '2016-09-14 15:57:00', '2016-09-28 13:29:57');
-INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2544, '10033', 'NCDR-SEQ', NULL, NULL, 279, '2016-09-14 15:57:00', '2016-09-28 13:44:47');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2545, '5081', 'NCDR-SEQ', NULL, NULL, 2190, '2016-09-14 15:57:00', '2016-09-28 13:51:22');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2546, '5650', 'NCDR-SEQ', NULL, NULL, 1984, '2016-09-14 15:57:00', '2016-09-14 15:56:26');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2547, '9041', 'NCDR-SEQ', NULL, NULL, 924, '2016-09-14 15:57:00', '2016-09-28 07:22:39');
@@ -1283,6 +1282,7 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3028, '80242-1', 'LOINC', NULL, NULL, 363, '2022-06-16 15:09:04', '2022-06-16 15:09:04');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3029, '100000994', 'ACC-NCDR', NULL, 'Dose Area Product is the integral of air kerma (the energy extracted from an x-ray beam per unit mass of air in a small irradiated air<br />volume; for diagnostic x-rays, the dose delivered to that volume of air) across the entire x-ray beam emitted from the x-ray tube. It is<br />a surrogate measure of the amount of energy delivered to the patient.<br />Also known as KAP (Kerma Area Product).', 1466, '2022-06-16 15:20:58', '2022-06-16 15:20:58');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3030, '372603003', 'SNOMED-CT', NULL, NULL, 2312, '2022-06-17 17:14:28', '2022-06-17 17:14:28');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3031, '96302009', 'SNOMED-CT', NULL, NULL, 3725, '2022-06-22 02:32:33', '2022-06-22 02:32:33');
 
 
 --
@@ -1291,10 +1291,10 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 -- Name: defs_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_codes_id_seq', 3030, true);
+SELECT pg_catalog.setval('public.defs_codes_id_seq', 3031, true);
 
 
--- Completed on 2022-06-18 05:53:21 EEST
+-- Completed on 2022-07-02 15:38:47 EEST
 
 --
 -- PostgreSQL database dump complete

@@ -14,10 +14,6 @@ Editing Codes For Option:
   <div class="column">
     <%= render "form.html", changeset: @changeset,
     action: Routes.definition_defs_option_opts_code_path(@conn, :update, @definition, @defs_option, @opts_code) %>
-
-    <%#= link "Back To Options Codes", to:  Routes.definition_defs_option_opts_code_path(@conn, :create,
-@definition, @defs_option),
-class: "button is-danger"%>
 <span>
   <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",
   conn: @conn, definition: @definition, defs_option: @defs_option %>
@@ -26,9 +22,7 @@ class: "button is-danger"%>
   <%= render  CardiofieldsWeb.SharedView, "_opts_link_buttons.html",
   conn: @conn, definition: @definition, defs_option: @defs_option %>
 </span>
-<span>
-   <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, @definition , @defs_option, @opts_code), class: "button  is-success" %>
-   </span>
+
 </div><!-- colum -->
 
 

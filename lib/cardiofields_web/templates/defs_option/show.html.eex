@@ -72,7 +72,7 @@ Show Field  Pick-Lists Option
 </span>
 <%#= link "Back To Field Pick-List", to: Routes.definition_defs_option_path(@conn, :index, @definition) , class: "button is-link"%>
 </span>
-<span><%= link "Edit Field  Option Item", 
+<span><%= link "Edit  Option Item", 
 to: Routes.definition_defs_option_path(@conn, :edit, @definition, @defs_option), 
 class: "button is-primary is-fullwidth"%>
 </span>

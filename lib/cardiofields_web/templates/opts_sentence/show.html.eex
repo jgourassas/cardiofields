@@ -11,6 +11,8 @@ Show Sentence for Option:
 <div class= " frame_1 box  has-background-light ">
 
 <ul class = "list  is-hoverable">
+<div class="columns">
+<div class="column frame_1">
 
   <li class= "list-item">
     <strong>Language:</strong>
@@ -23,25 +25,30 @@ Show Sentence for Option:
     <%= raw @opts_sentence.sentence %>
   </span>
   </li>
+  
+</div><!-------column----------------------->
 
-  <li  class= "list-item">
-    <strong>Note:</strong>
-    <%= raw @opts_sentence.note %>
+
+
+<div class="column frame_1">
+
+<li class="list-item" >
+    <strong>Note </strong> 
+    <% string_len = to_string(@opts_sentence.note) %>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+    <%= raw @opts_sentence.note  %>
+    <%end %>
   </li>
-<!--
-  <li class= "list-item has-background-info has-text-white">
-    Field Name:
-    <%#= @definition.name %>
-  </li>
--->
+
+ 
+</div><!---column-------------------->
+</div><!-----columns-------------------------->
+
+
 </ul>
 </div>
-
-<span>
-   <%#= link "List of  Options Sentences", to: Routes.definition_defs_option_opts_sentence_path(@conn, :index,
-   @definition, @defs_option),
-    class: "button  is-primary"%>
-</span>
 
 <span>
    <%= link "Edit Option Sentence", to: Routes.definition_defs_option_opts_sentence_path(@conn, :edit, @definition ,

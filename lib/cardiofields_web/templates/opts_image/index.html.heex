@@ -84,10 +84,11 @@
 </table>
 </div>
 
-<span><%= link "New Image For Option", 
+<span><%= link "New Image For Option: " <> 
+ "#{@defs_option.selection_text}",
   to: Routes.definition_defs_option_opts_image_path(@conn, :new, 
   @definition, @defs_option),
-  class: "button is-info is-large is-fullwidth"
+  class: "button is-info is-medium is-fullwidth"
   %></span>
 
 

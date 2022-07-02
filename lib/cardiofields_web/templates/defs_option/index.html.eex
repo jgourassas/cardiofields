@@ -46,10 +46,6 @@ definition: @definition %>
  
   <td class="first_column">
    <span class="tag is-small is-rounded is-primary"> 
-      <i class="fa fa fa-arrow-turn-right"
-           style="font-size:16px;color:#fff;text-align:center;">
-     </i>
-      
     <%=index + 1 %>
     </span>
 
@@ -126,9 +122,10 @@ definition: @definition %>
 </table>
 </div>
 
-<span><%= link "New Option - Pick-List Element",
+<span><%= link "Enter a New Option  for Field: " <>
+ "#{@definition.name}",
       to: Routes.definition_defs_option_path(@conn, :new, @definition),
-class: "button is-primary is-medium is-fullwidth" %>
+class: "button is-info is-medium is-fullwidth" %>
 </span>
 
 <span>

@@ -78,7 +78,7 @@ to: Routes.definition_defs_option_opts_sentence_path(@conn, :show,
      <%= link  "New Sentence For Option: " <>
      "#{@defs_option.selection_text}",
   to:  Routes.definition_defs_option_opts_sentence_path(@conn, :new, @definition, @defs_option),
-class: "button is-info is-large is-fullwidth"%>
+class: "button is-info is-medium  is-fullwidth"%>
 </span>
 
 
