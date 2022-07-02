@@ -277,9 +277,6 @@ class: "button is-primary  is-small is-rounded is-fullwidth "  do %>
   </span>
 
 
-
-
-
 <%= if @page.total_entries == 0 do %>
 <section class="section">
 <div class="container">
@@ -312,10 +309,5 @@ Total Pages:
  </div>
 
 <!------------------------------>
-
-
-
-
-
 </div><!---------column---->
 </div><!------columns-------->
