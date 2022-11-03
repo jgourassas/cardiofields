@@ -288,12 +288,7 @@
 
 <!---------end start------------------------------------>
 
-
-
-
-
-
-  <!---------------------->
+ <!---------------------->
 
   <div>
     <%= submit "Save Field Data", class: "button is-info is-medium is-fullwidth " %>

@@ -29,7 +29,9 @@ definition: @definition %>
       <th>Field Name</th>
       <th>Saved As: </th>
        <th>Selection text</th>
-       <th>Definition</th>
+      <!----------
+       <th  style="width:40%" >Definition</th>
+       --->
        <th>Option Sentences</th>
       <th>Option Codes</th>
       <th>Images</th>
@@ -40,10 +42,12 @@ definition: @definition %>
     </tr>
   </thead>
   <tbody>
+
   <%= for {defs_option, index} <- Enum.with_index(@defs_options) do %>
   <%#= for defs_option <- @defs_options do %>
   <tr>
- 
+
+
   <td class="first_column">
    <span class="tag is-small is-rounded is-primary"> 
     <%=index + 1 %>
@@ -64,7 +68,11 @@ definition: @definition %>
       <td><strong><%= defs_option.name %> </strong> </td>
       <td><%= defs_option.code %></td>
       <td><em><%= raw defs_option.selection_text %> </em> </td>
-     <td  ><%= raw defs_option.selection_definition %>  </td>
+     <!--
+     <td class="column is-one-third" >
+     <%= raw defs_option.selection_definition %>  
+     </td>
+     -->
 
    <td >
 
@@ -120,6 +128,8 @@ definition: @definition %>
 <% end %>
   </tbody>
 </table>
+
+
 </div>
 
 <span><%= link "Enter a New Option  for Field: " <>
