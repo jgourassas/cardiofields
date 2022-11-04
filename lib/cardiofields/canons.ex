@@ -757,11 +757,13 @@ defmodule Cardiofields.Canons do
 
   ###############
   def all_defs_options(definition_id) do
-    from(
+    query = from(
       dr in Defs_option,
       where: dr.definition_id == ^definition_id,
       order_by: dr.code
     )
+   Repo.all(query)
+
   end
 
   def defs_codes(definition_id) do
