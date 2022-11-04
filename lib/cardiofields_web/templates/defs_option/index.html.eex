@@ -18,10 +18,14 @@ definition: @definition %>
 -->
 
 <div class= "frame_1 box  has-background-light ">
-<table class="table is-bordered
-                    is-striped
-                    is-full-width
-                    is-hoverable">
+<div class="table-container">
+
+ <table class="table 
+    is-bordered
+    is-striped
+    is-narrow 
+    is-fullwidth 
+    is-hoverable ">
 
   <thead class="thead">
     <tr>
@@ -128,7 +132,7 @@ definition: @definition %>
 <% end %>
   </tbody>
 </table>
-
+</div><!------container---------->
 
 </div>
 

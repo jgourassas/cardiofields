@@ -1,7 +1,8 @@
 
 ## Cardiofieds is a Collection of fields based on Standard Definitions.  
 
-#### or a Data Dictionary
+#### or a Data Dictionary 
+#### Or a Lexicon 
 
 ##### It can be used to Build cardiology Databases and Reports
 
@@ -33,7 +34,7 @@
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Install Node.js dependencies with `cd assets && npm install`
-  * Please do not issue the command mix ecto.migrate
+  * Please **do not issue the command mix ecto.migrate**
   * As postgres user insert all .sql in the cadiofields_dev database from the dir table_backup
   * Start Phoenix endpoint with `mix phx.server`
 
