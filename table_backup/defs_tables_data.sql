@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-03 02:55:26 EET
+-- Started on 2022-11-10 17:44:36 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -183,6 +183,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (934, NULL, NULL, NULL, NULL, NULL, 'social_histories', 'social_histories', NULL, '2022-05-21 14:58:00', '2022-05-21 14:58:00', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (682, NULL, NULL, NULL, NULL, NULL, 'acs_iv_meds', '<p>This is table belong to Acute Coronary Syndoms.</p><p>Contains the Intravenous Medications given or use during the Hospital Stay. <br /><br /></p>', NULL, '2016-09-14 15:57:00', '2022-06-02 03:29:56', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (930, NULL, NULL, NULL, NULL, NULL, 'bio_valve_dysfunc', 'Structural valve deterioration includes permanent intrinsic changes of the valve (i.e. leaflet tear, calcification, pannus eposition, flail, or fibrotic leaflet) leading to degeneration and/or dysfunction, which in turn may result in stenosis or intra-prosthetic regurgitation', NULL, '2022-05-01 15:10:49', '2022-06-13 08:36:43', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (935, NULL, NULL, NULL, NULL, 'scores', 'scores', 'Table of all scores', NULL, '2022-11-08 08:14:27', '2022-11-09 09:14:48', NULL);
 
 
 --
@@ -191,10 +192,10 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 -- Name: defs_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_tables_id_seq', 934, true);
+SELECT pg_catalog.setval('public.defs_tables_id_seq', 935, true);
 
 
--- Completed on 2022-11-03 02:55:26 EET
+-- Completed on 2022-11-10 17:44:36 EET
 
 --
 -- PostgreSQL database dump complete

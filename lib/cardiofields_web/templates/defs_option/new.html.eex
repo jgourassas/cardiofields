@@ -8,10 +8,10 @@ New Field Option For Pick-List
 
 <%= render  CardiofieldsWeb.SharedView, "_definition_info.html", definition: @definition %>
 
- 
+ <span>
  <%= render "form.html", changeset: @changeset, definition: @definition,
         action: Routes.definition_defs_option_path(@conn, :create, @definition) %>
-        <span>
-          
-  <%= link "Back To Field Options  List", to: Routes.definition_defs_option_path(@conn, :index, @definition) , class: "button is-primary is-medium"%>
+  </span>
+  <span>
+    <%= link "Back To Field Options  List", to: Routes.definition_defs_option_path(@conn, :index, @definition) , class: "button is-primary is-medium"%>
 </span>

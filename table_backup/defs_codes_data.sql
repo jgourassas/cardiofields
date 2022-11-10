@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-03 02:55:25 EET
+-- Started on 2022-11-10 17:44:36 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -644,7 +644,6 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2218, '5040', 'NCDR-SEQ', NULL, NULL, 1574, '2016-09-14 15:57:00', '2016-09-28 06:07:00');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2219, 'No', 'NCDR-SEQ', NULL, NULL, 2419, '2016-09-14 15:57:00', '2016-09-14 15:56:26');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2220, '10012', 'NCDR-SEQ', NULL, NULL, 1836, '2016-09-14 15:57:00', '2016-09-21 07:12:38');
-INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2221, '5106', 'NCDR-SEQ', NULL, NULL, 1929, '2016-09-14 15:57:00', '2016-09-30 13:53:49');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2222, '5107', 'NCDR-SEQ', NULL, NULL, 1930, '2016-09-14 15:57:00', '2016-09-30 13:55:23');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2223, '7065', 'NCDR-SEQ', NULL, NULL, 1817, '2016-09-14 15:57:00', '2016-09-23 05:01:10');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (2224, '3095', 'NCDR-SEQ', NULL, NULL, 2276, '2016-09-14 15:57:00', '2016-09-26 09:53:07');
@@ -1294,7 +1293,7 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 SELECT pg_catalog.setval('public.defs_codes_id_seq', 3031, true);
 
 
--- Completed on 2022-11-03 02:55:25 EET
+-- Completed on 2022-11-10 17:44:36 EET
 
 --
 -- PostgreSQL database dump complete
