@@ -762,7 +762,10 @@ defmodule Cardiofields.Canons do
       where: dr.definition_id == ^definition_id,
       order_by: dr.code
     )
+<<<<<<< HEAD
    Repo.all(query)
+=======
+>>>>>>> breadcrumps2
 
   end
 
