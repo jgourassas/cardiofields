@@ -146,7 +146,6 @@ defmodule CardiofieldsWeb.Opts_sentenceController do
     end
   end
 
-  ###################
 
   ####################
   defp assign_all_defs_options(conn, _opts) do
@@ -155,7 +154,6 @@ defmodule CardiofieldsWeb.Opts_sentenceController do
         query = Canons.all_defs_options(definition_id)
         all_defs_options = Repo.all(query)
         assign(conn, :all_defs_options, all_defs_options)
-
       _ ->
         conn
     end

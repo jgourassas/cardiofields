@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.7 (Debian 13.7-0+deb11u1)
--- Dumped by pg_dump version 13.7 (Debian 13.7-0+deb11u1)
+-- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
+-- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-07-02 15:38:46 EEST
+-- Started on 2022-11-11 09:10:34 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -684,7 +684,7 @@ INSERT INTO public.defs_sentences (id, language, sentence, note, definition_id, 
 SELECT pg_catalog.setval('public.defs_sentences_id_seq', 728, true);
 
 
--- Completed on 2022-07-02 15:38:46 EEST
+-- Completed on 2022-11-11 09:10:34 EET
 
 --
 -- PostgreSQL database dump complete
