@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-11 09:16:13 EET
+-- Started on 2022-11-11 17:38:40 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -104,6 +104,8 @@ INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, 
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (92, 'aa', ' Option Sentence', NULL, NULL, '2022-06-19 01:14:49', '2022-06-19 01:14:49', 9032);
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (93, 'en', 'Exercise', NULL, NULL, '2022-06-23 06:08:39', '2022-06-23 06:08:39', 3221);
 INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (94, 'aa', 'test option sentence', NULL, NULL, '2022-11-11 06:27:53', '2022-11-11 06:27:53', 9043);
+INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (95, 'en', 'Normal', NULL, NULL, '2022-11-11 13:28:13', '2022-11-11 13:28:13', 9239);
+INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, inserted_at, updated_at, defs_option_id) VALUES (96, 'el', 'Φυσιολογική', NULL, NULL, '2022-11-11 13:28:40', '2022-11-11 13:28:40', 9239);
 
 
 --
@@ -112,10 +114,10 @@ INSERT INTO public.opts_sentences (id, language, sentence, note, definition_id, 
 -- Name: opts_sentences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_sentences_id_seq', 94, true);
+SELECT pg_catalog.setval('public.opts_sentences_id_seq', 96, true);
 
 
--- Completed on 2022-11-11 09:16:14 EET
+-- Completed on 2022-11-11 17:38:41 EET
 
 --
 -- PostgreSQL database dump complete

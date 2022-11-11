@@ -81,7 +81,7 @@ is-hoverable">
       to: Routes.definition_defs_code_path(@conn, :new, @definition),
 class: "button is-info is-medium is-fullwidth" %>
 </span>
-</span>
+
 
 <span>
   <%= render  CardiofieldsWeb.SharedView, "_defs_link_buttons.html",

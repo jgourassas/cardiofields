@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-11 09:16:13 EET
+-- Started on 2022-11-11 17:38:40 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8562,6 +8562,10 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9231, 'chest_pain_vascular_causes', 'Ao_ulcer', 'Penetrating aortic ulcer', 'Ulceration of an aortic atherosclerotic plaque penetrating through the internal elastic lamina into the media. <br />More often in elderly patients, and rarely manifests as signs of organ malperfusion.', NULL, 4114, '2022-11-10 14:45:01', '2022-11-10 14:45:01', 'Eur Heart J. 2014;35:2873-2926');
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9237, 'chest_pain_nocardiac_causes', 'Sickle_cell', 'Sickle cell disease', 'Acute chest syndrome is a leading cause of death for patients with sickle cell disease. <br />Although chest pain occurs in most, other manifestations of acute chest syndrome in sickle cell disease/crisis include shortness of breath, fever, arm and leg pain, and the presence of a new density on chest radiography.', '<p data-block-key="sa041">Sickle cell disease is the name for a group of inherited health conditions that affect the red blood cells. The most serious type is called sickle cell anaemia.</p><p data-block-key="g6d4f">People with sickle cell disease produce unusually shaped red blood cells that can cause problems because they do not live as long as healthy blood cells and&nbsp;can block blood vessels.</p><p data-block-key="mum4i">Sickle cell disease is a serious and lifelong health condition, although treatment can help manage many of the symptoms.</p><p data-block-key="sa041">&nbsp;</p>', 4115, '2022-11-10 15:04:39', '2022-11-10 15:04:39', ' Circulation. 2021;144:e368–e454');
 INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (2860, 'tr_structure', '4', 'Ebstein', 'A congenital malformation of the tricuspid valve and right ventricle that is characterized by downward (apical) displacement of the functional annulus, usually involving the septal and inferior (posterior) leaflets.', NULL, 2883, '2016-10-19 03:47:05', '2022-11-11 00:44:07', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9239, 'la_size_volume_desc', 'normal', 'Normal', NULL, NULL, 4116, '2022-11-11 13:24:05', '2022-11-11 13:24:05', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9240, 'la_size_volume_desc', 'Reduced', 'Reduced', 'Size of the left atrium is smaller than normal.', NULL, 4116, '2022-11-11 13:29:26', '2022-11-11 13:29:26', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9241, 'la_size_volume_desc', 'Mildly_enlarged', 'Mildly enlarged', 'Size of the left atrium is slightly larger than normal.', NULL, 4116, '2022-11-11 13:30:11', '2022-11-11 13:30:11', NULL);
+INSERT INTO public.defs_options (id, name, code, selection_text, selection_definition, selection_notes, definition_id, inserted_at, updated_at, selection_reference) VALUES (9243, 'la_size_volume_desc', 'normal', 'Normal', NULL, NULL, 4116, '2022-11-11 13:33:09', '2022-11-11 13:33:09', NULL);
 
 
 --
@@ -8570,10 +8574,10 @@ INSERT INTO public.defs_options (id, name, code, selection_text, selection_defin
 -- Name: defs_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_options_id_seq', 9238, true);
+SELECT pg_catalog.setval('public.defs_options_id_seq', 9243, true);
 
 
--- Completed on 2022-11-11 09:16:13 EET
+-- Completed on 2022-11-11 17:38:40 EET
 
 --
 -- PostgreSQL database dump complete
