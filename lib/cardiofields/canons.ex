@@ -142,7 +142,7 @@ defmodule Cardiofields.Canons do
       
   end
   ################3
-    ###################### 3
+    ###################### 
   def search_on_notes(query) do
     from(d in Definition,
       where: fragment("(?) @@ plainto_tsquery(?)", d.notes_tsv, ^query),
@@ -152,6 +152,34 @@ defmodule Cardiofields.Canons do
     )
   end
 
+  def search_on_notes_1(query) do
+    a_query =
+    from(b in Definition,
+      where: 
+        fragment("(?) @@ websearch_to_tsquery(?)", b.notes_tsv, ^query),
+      select: %{
+        headline:
+          fragment(
+            """
+            ts_headline(
+              'english', 
+              CONCAT(name, ' ', table_name), 
+              websearch_to_tsquery(?),
+              'StartSel=<h3>,StopSel=</h3>,MinWords=25,MaxWords=75'
+            )
+            """,
+            ^query
+          )
+          
+      }
+    )
+
+  Repo.all(a_query)
+end
+
+
+
+  
   ################# 33
   def search_on_indexing(query) do
     from(d in Definition,
@@ -762,10 +790,7 @@ defmodule Cardiofields.Canons do
       where: dr.definition_id == ^definition_id,
       order_by: dr.code
     )
-<<<<<<< HEAD
    Repo.all(query)
-=======
->>>>>>> breadcrumps2
 
   end
 

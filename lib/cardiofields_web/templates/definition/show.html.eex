@@ -182,97 +182,31 @@
 </div>
 <!--------start to show options----------------------->
 <div class= "box  has-background-light ">
-<ul class="frame_1 list is-hoverable">
+<ul class="frame_5 list is-hoverable">
 <div class= "columns">
-<div class = "column frame_1">
+<div class = "column frame_5">
 
  <% options_count =  Cardiofields.Canons.count_options(@definition.id) %>
-<li class="list-item">
-  <span class="frame_5">
-    <strong>Options for Field Name:</strong>
-    <%= @definition.name %>
-<%= " --- Options Count:  " %>
-     <%=options_count%>
-    </span>
-  </li>
-  
-<% defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
-
+ <% defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
  
- <%= for {defs_option, index} <- Enum.with_index(defs_options) do %>
-<div class="frame_2">
-<li  class="list-item">
-<span class="tag is-medium is-rounded is-primary"> 
-   <%=Option %>
-    <%=index + 1 %>
-  </span>
-</li>
-
-<bordered/>
-
-<li class="list-item">
- <span class="tag is-white", style="font-size: 14px;">
-   <i class="fa fa-eye" aria-hidden="true"></i>
- </span>
-<strong class="frame_5",style="font-size: 18px;">Selection Text:
-<%= defs_option.selection_text %>
-</strong>
-</li>
-
-<li class="list-item">
- <span class="tag is-white", style="font-size: 14px;">
-   <i class="fa fa-eye" aria-hidden="true"></i>
- </span>
-<strong class="frame_5",style="font-size: 18px;">Code:
-<%= defs_option.code %>
-</strong>
-</li>
-
-
-<li  class="list-item">
-<span class="tag is-white", style="font-size: 14px;">
-   <i class="fa fa-eye" aria-hidden="true"></i>
-   </span>
- <strong class="frame_5 ">Selection Definition:</strong>
-<span class="has-text-justify is-size-5 box">
-<%= raw defs_option.selection_definition %>
+ <%= if options_count == 0 do %>
+ <span class = "nothing_found">
+ Pick List - Options Nothing found 
 </span>
-</li>
+ <%else %>
 
-<li  class="list-item">
-<span class="tag is-white", style="font-size: 14px;">
-   <i class="fa fa-eye" aria-hidden="true"></i>
-   </span>
-   <% string_len = to_string(defs_option.selection_reference) %>
-   <%= if String.length(string_len) === 0 do  %>
-    <span style="color:red;"> Reference:  N/A Epty Field Data</span>
-   <% else %>
- <strong class="frame_5">Selection Reference :</strong>
- <%=  defs_option.selection_reference %>
-   <% end %>
-
-</li>
-</div>
-<%end %>
-
-</div> <!-- class= "box  has-background-light ">--->
-</ul> <!--- class="frame_1 list is-hoverable">--->
-</div><!--- class= "columns">--->
-</div> <!--- class = "column frame_1">-->
- 
-
-
-
-
-
-<<<<<<< HEAD
-<!-------end to show-------------------------------------->
-=======
+<h5 class="title is-5 has-text-centered">
+   Showing Field - Options - Pick List
+<span class ="frame_5">
+<%= "#{@definition.name}" %>
+</span>
+</h5>
+<!--------------------------------------------->
 <% defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
 
  
  <%= for {defs_option, index} <- Enum.with_index(defs_options) do %>
-<div class="frame_2">
+<div class="frame_1">
 <li  class="list-item">
 <span class="tag is-medium is-rounded is-primary"> 
    <%=Option %>
@@ -322,7 +256,7 @@
 
 </li>
 </div>
-
+<%end %><!----if ---->
 
 <%end %>
 </div> <!-- class= "box  has-background-light ">--->
@@ -330,7 +264,7 @@
 </div><!--- class= "columns">--->
 </div> <!--- class = "column frame_1">-->
 
->>>>>>> breadcrumps2
+
 <span><%= link "Edit Field",
  to: Routes.definition_path(@conn, :edit, @definition), 
  class: "button is-medium is-primary is-fullwidth" %>

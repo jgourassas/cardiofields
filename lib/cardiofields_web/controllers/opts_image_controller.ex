@@ -107,8 +107,8 @@ defmodule CardiofieldsWeb.Opts_imageController do
     case conn.params do
       %{"definition_id" => definition_id} ->
         query = Canons.all_defs_options(definition_id)
-        all_defs_options = Repo.all(query)
-        assign(conn, :all_defs_options, all_defs_options)
+        #all_defs_options = Repo.all(query)
+        assign(conn, :all_defs_options, query)
 
       _ ->
         conn
