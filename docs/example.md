@@ -2,7 +2,6 @@
 mix phx.gen.html Canons Opts_image opts_images image:string 
 **A small example how I use it**
  As css I used bulma framework  
-
 <% alias Angio.Canons, as: Query %>
 
  **the function to select options (Make yours)** 

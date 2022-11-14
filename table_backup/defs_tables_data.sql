@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-13 07:13:02 EET
+-- Started on 2022-11-14 17:52:01 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -121,7 +121,6 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (782, NULL, NULL, NULL, NULL, NULL, 'tavr_diagnostics', 'For Transcatheter Aortic Valve Replacement Procedures. DIAGNOSTIC CATH FINDINGS / ECHOCARDIOGRAM FINDINGS', NULL, '2016-09-14 15:57:00', '2016-09-20 06:24:35', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (893, NULL, NULL, NULL, NULL, NULL, 'eps_diagn_eval', 'Electrophysiology Studies:  Diagnostic Evaluations  Sinus Node Function, Atrial Function, AV Node Function', NULL, '2016-12-23 09:06:53', '2016-12-23 09:06:53', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (775, NULL, NULL, NULL, NULL, NULL, 'research_terms', 'Definitions for some research Terms: ethnicity, interventional clinical trial,  What Is Disease, The Meaning of Admssion criteria', NULL, '2016-09-14 15:57:00', '2016-09-14 15:56:26', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (721, NULL, NULL, NULL, NULL, NULL, 'chd_conditions', 'Patient Congenital Conditions. Down, alagille,  williams beuren,  DiGeorge', NULL, '2016-09-14 15:57:00', '2016-09-26 04:49:37', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (802, NULL, NULL, NULL, NULL, NULL, 'tmvr_echo_fups', 'Transcatheter Mitral Valve Procedures Leaflet Clip.  FOLLOW-UP (30 Days and 1 Year) Echocardiogram', NULL, '2016-09-14 15:57:00', '2016-09-14 15:56:26', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (703, NULL, NULL, NULL, NULL, NULL, 'care_episodes', 'Table for admissions, Hospital arrival times, age', NULL, '2016-09-14 15:57:00', '2016-09-14 15:56:26', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (716, NULL, NULL, NULL, NULL, NULL, 'cath_radiations', 'Radiation data. Fluoro Karma, exposure Time,  method..of measurment', NULL, '2016-09-14 15:57:00', '2016-09-14 15:56:26', NULL);
@@ -184,7 +183,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (682, NULL, NULL, NULL, NULL, NULL, 'acs_iv_meds', '<p>This is table belong to Acute Coronary Syndoms.</p><p>Contains the Intravenous Medications given or use during the Hospital Stay. <br /><br /></p>', NULL, '2016-09-14 15:57:00', '2022-06-02 03:29:56', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (930, NULL, NULL, NULL, NULL, NULL, 'bio_valve_dysfunc', 'Structural valve deterioration includes permanent intrinsic changes of the valve (i.e. leaflet tear, calcification, pannus eposition, flail, or fibrotic leaflet) leading to degeneration and/or dysfunction, which in turn may result in stenosis or intra-prosthetic regurgitation', NULL, '2022-05-01 15:10:49', '2022-06-13 08:36:43', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (935, NULL, NULL, NULL, NULL, 'scores', 'scores', 'Table of all scores', NULL, '2022-11-08 08:14:27', '2022-11-09 09:14:48', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (936, NULL, NULL, NULL, NULL, NULL, 'echo_congenital', 'Note: This is an incomplete presentation of the data elements used to describe congenital heart disease.<br />All definitions (unless otherwise stated) are obtained from the International<br />Pediatric and Congenital Cardiac Code (IPCCC) as published by the International Society for Nomenclature of Pediatric and Congenital Heart Disease (ISNPCHD) (http://www.<br />ipcccc.net/). The IPCCC number for each lesion is listed in the Source column. For a more complete listing of congenital heart diseases, please see the ISNPCHD website (http://<br />www.ipccc.net/) and 2017 publication.20<br />me 32 Number', NULL, '2022-11-12 09:02:48', '2022-11-12 09:02:48', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (721, NULL, NULL, NULL, NULL, NULL, 'chd_conditions', 'Patient Congenital Conditions. Down, alagille, williams beuren, DiGeorge<br /><br />Note: This is an incomplete presentation of the data elements used to describe congenital heart disease.<br /><br />All definitions (unless otherwise stated) are obtained from the International<br />Pediatric and Congenital Cardiac Code (IPCCC) as published by the International Society for Nomenclature of Pediatric and Congenital Heart Disease (ISNPCHD) (http://www.<br />ipcccc.net/). The IPCCC number for each lesion is listed in the Source column. For a more complete listing of congenital heart diseases, please see the ISNPCHD website (http://<br />www.ipccc.net/) and 2017 publication.20<br />me 32 Number', NULL, '2016-09-14 15:57:00', '2022-11-13 14:10:33', NULL);
 
 
 --
@@ -196,7 +195,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 SELECT pg_catalog.setval('public.defs_tables_id_seq', 936, true);
 
 
--- Completed on 2022-11-13 07:13:02 EET
+-- Completed on 2022-11-14 17:52:01 EET
 
 --
 -- PostgreSQL database dump complete

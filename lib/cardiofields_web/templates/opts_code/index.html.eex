@@ -1,16 +1,16 @@
 
 
-<h4 class="title is-4 has-text-centered frame_3">
- Listing Codes For Option Selection (SNOMED-CT, LOINC... )
-</h4>
+<h5 class="title is-5 has-text-centered frame_3">
+ Listing Codes For Options
+</h5>
 
 
 <h5 class="title is-5 has-text-centered">
-<span class= "frame_1">
+<span class= "frame_5">
 <%= "Field name:"  %>
 <%= raw  "#{@definition.name}"%>
 </span>
-<span class= "frame_1">
+<span class= "frame_5">
 <%= "Pick List Option: " %>
 <%= raw "#{@defs_option.selection_text}" %>
 </span>

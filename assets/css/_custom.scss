@@ -1,5 +1,6 @@
 
 $white: #fff;
+$blue: #0066FF;
 $control-size: 2.75em;
 
 @mixin border_radius($radius) {
@@ -7,6 +8,11 @@ $control-size: 2.75em;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
+}
+@mixin box_shadow($left:0, $top:2px, $blur:2px, $color:#000, $inset:"inset") {
+  -webkit-box-shadow:$left $top $blur $color #{$inset};
+  -moz-box-shadow:$left $top $blur $color #{$inset};
+  box-shadow:$left $top $blur $color #{$inset};
 }
 
 .help {
@@ -51,13 +57,13 @@ $control-size: 2.75em;
   margin-bottom: 10px;
 }
 
-.element_info {
-  //background-color:#3949AB; // #375A7F;//#F65314;//#6d0c74;//#990033;//$steelblue;
-  background-color:#1b0718; //#990033;//$steelblue;
+.frame_6{
+  background-color:#3949AB; // #375A7F;//#F65314;//#6d0c74;//#990033;//$steelblue;
+  //background-color:#1b0718; //#990033;//$steelblue;
   box-shadow: 0 0.375em 0.313em -0.313em rgba(0, 0, 0, 0.8),
     inset 0 0.063em rgba(255, 255, 255, 0.4),
     inset 0 -0.188em rgba(0, 0, 0, 0.15);
-  color: #ddd;
+  color: #ffff;
   text-transform: uppercase;
   text-shadow: 0 0.063em #000;
   font: bold 1.1rem sans-serif;
@@ -106,6 +112,21 @@ body {
   border-bottom-width: 4px;
   @include border-radius(18px);
 }
+
+.frame_3 {
+	border: 1px #708090;//#004aff;//#000;
+  //overflow-x: scroll;
+  //overflow-y: scroll;
+  padding: 4px;
+  margin: 5px;
+  border-style: solid;
+  font-size: rem-calc(14);
+  font-weight: 600;
+  @include border-radius(8px);
+  //margin-bottom: 20px;
+}
+
+
 .frame_5 {
   background-color: #cfe0e8;//#A7C7E7; //#ADD8E6;
  // color: #ffff;
@@ -123,19 +144,40 @@ body {
   border-bottom-width: 1px;
 }
 
+.element_info {
+  background-color:#C6CFF6 ;// #AFC3D2;//#936ED4; //#fc9272;//#fee0d2;//#CCCCFF;//$beige-lighter;//$turquoiseBrighter; //$yellowBrighter;//$white_smoke; // #ddd ;//#006699;//#7CBB00;//#7f78d2;//#0074D9;//#3D9970;//#1F7A1F;//#990033;
+  color: $blue;
+  box-shadow: 0 0.375em 0.313em -0.313em rgba(0, 0, 0, 0.8),
+    inset 0 0.063em rgba(255, 255, 255, 0.4),
+    inset 0 -0.188em rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  text-shadow: 0 0.063em #000;
+  font: bold 1.1rem sans-serif;
+  padding: 7px;
+  text-align: center;
+  width: 95%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: rem-calc(25);
+  margin-top: rem-calc(25);
 
-.frame_3 {
-	border: 1px #708090;//#004aff;//#000;
+}
+.frame_6{
+ // padding: rem-calc(150);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 35px;
+  border:solid 8px #DEDEDE;
+//  background-color: "#fff";
+  background-color: #cfe0e8;//#A7C7E7; //#ADD8E6;
   //overflow-x: scroll;
   //overflow-y: scroll;
-  padding: 4px;
-  margin: 5px;
-  border-style: solid;
-  font-size: rem-calc(14);
-  font-weight: 600;
-  @include border-radius(8px);
-  //margin-bottom: 20px;
+  @include border_radius(14px);
+  @include box_shadow();
 }
+
 /*
 .frame_4 {
   background-color:#ddc;

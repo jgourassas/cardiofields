@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-13 07:13:02 EET
+-- Started on 2022-11-14 17:52:01 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1284,6 +1284,9 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3031, '96302009', 'SNOMED-CT', NULL, NULL, 3725, '2022-06-22 02:32:33', '2022-06-22 02:32:33');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3032, '04.05.00', 'IPCCC', NULL, NULL, 4127, '2022-11-12 17:59:42', '2022-11-12 17:59:42');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3033, '04.08.05', 'IPCCC', NULL, NULL, 4129, '2022-11-12 19:05:31', '2022-11-12 19:05:31');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3034, '05.02.01', 'IPCCC', NULL, NULL, 4133, '2022-11-13 07:35:04', '2022-11-13 07:35:04');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3035, ' 06.02.07', 'IPCCC', NULL, NULL, 4134, '2022-11-13 09:10:35', '2022-11-13 09:10:35');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3036, '07.10.00', 'IPCCC', NULL, 'Lopez L, Houyel L, Colan SD, et al. <br />Classification of ventricular septal defects for the eleventh iteration of the International Classification of Diseases - striving for consensus:<br />a report from the International Society for Nomenclature of Paediatric and Congenital Heart Disease. <br />Ann Thorac Surg. 2018;106:1578-89.21', 2603, '2022-11-13 14:35:14', '2022-11-13 14:35:14');
 
 
 --
@@ -1292,10 +1295,10 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 -- Name: defs_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_codes_id_seq', 3033, true);
+SELECT pg_catalog.setval('public.defs_codes_id_seq', 3036, true);
 
 
--- Completed on 2022-11-13 07:13:02 EET
+-- Completed on 2022-11-14 17:52:01 EET
 
 --
 -- PostgreSQL database dump complete

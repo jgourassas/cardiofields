@@ -165,7 +165,7 @@ defmodule Cardiofields.Canons do
               'english', 
               CONCAT(name, ' ', table_name), 
               websearch_to_tsquery(?),
-              'StartSel=<h3>,StopSel=</h3>,MinWords=25,MaxWords=75'
+              'StartSel=<strong>,StopSel=</strong>,MinWords=25,MaxWords=75'
             )
             """,
             ^query
@@ -174,7 +174,7 @@ defmodule Cardiofields.Canons do
       }
     )
 
-  Repo.all(a_query)
+  #Repo.all(a_query)
 end
 
 
@@ -192,19 +192,12 @@ end
 
   ########################
   def search_inserted_after(inserted_date) do
-    # IO.puts("--------------updated after")
-    # IO.inspect(inserted_date)
+   
 
     # Get all items published since the last month
-    # from p in Post, where: p.published_at >
-    # datetime_add(^NaiveDateTime.utc_now(), -1, "month")
-    # _query = 
-    from(d in Definition,
-      # where: d.updated_at < datetime_add(^NaiveDateTime.utc_now(), -1, "month"),
-      where: d.inserted_at > ^inserted_date,
-      limit: 250,
-      order_by: [desc: d.inserted_at]
-    )
+    from p in Definition, where: p.inserted_at >
+    datetime_add(^NaiveDateTime.utc_now(), -1, "month")
+  
   end
 
   ############################

@@ -62,7 +62,7 @@ Total Number of Results
 
 
 <div class="title_form">
- <h5 class="title is-5 has-text-centered frame_2">
+ <h5 class="title is-5 has-text-centered frame_5">
   Listing Database Fields  Ordered alphabeticaly  By Field Name.
 <h5/>
 
@@ -131,7 +131,7 @@ Total Number of Results
     </tr>
   </thead>
   <tbody>
-  <%= for {definition, index} <- Enum.with_index(@definitions) do %>
+   <%= for {definition, index} <- Enum.with_index(@definitions) do %>
    <tr>
    
    <td>
