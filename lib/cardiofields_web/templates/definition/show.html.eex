@@ -202,7 +202,7 @@
 </span>
 </h5>
 <!--------------------------------------------->
-<% defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
+<%# defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
 
  
  <%= for {defs_option, index} <- Enum.with_index(defs_options) do %>

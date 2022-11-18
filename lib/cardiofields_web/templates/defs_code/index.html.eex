@@ -53,11 +53,10 @@ is-hoverable">
       <td>
        <span><%= link "Show",
        to: Routes.definition_defs_code_path(@conn,
-       :show, @definition,defs_code), class: "button is-primary is-small is-fullwidth" %></span>
+       :show, @definition,defs_code), class: "button is-primary is-small is-fullwidth is-round" %></span>
       </td>
 
-      <td>
-         <span><%= link "Edit",
+      <td><%= link "Edit",
          to: Routes.definition_defs_code_path(@conn,
          :edit, @definition,defs_code), class: "button is-primary is-small is-fullwidth" %></span>
 

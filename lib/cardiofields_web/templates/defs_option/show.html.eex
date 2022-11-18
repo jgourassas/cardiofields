@@ -34,16 +34,21 @@ Show Field  Pick-Lists Option
   
 
   <li class="list-item ">
-    <strong class="frame_3">Selection definition:</strong>
-    <%= raw @defs_option.selection_definition %>
 
+    <strong class="frame_3">Selection definition:</strong>
+    <span class="has-text-justify is-size-6 box" >
+    <%= raw @defs_option.selection_definition %>
+  </span>
   </li>
   </div>
+  
   <div class="column frame_1">
   <li class="list-item">
     <strong class="frame_3" >Notes:</strong>
-    <br/>
+     <span class="has-text-justify is-size-6 box" >
     <%= raw  @defs_option.selection_notes %>
+    </span>
+    
   </li>
   <li class="list-item">
     <strong class="frame_3" >Option Reference</strong>

@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-14 17:52:01 EET
+-- Started on 2022-11-18 18:20:22 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -273,6 +273,13 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (227, 'IPCCC', '06.01.34', NULL, NULL, NULL, 2860, '2022-11-13 09:04:34', '2022-11-13 09:04:34');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (228, 'IPCCC', '06.02.22', NULL, NULL, NULL, 9283, '2022-11-13 09:16:29', '2022-11-13 09:16:29');
 INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (229, 'IPCCC', '07.14.05', NULL, NULL, NULL, 9287, '2022-11-13 14:51:00', '2022-11-13 14:51:00');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (230, 'IPCCC', ' 06.02.04', NULL, NULL, NULL, 9306, '2022-11-15 07:47:05', '2022-11-15 07:47:05');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (231, 'IPCCC', '06.02.22', NULL, NULL, NULL, 9307, '2022-11-15 07:49:16', '2022-11-15 07:49:16');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (232, 'IPCCC', ' 05.02.22', NULL, NULL, NULL, 9308, '2022-11-15 07:50:45', '2022-11-15 07:50:45');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (233, 'IPCCC', ' 09.15.01', NULL, NULL, NULL, 9309, '2022-11-15 14:05:02', '2022-11-15 14:05:02');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (234, 'IPCCC', '05.03.01', NULL, NULL, NULL, 9320, '2022-11-16 05:41:13', '2022-11-16 05:41:13');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (235, 'IPCCC', '04.04.13', NULL, NULL, NULL, 9324, '2022-11-16 05:57:28', '2022-11-16 05:57:28');
+INSERT INTO public.opts_codes (id, code_system, code, description, notes, definition_id, defs_option_id, inserted_at, updated_at) VALUES (236, 'IPCCC', '06.02.01', NULL, NULL, NULL, 9330, '2022-11-16 14:12:41', '2022-11-16 14:12:41');
 
 
 --
@@ -281,10 +288,10 @@ INSERT INTO public.opts_codes (id, code_system, code, description, notes, defini
 -- Name: opts_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opts_codes_id_seq', 229, true);
+SELECT pg_catalog.setval('public.opts_codes_id_seq', 236, true);
 
 
--- Completed on 2022-11-14 17:52:01 EET
+-- Completed on 2022-11-18 18:20:22 EET
 
 --
 -- PostgreSQL database dump complete

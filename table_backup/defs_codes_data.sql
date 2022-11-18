@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-14 17:52:01 EET
+-- Started on 2022-11-18 18:20:22 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1287,6 +1287,11 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3034, '05.02.01', 'IPCCC', NULL, NULL, 4133, '2022-11-13 07:35:04', '2022-11-13 07:35:04');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3035, ' 06.02.07', 'IPCCC', NULL, NULL, 4134, '2022-11-13 09:10:35', '2022-11-13 09:10:35');
 INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3036, '07.10.00', 'IPCCC', NULL, 'Lopez L, Houyel L, Colan SD, et al. <br />Classification of ventricular septal defects for the eleventh iteration of the International Classification of Diseases - striving for consensus:<br />a report from the International Society for Nomenclature of Paediatric and Congenital Heart Disease. <br />Ann Thorac Surg. 2018;106:1578-89.21', 2603, '2022-11-13 14:35:14', '2022-11-13 14:35:14');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3037, ' 06.01.03', 'IPCCC', NULL, NULL, 4153, '2022-11-15 07:41:08', '2022-11-15 07:41:08');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3038, '09.29.31', 'IPCCC', NULL, NULL, 4169, '2022-11-17 14:39:14', '2022-11-17 14:39:14');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3039, ' 09.45.16', 'IPCCC', NULL, NULL, 4170, '2022-11-17 14:41:35', '2022-11-17 14:41:35');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3040, ' 01.05.01', 'IPCCC', NULL, NULL, 4173, '2022-11-17 15:06:42', '2022-11-17 15:06:42');
+INSERT INTO public.defs_codes (id, code, code_system, description, note, definition_id, inserted_at, updated_at) VALUES (3041, '01.01.03', 'IPCCC', NULL, NULL, 4174, '2022-11-17 15:09:44', '2022-11-17 15:09:44');
 
 
 --
@@ -1295,10 +1300,10 @@ INSERT INTO public.defs_codes (id, code, code_system, description, note, definit
 -- Name: defs_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_codes_id_seq', 3036, true);
+SELECT pg_catalog.setval('public.defs_codes_id_seq', 3041, true);
 
 
--- Completed on 2022-11-14 17:52:01 EET
+-- Completed on 2022-11-18 18:20:22 EET
 
 --
 -- PostgreSQL database dump complete

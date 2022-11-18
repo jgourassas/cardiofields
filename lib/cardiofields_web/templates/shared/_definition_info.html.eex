@@ -1,9 +1,25 @@
-
-<article class="message is-info">
+<article class="message is-primary frame_1">
+  <div class="message-header">
+    <p>FIELD INFO</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
   <div class="message-body">
- <strong>Field Name:</strong> <%= @definition.name %><br/>
- <strong>Field Instructions </strong>: <%= raw @definition.coding_instructions %>
- <strong>Table:</strong>
-<%= @definition.table_name %>
+
+ <strong">
+ Field Name:
+  <%= @definition.name %>
+Field Instructions:
+   <%= raw @definition.coding_instructions %>
+ </strong>
+
+  
+
+ <strong" >Table:
+ <%= @definition.table_name %>
+</strong>
+
   </div>
 </article>
+
+
+

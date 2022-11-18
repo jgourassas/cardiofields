@@ -1,10 +1,8 @@
 
 ## Cardiofieds is a Collection of fields based on Standard Definitions.  
+ 
 
-#### or a Data Dictionary 
-#### Or a Lexicon 
-
-##### It can be used to Build cardiology Databases and Reports
+##### It can be used to Build cardiology Databases and Reports. Or as Lexicon
 
  **Tables**
 

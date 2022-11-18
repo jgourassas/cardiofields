@@ -10,24 +10,26 @@ Showing Code For Field:
     "_definition_info.html", definition: @definition %>
 
 <ul class="frame_1  list is-hoverable">
+<div class="columns">
+ <div class="column frame_1">
 
   <li class="list-item">
-    <strong class="frame_3">Code system:</strong>
+    <strong >Coding system:</strong>
     <%= @defs_code.code_system %>
-  </li>
-
-  <li class="list-item">
-    <strong class="frame_3">Code:</strong>
+      <strong class="frame_3">Code:
     <%= @defs_code.code %>
+    </strong>
   </li>
 
+ 
   <li class="list-item">
     <strong class="frame_3">Description:</strong>
        <%= raw @defs_code.description %>
      </li> 
-
+</div> <!--- end column---------------->
+<div class = "column frame_1">
   <li class="list-item">
-    <strongclass="frame_3" >Note:</strong>
+    <strong class="frame_3" >Note:</strong>
     <%= raw @defs_code.note %>
   </li>
 
@@ -35,7 +37,8 @@ Showing Code For Field:
     <strong class="frame_3">Definition ID:</strong>
     <%= @defs_code.definition_id %>
   </li>
-
+</div><!-------end column---------->
+</div><!---columns--------->
 </ul>
 
 

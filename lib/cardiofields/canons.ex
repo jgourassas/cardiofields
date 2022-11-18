@@ -192,12 +192,12 @@ end
 
   ########################
   def search_inserted_after(inserted_date) do
-   
-
+  
     # Get all items published since the last month
     from p in Definition, where: p.inserted_at >
     datetime_add(^NaiveDateTime.utc_now(), -1, "month")
-  
+
+   # Cldr.Calendar.minus ~D[p.inserted_at], :days, 1
   end
 
   ############################
@@ -986,13 +986,16 @@ end
     query =
       from(
         d in Definition,
-        where: d.name == ^qname,
+        where: fragment("(?) @@ plainto_tsquery(?)", d.notes, ^qname),
+        #where: d.name == ^qname,
         select: d.notes,
         limit: 250,
         order_by: [asc: d.name, asc: d.table_name]
       )
+     # "<h1 class='title is-1 has-text-centered frame_5'" <> qname <> " " <> "</h1>"
 
     _res = Cardiofields.Repo.all(query)
+
   end
 
   #############
