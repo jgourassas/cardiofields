@@ -134,10 +134,12 @@ Total Number of Results
    <%= for {definition, index} <- Enum.with_index(@definitions) do %>
    <tr>
    
-   <td>
    
-
-<span class="tag is-white", style="font-size: 14px;">
+   <td class="first_column">
+   <span class="tag is-small is-rounded is-primary"> 
+    <%=index + 1 %>
+    </span>
+  <span class="tag is-white", style="font-size: 14px;">
    <i class="fa fa-eye" aria-hidden="true"></i>
    Updated: <%= definition.updated_at %></span>
     <br/>
@@ -146,8 +148,6 @@ Total Number of Results
       Inserted: 
    <%= definition.inserted_at %></span>
 
- 
-
 <%= if "#{definition.indexing}" == "" do %>
        
        <p style="background-color:#ffd700;">
@@ -155,13 +155,15 @@ Total Number of Results
         </p>
        <% else %>
       <p class="mr-0 pt-3">
-          <span style="background-color:#0047AB, color:ffffff;"> 
+      
+       <i class="<i class="fa-thin fa-tag">
+        <span  class="tag is-white", style = "background-color:  #fff8e7;"> 
          <em>Index: </em>
-      <strong>
+      <strong >
         <%= raw( definition.indexing) %>
       </strong>
         </span>
-      
+   
       </p>
      <% end %>
 

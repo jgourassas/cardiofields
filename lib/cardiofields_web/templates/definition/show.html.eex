@@ -195,14 +195,21 @@
 </span>
  <%else %>
 
-<h5 class="title is-5 has-text-centered ">
-   Showing Field - Options - Pick List
-<span class ="frame_5">
-<%= "#{@definition.name}" %>
-</span>
-</h5>
-<!--------------------------------------------->
-<%# defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
+</li>
+</div>
+<%end %>
+
+</div> <!-- class= "box  has-background-light ">--->
+</ul> <!--- class="frame_1 list is-hoverable">--->
+</div><!--- class= "columns">--->
+</div> <!--- class = "column frame_1">-->
+ 
+
+
+
+
+
+<% defs_options =  Cardiofields.Canons.all_defs_options(@definition.id) %>
 
  
  <%= for {defs_option, index} <- Enum.with_index(defs_options) do %>
@@ -258,12 +265,11 @@
 </div>
 <%end %><!----if ---->
 
-<%end %>
+
 </div> <!-- class= "box  has-background-light ">--->
 </ul> <!--- class="frame_1 list is-hoverable">--->
 </div><!--- class= "columns">--->
 </div> <!--- class = "column frame_1">-->
-
 
 <span><%= link "Edit Field",
  to: Routes.definition_path(@conn, :edit, @definition), 
