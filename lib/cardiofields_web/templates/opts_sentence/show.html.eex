@@ -53,7 +53,7 @@ Show Sentence for Option:
 <span>
    <%= link "Edit Option Sentence", to: Routes.definition_defs_option_opts_sentence_path(@conn, :edit, @definition ,
    @defs_option, @opts_sentence), 
-   class: "button is-primary is-fullwidth" %>
+   class: "button is-primary is-fullwidth is-medium" %>
    </span>
 
 <span>

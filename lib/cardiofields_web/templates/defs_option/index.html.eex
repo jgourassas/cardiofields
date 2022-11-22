@@ -1,24 +1,7 @@
 <% alias Cardiofields.Canons.Definition %>
-
-<h5 class="title is-5 has-text-centered frame_5" >
-<span>
-  Pick List -  Options  For Field: 
-   </span>
-  <span>
-
- <%= "#{@definition.name}" %>
- </span>
-</h5>
-
-
 <%= render  CardiofieldsWeb.SharedView, "_definition_info.html",
 definition: @definition %>
 
-<!------
-<span class="icon">
-  <i class="fas fa-list-alt fa-2x"></i>
-</span>
--->
 
 <div class= "frame_1 box  has-background-light ">
 <div class="table-container">
@@ -51,7 +34,6 @@ definition: @definition %>
   <tbody>
 
   <%= for {defs_option, index} <- Enum.with_index(@defs_options) do %>
-  <%#= for defs_option <- @defs_options do %>
   <tr>
 
 
@@ -142,7 +124,7 @@ definition: @definition %>
 <span><%= link "Enter a New Option  for Field: " <>
  "#{@definition.name}",
       to: Routes.definition_defs_option_path(@conn, :new, @definition),
-class: "button is-info is-medium is-fullwidth" %>
+class: "button is-fullwidth is-medium is-primary" %>
 </span>
 
 <span>

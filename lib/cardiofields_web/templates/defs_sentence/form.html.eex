@@ -64,7 +64,7 @@
  </div><!--columns------>
 
  <div>
-    <%= submit "Save and Continue", class: "button is-info is-medium is-fullwidth " %>
+    <%= submit "Save and Continue", class: "button is-primary is-medium is-fullwidth " %>
 
   </div>
 <% end %>

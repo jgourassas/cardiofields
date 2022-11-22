@@ -89,7 +89,7 @@ is-hoverable">
 <span>
 <%= link "New Phrase - Sentence For Field",
       to: Routes.definition_defs_sentence_path(@conn, :new, @definition),
-class: "button is-info is-medium is-fullwidth" %>
+class: "button is-fullwidth is-medium is-primary" %>
 </span>
 
 <span>

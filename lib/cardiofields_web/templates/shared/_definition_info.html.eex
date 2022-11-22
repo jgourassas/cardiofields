@@ -1,25 +1,31 @@
-<article class="message is-primary frame_1">
-  <div class="message-header">
-    <p>FIELD INFO</p>
-    <button class="delete" aria-label="delete"></button>
-  </div>
-  <div class="message-body">
+<h5 class="title is-5 has-text-centered frame_5" >
+<span class="frame_3", style= "background-color:#3C99DC;color:#fff" >
+  Field Info: 
+  </span>
 
- <strong">
- Field Name:
-  <%= @definition.name %>
-Field Instructions:
+
+<span  style= "background-color:#CCCCF; color:#000" >
+  Field Name: 
+ </span>
+  <span class="frame_3", style= "background-color:#D5F3FE;font-size: 18px;">
+ <%= "#{@definition.name}" %>
+ </span>
+ 
+ <span  style= "background-color:#CCCCF; color:#000;">
+  Field Instructions:
+  </span>
+ <span class="frame_3", style="background-color:#D5F3FE; font-size: 18px;">
    <%= raw @definition.coding_instructions %>
- </strong>
+</span>
 
-  
-
- <strong" >Table:
+<span style= "background-color:#CCCCF; color:#000;">
+  Table:
+  </span>8
+  <span class="frame_3", style="background-color:#D5F3FE;font-size: 18px;">
  <%= @definition.table_name %>
-</strong>
+  </span>
+  </h5>
 
-  </div>
-</article>
 
 
 

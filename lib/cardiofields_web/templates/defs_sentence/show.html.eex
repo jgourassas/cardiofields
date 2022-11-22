@@ -48,7 +48,7 @@
 
 <span><%= link "Edit Field Sentence", to: Routes.definition_defs_sentence_path(@conn, :edit,
  @definition, @defs_sentence), 
- class: "button is-primary is-fullwidth"%>
+ class: "button is-primary is-fullwidth is-medium"%>
  
 </span>
 

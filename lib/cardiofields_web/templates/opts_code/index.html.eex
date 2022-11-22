@@ -102,7 +102,7 @@ to: Routes.definition_defs_option_opts_code_path(@conn, :show,
 <span>
         <%= link  "Enter A New Code For Option ",
   to:  Routes.definition_defs_option_opts_code_path(@conn, :new, @definition, @defs_option),
-class: "button is-info is-medium is-fullwidth"%>
+class: "button is-fullwidth is-medium is-primary"%>
 
 </span>
 

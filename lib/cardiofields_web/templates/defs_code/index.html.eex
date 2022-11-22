@@ -43,6 +43,8 @@ is-hoverable">
    <i class="fa fa-registered" aria-hidden="true"></i>
       Inserted: 
    <%= defs_code.inserted_at %></span>
+
+   
 </td>
 
 
@@ -78,7 +80,7 @@ is-hoverable">
 <span><%= link "Enter a New Code For Field: " <>
 "#{@definition.name}",
       to: Routes.definition_defs_code_path(@conn, :new, @definition),
-class: "button is-info is-medium is-fullwidth" %>
+class: "button is-fullwidth is-medium is-primary" %>
 </span>
 
 

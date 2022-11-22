@@ -79,7 +79,7 @@ Show Field  Pick-Lists Option
 </span>
 <span><%= link "Edit  Option Item", 
 to: Routes.definition_defs_option_path(@conn, :edit, @definition, @defs_option), 
-class: "button is-primary is-fullwidth"%>
+class: "button is-primary is-fullwidth is-medium"%>
 </span>
 
 

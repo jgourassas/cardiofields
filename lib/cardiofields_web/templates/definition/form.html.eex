@@ -131,7 +131,7 @@
 <div class = "column">
 <label class="label">Title Name </label>
   <div class="control">
-   <%= text_input f, :title_name, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :title_name, class: "input", type: "text", placeholder: "Title Name"  %>
   </div>
    <%= error_tag f, :title_name %>
    <p class="help"></p>
@@ -142,7 +142,7 @@
 <div class="field">
   <label class="label">Short Name In Reference </label>
   <div class="control">
-   <%= text_input f, :short_name, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :short_name, class: "input", type: "text", placeholder: "Short Name"  %>
   </div>
    <%= error_tag f, :short_name %>
   <p class="help"></p>
@@ -162,7 +162,7 @@
 
 <label class="label">Reference </label>
   <div class="control">
-   <%= text_input f, :ref, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :ref, class: "input", type: "text", placeholder: "Reference"  %>
   </div>
    <%= error_tag f, :ref %>
   <p class="help"></p>
@@ -171,7 +171,7 @@
  <div class = "column">
 <label class="label">Default Value </label>
   <div class="control">
-   <%= text_input f, :default_value, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :default_value, class: "input", type: "text", placeholder: "Default  Value"  %>
   </div>
    <%= error_tag f, :default_value %>
    <p class="help"></p>
@@ -198,7 +198,7 @@
   <div class="control">
     <%= text_input f, :support_definition,
         class: "textarea",
-        type: "input", placeholder: "Text input"  %>
+        type: "input", placeholder: "Support Definition"  %>
   </div>
   <p class="help">Supp Def</p>
    </div>
@@ -214,7 +214,7 @@
 <div class = "column">
 <label class="label">Usual Range</label>
   <div class="control">
-   <%= text_input f, :usual_range, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :usual_range, class: "input", type: "text", placeholder: "Usual Range"  %>
   </div>
    <%= error_tag f, :usual_range %>
    <p class="help"></p>
@@ -222,7 +222,7 @@
  <div class = "column">
 <label class="label">Valid Range</label>
   <div class="control">
-   <%= text_input f, :valid_range, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :valid_range, class: "input", type: "text", placeholder: "Valid Range"  %>
   </div>
    <%= error_tag f, :valid_range %>
    <p class="help"></p>
@@ -238,7 +238,7 @@
 <div class = "column">
 <label class="label">Data Source</label>
   <div class="control">
-   <%= text_input f, :data_source, class: "input", type: "text", placeholder: "Text input"  %>
+   <%= text_input f, :data_source, class: "input", type: "text", placeholder: "ata Source"  %>
    <%= error_tag f, :data_source %>
    <p class="help"></p>
 </div>
@@ -291,6 +291,6 @@
  <!---------------------->
 
   <div>
-    <%= submit "Save Field Data", class: "button is-info is-medium is-fullwidth " %>
+    <%= submit "Save Field Data", class: "button is-primary is-medium is-fullwidth " %>
   </div>
 <% end %>

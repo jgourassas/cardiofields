@@ -89,7 +89,7 @@ Total Number of Results
 
       <thead class="thead">
          <tr>
-         <th> Updated - Inserted - <em>Indexing</em></th>
+         <th> Updated, Inserted, Index </th>
           <th>Field Name - Table Name</th>
         
           <th>Instructions 
@@ -117,54 +117,48 @@ Total Number of Results
           </th>
 
           <th>
-     <span>
-         <i class="fa fa-code"
-          style="font-size:16px;color:#053eff;text-align:center;">
-          </i>
-         </span>
+          <i class="fa fa-code" style="font-size:16px;color:#053eff;text-align:center;"></i>
           Codes For Field
-         <br />
-          </th>
+         </th>
+     
           <th>Show</th>
           <th>Edit</th>
           <th>Delete</th>
     </tr>
+  
   </thead>
+  
   <tbody>
    <%= for {definition, index} <- Enum.with_index(@definitions) do %>
    <tr>
-   
-   
-   <td class="first_column">
+    
+   <td class= "box  has-background-light ">
    <span class="tag is-small is-rounded is-primary"> 
     <%=index + 1 %>
-    </span>
-  <span class="tag is-white", style="font-size: 14px;">
-   <i class="fa fa-eye" aria-hidden="true"></i>
+   </span>
+   <br/>
+  
+  <span class="tag is-white", style="font-size: 12px;">
    Updated: <%= definition.updated_at %></span>
     <br/>
-   <span class="tag is-link", style="font-size: 14px;">
-   <i class="fa fa-registered" aria-hidden="true"></i>
+  
+   <span class="tag is-link is-light", style="font-size: 12px;">
       Inserted: 
-   <%= definition.inserted_at %></span>
+   <%= definition.inserted_at %>
+   </span>
 
 <%= if "#{definition.indexing}" == "" do %>
-       
-       <p style="background-color:#ffd700;">
+        <p style="background-color:#ffd700;">
          No Index
         </p>
+       
        <% else %>
-      <p class="mr-0 pt-3">
-      
-       <i class="<i class="fa-thin fa-tag">
-        <span  class="tag is-white", style = "background-color:  #fff8e7;"> 
-         <em>Index: </em>
-      <strong >
+<br/>
+        <span class="tag is-primary  is-light is-small"> 
+        Index: 
         <%= raw( definition.indexing) %>
-      </strong>
         </span>
-   
-      </p>
+     
      <% end %>
 
 </td>
@@ -173,7 +167,7 @@ Total Number of Results
        <%= definition.name %>
         </strong>
   <br/>
-  <span style="color:#990000;//336600;//009900;//000080;">  
+  <span style="color:#990000">  
     Table : 
     <%= definition.table_name %>
    
@@ -275,7 +269,7 @@ class: "button is-primary  is-small is-rounded is-fullwidth "  do %>
 
 <span><%= link "Add A New Field",
  to: Routes.definition_path(@conn, :new), 
- class: "button is-info is-medium is-fullwidth"  %>
+ class: "button is-fullwidth is-medium is-primary "  %>
   </span>
 
 

@@ -153,7 +153,7 @@ defmodule Cardiofields.Canons do
   end
 
   def search_on_notes_1(query) do
-    a_query =
+    _a_query =
     from(b in Definition,
       where: 
         fragment("(?) @@ websearch_to_tsquery(?)", b.notes_tsv, ^query),
@@ -194,9 +194,10 @@ end
   def search_inserted_after(inserted_date) do
   
     # Get all items published since the last month
-    from p in Definition, where: p.inserted_at >
-    datetime_add(^NaiveDateTime.utc_now(), -1, "month")
-
+  # from p in Definition, where: p.inserted_at >
+  # datetime_add(^NaiveDateTime.utc_now(), -1, "month")
+    from p in Definition, where: p.inserted_at > ^inserted_date
+ 
    # Cldr.Calendar.minus ~D[p.inserted_at], :days, 1
   end
 
@@ -804,7 +805,7 @@ end
           and  not is_nil(c.code),
           limit: 250
     )
-  res = Cardiofields.Repo.all(query)
+  _res = Cardiofields.Repo.all(query)
   #res_len = length(res)
   # not working
 

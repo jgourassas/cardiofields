@@ -54,7 +54,7 @@ Show Codes For Option:
 <span>
    <%= link "Edit", to: Routes.definition_defs_option_opts_code_path(@conn, :edit, 
       @definition , @defs_option, @opts_code), 
- class: "button is-primary is-fullwidth"%>  
+ class: "button is-primary is-fullwidth is-medium"%>  
    </span>
    
 <span>

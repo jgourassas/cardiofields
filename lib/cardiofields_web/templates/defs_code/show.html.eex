@@ -45,7 +45,7 @@ Showing Code For Field:
 
 <%#= link "Back To Definition Codes  List", to: Routes.definition_defs_code_path(@conn, :index, @definition) , class: "button is-link"%>
 <span><%= link "Edit", to: Routes.definition_defs_code_path(@conn, :edit, @definition, @defs_code), 
-class: "button is-primary is-fullwidth" %>
+class: "button is-primary is-fullwidth is-medium" %>
 </span>
 
 
