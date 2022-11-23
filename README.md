@@ -1,9 +1,9 @@
 
-## Cardiofieds is a Collection of fields based on Standard Definitions.  
- 
 
-##### It can be used to Build cardiology Databases and Reports. Or as Lexicon
+##### Cardiofields can be used to Build cardiology Databases and Reports. Or as Lexicon
 
+ ##### To  build a database using Cardiofields check in docs/example.md
+   
  **Tables**
 
    * Fields (~ 3000 entries). Contains Field Name, Coding Instructions, Range  and some  extensive and important Notes About the entity
@@ -14,7 +14,7 @@
    * Pick-List Items Sentences for the reports in your Language
    * Pick-List Items Codes (Uncompleted)
    * Pick-List Items Images (Very Simple)
-   
+  
  
 ### Please Read and the docs
 

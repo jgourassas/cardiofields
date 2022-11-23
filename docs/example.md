@@ -1,12 +1,15 @@
+**collect the fields that you want toy use as:**
 
-mix phx.gen.html Canons Opts_image opts_images image:string 
+**mix phx.gen.html Canons Opts_image opts_images image:string**
+
 **A small example how I use it**
  As css I used bulma framework  
+
 <% alias Angio.Canons, as: Query %>
 
  **the function to select options (Make yours)** 
 
-def select_options(field) do
+~~~def select_options(field) do
     first find the id that correspond to the field
     query_a =
       from(
@@ -56,9 +59,10 @@ def select_options(field) do
         final_options = ["Definition Options - Selections Not Found"]
     end
     end
+~~~
 
 **the function search instructions)**
-def search_in_instructions(qname) do
+~~~def search_in_instructions(qname) do
         query =
       from(
         d in Definition,
@@ -71,10 +75,10 @@ def search_in_instructions(qname) do
       )
 
     res = Cardiofields.Repo.all(query)
-  end
+ ~~~end
 
  **In the forms** 
- <div class="column">
+ ~~~<div class="column">
         <% s_gender = Query.select_options("patnts_gender") %> 
         <div class="field">
           <label class="label">Gender </label>
@@ -88,10 +92,10 @@ def search_in_instructions(qname) do
             <!--select---->
           <!--control---->
         </div>
-    </div>
+    ~~~</div>
 
 **second example in the form**
-<% s_collat_flow_idx_method   =
+~~~<% s_collat_flow_idx_method   =
         Query.select_options("collat_flow_idx_method") %>
   <% i_collat_flow_idx_method =
                 raw Query.search_in_instructions("collat_flow_idx_method")%>
@@ -129,7 +133,7 @@ class: "form-control") %>
 <%= i_cor_anat_lm_ostium_type%>
 </p>
 </div>
-</div>
+~~~</div>
 
 Enjoy Profit 
 
