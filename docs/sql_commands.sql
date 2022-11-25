@@ -94,22 +94,42 @@ SELECT
     id, 
     COUNT(id)
 FROM
-    definitions
+    --definitions
+    defs_options
 GROUP BY
     id
 HAVING
     COUNT( id )> 1
 ORDER BY
     id;
-
-
 --find out double records-------------
+
+---------------------
+
+SELECT 
+    code,
+    name,
+        COUNT(*) AS Count
+FROM defs_options
+GROUP BY code, name, code
+HAVING COUNT(*) > 1
+ORDER BY name;
+
+-----------------------
+------------------------
+CREATE UNIQUE INDEX defs_option_code_constrain_idx
+ON defs_options(name,code);
+
+
+ALTER TABLE defs_options
+ADD CONSTRAINT defs_option_code_constrain_idx UNIQUE (name, code);
+
 ----------------
 SELECT
     name, 
     COUNT(name)
 FROM
-    definitions
+    defs_options
 GROUP BY
     name
 HAVING

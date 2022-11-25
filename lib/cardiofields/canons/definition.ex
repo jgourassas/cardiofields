@@ -66,6 +66,14 @@ defmodule Cardiofields.Canons.Definition do
   def order_by_name(query) do
     _query = from(c in query, order_by: c.name)
   end
+##########################3
+#ALTER TABLE table_name
+#ADD CONSTRAINT constraint_name UNIQUE (column1, column2, ... column_n);
+#ALTER TABLE your_table DROP CONSTRAINT constraint_name;
 
-  #################
+#ALTER TABLE definition
+#ADD CONSTRAINT :name_constrain_idx UNIQUE (name);
+
+
+#################
 end

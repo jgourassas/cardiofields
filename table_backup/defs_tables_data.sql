@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-22 18:42:37 EET
+-- Started on 2022-11-25 06:16:04 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -186,6 +186,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (937, NULL, NULL, NULL, NULL, NULL, 'echo_terms', 'Echo Terminologies (Peak Velocity, Valve Area etc...)', NULL, '2022-11-17 15:43:35', '2022-11-17 15:43:35', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (721, NULL, NULL, NULL, NULL, NULL, 'chd_conditions', 'Patient Congenital Conditions. Down, alagille, williams beuren, DiGeorge<br /><br />Note: This is an incomplete presentation of the data elements used to describe congenital heart disease.', NULL, '2016-09-14 15:57:00', '2022-11-20 05:31:17', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (938, NULL, NULL, NULL, NULL, NULL, 'lv_echo_systolic_function', NULL, NULL, '2022-11-20 08:35:05', '2022-11-20 08:36:02', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (939, NULL, NULL, NULL, NULL, NULL, 'lv_echo_diastolic_function', 'Left Ventricular Diastolic Function', NULL, '2022-11-24 08:52:35', '2022-11-24 08:52:35', NULL);
 
 
 --
@@ -194,10 +195,10 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 -- Name: defs_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_tables_id_seq', 938, true);
+SELECT pg_catalog.setval('public.defs_tables_id_seq', 939, true);
 
 
--- Completed on 2022-11-22 18:42:37 EET
+-- Completed on 2022-11-25 06:16:04 EET
 
 --
 -- PostgreSQL database dump complete

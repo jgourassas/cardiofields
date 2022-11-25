@@ -33,8 +33,16 @@ defmodule Cardiofields.Canons.Defs_option do
       :selection_reference
     ])
     |> validate_required([])
-   # |> order_by_code()
+   #|> validate_required([:code])
+   #|> unique_constraint(:code, name: defs_options_code_constrain_idx,
+   #message: "Opps Dublicate code ......")
+
   end
+#ALTER TABLE table_name
+#ADD CONSTRAINT constraint_name UNIQUE (column1, column2, ... column_n);
+#ALTER TABLE your_table DROP CONSTRAINT constraint_name;
+
+
 
   def order_by_code(query) do
     _results = from(q in query, order_by: [asc: q.code])
