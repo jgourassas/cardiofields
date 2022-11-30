@@ -70,8 +70,8 @@ Total Number of Results
       <%= render  CardiofieldsWeb.SharedView,
       "_definitions_count.html", definition: @definitions %>
 
-   <%= link " - List All Fields - ", to: Routes.definition_path(@conn, :index),
-     class: "button is-rounded is-warning"  %>
+   <%= link "  List All Fields  ", to: Routes.definition_path(@conn, :index),
+     class: "button is-rounded is-primary"  %>
 </span>
 
 </div><!------title form------------------->

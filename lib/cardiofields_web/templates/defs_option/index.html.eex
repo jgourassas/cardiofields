@@ -38,8 +38,9 @@ definition: @definition %>
 
 
   <td class="first_column">
-   <span class="tag is-small is-rounded is-primary"> 
+   <span class="tag is-small is-rounded is-danger"> 
     <%=index + 1 %>
+    <br/>
     </span>
 
   <span class="tag is-white", style="font-size: 14px;">

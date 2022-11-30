@@ -1,14 +1,14 @@
 
 <% alias Cardiofields.Canons %>
-<% definitions_count = Canons.count_definitions()  %>
+<% fields_count = Canons.count_definitions()  %>
 <span></span>
-    <%= if definitions_count > 0 do %>
+    <%= if fields_count > 0 do %>
           <span class="button is-rounded is-primary">
-            <span> Total  Number of  fields: </span>
-             <strong><%= definitions_count %></strong>
+            <span> Total  Number of  Fields : </span>
+             <strong><%= fields_count %></strong>
         </span>
     <% else %>
         <span class="button is-small is-danger">
-            <%= definitions_count %>
+            <%= fields_count %>
            </span>
     <% end %>

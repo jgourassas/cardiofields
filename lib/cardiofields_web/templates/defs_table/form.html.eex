@@ -11,7 +11,7 @@
      <!-------------start------------------------->
    <div class="columns">
 
-   <div class="column is-4 frame_3">
+   <div class="column", style="background-color: #FF9933; ">
    <div class="field">
     <label class="label">Table Name</label>
   <div class="control">
@@ -19,78 +19,25 @@
    <%= error_tag f, :name %>
    <p class="help"></p>
   </div><!---control--->
-       </div><!-----field--------------->
+  </div><!-----field--------------->
 
        </div><!----column 1---------------->
- <div class="column is-7 frame_3">
-
+   <div class="column", style="background-color: #D7FF5E ;  ">
 <div class="field">
   <label class="label">Notes </label>
   <div class="control">
     <%= text_input f, :note,
         class: "textarea",
-        type: "input", placeholder: "note"  %>
+        type: "input", placeholder: "Note"  %>
   <p class="help"></p>
 
   </div><!---control---------->
    </div><!-------field-------->
-
-
-
-
      </div><!----column 2---------------->
 
 
    </div><!-----columns----------------->
-    <!------------end -start------------------------->
-
-
-
-    <!-------------start------------------------->
-<section class="is-large">
-   <div class="columns">
-
-     <div class="column is-4 frame_3">
-   <div class="field">
-    <label class="label">Template ID </label>
-  <div class="control">
-   <%= text_input f, :template_id, class: "input", type: "text", placeholder: "template_id "  %>
-   <%= error_tag f, :template_id %>
-   <p class="help"></p>
-  </div><!---control--->
-  </div><!-----field--------------->
-  </div><!----column 1---------------->
-
-     <div class="column is-4 frame_3">
-    <div class="field">
-    <label class="label">Code </label>
-  <div class="control">
-   <%= text_input f, :code, class: "input", type: "text", placeholder: "Set a code"  %>
-   <%= error_tag f, :code %>
-   <p class="help"></p>
-  </div><!---control--->
-   </div><!-----field--------------->
-   </div><!----column 2---------------->
-
-
-  <div class="column  is-4 frame_3">
-  <div class="field">
-    <label class="label">Coding System </label>
-  <div class="control">
-   <%= text_input f, :code_system , class: "input", type: "text", placeholder: "code_system "  %>
-   <%= error_tag f, :code_system  %>
-   <p class="help"></p>
-  </div><!---control--->
-       </div><!-----field--------------->
-     </div><!----column 3---------------->
-     
-   </div><!-----columns----------------->
-</section>
-    <!------------end -start------------------------->
- <!-------------start------------------------->
-   
-    <!------------end -start------------------------->
-
+    
 
   </div><!-------end LEFT COLUMN--------------------->
   <div class= "column">
@@ -98,8 +45,8 @@
   <!-------------start------------------------->
    <div class="columns">
 
-     <div class="column is-4 frame_3">
-
+     
+ <div class="column", style="background-color:#a6b1e1; ">
         <div class="field">
     <label class="label">Display Name </label>
   <div class="control">
@@ -150,7 +97,46 @@
    </div><!-------end RIGTH COLUMN--------------------->
   </div><!------END columns------------------------------------->
 
+<div class="columns">
 
+<div class="column"  ">
+<div class="field">
+    <label class="label">Template ID </label>
+  <div class="control">
+   <%= text_input f, :template_id, class: "input", type: "text", placeholder: "template_id "  %>
+   <%= error_tag f, :template_id %>
+   <p class="help"></p>
+  </div><!---control--->
+  </div><!-----field--------------->
+
+</div><!------column--------------->
+
+<div class="column" >
+ <div class="field">
+    <label class="label">Code </label>
+  <div class="control">
+   <%= text_input f, :code, class: "input", type: "text", placeholder: "Set a code"  %>
+   <%= error_tag f, :code %>
+   <p class="help"></p>
+  </div><!---control--->
+   </div><!-----field--------------->
+</div><!------colume--------------->
+
+
+<div class="column" >
+  <div class="field">
+    <label class="label">Coding System </label>
+  <div class="control">
+   <%= text_input f, :code_system , class: "input", type: "text", placeholder: "code_system "  %>
+   <%= error_tag f, :code_system  %>
+   <p class="help"></p>
+  </div><!---control--->
+       </div><!-----field--------------->
+
+</div><!------colume--------------->
+
+
+</div> <!-------columns-------->
   <div>
     <%= submit "Save", class: "button is-primary is-large is-fullwidth" %>
   </div>

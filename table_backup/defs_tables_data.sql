@@ -5,7 +5,7 @@
 -- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
 -- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
 
--- Started on 2022-11-25 06:16:04 EET
+-- Started on 2022-11-30 05:49:21 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -184,9 +184,11 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (930, NULL, NULL, NULL, NULL, NULL, 'bio_valve_dysfunc', 'Structural valve deterioration includes permanent intrinsic changes of the valve (i.e. leaflet tear, calcification, pannus eposition, flail, or fibrotic leaflet) leading to degeneration and/or dysfunction, which in turn may result in stenosis or intra-prosthetic regurgitation', NULL, '2022-05-01 15:10:49', '2022-06-13 08:36:43', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (935, NULL, NULL, NULL, NULL, 'scores', 'scores', 'Table of all scores', NULL, '2022-11-08 08:14:27', '2022-11-09 09:14:48', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (937, NULL, NULL, NULL, NULL, NULL, 'echo_terms', 'Echo Terminologies (Peak Velocity, Valve Area etc...)', NULL, '2022-11-17 15:43:35', '2022-11-17 15:43:35', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (721, NULL, NULL, NULL, NULL, NULL, 'chd_conditions', 'Patient Congenital Conditions. Down, alagille, williams beuren, DiGeorge<br /><br />Note: This is an incomplete presentation of the data elements used to describe congenital heart disease.', NULL, '2016-09-14 15:57:00', '2022-11-20 05:31:17', NULL);
-INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (938, NULL, NULL, NULL, NULL, NULL, 'lv_echo_systolic_function', NULL, NULL, '2022-11-20 08:35:05', '2022-11-20 08:36:02', NULL);
 INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (939, NULL, NULL, NULL, NULL, NULL, 'lv_echo_diastolic_function', 'Left Ventricular Diastolic Function', NULL, '2022-11-24 08:52:35', '2022-11-24 08:52:35', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (940, NULL, NULL, NULL, NULL, 'Right Ventricular Systolic Function', 'rv_echo_systolic_function', 'Right Ventricular Systolic Function', NULL, '2022-11-25 07:14:27', '2022-11-25 07:14:27', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (941, NULL, NULL, NULL, NULL, NULL, 'rv_echo_diastolic_function', 'Left ventricular diastolic function', NULL, '2022-11-25 13:12:12', '2022-11-25 13:12:12', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (938, NULL, NULL, NULL, NULL, NULL, 'lv_echo_systolic_function', 'lv echo systolic function', NULL, '2022-11-20 08:35:05', '2022-11-29 04:11:07', NULL);
+INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name, display_name, name, note, template_id, inserted_at, updated_at, info_coronary_id) VALUES (721, NULL, NULL, NULL, NULL, NULL, 'chd_conditions', 'Partial List for Patient Congenital Conditions. Down, alagille, williams beuren, DiGeorge', NULL, '2016-09-14 15:57:00', '2022-11-29 04:21:53', NULL);
 
 
 --
@@ -195,10 +197,10 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 -- Name: defs_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.defs_tables_id_seq', 939, true);
+SELECT pg_catalog.setval('public.defs_tables_id_seq', 941, true);
 
 
--- Completed on 2022-11-25 06:16:04 EET
+-- Completed on 2022-11-30 05:49:21 EET
 
 --
 -- PostgreSQL database dump complete

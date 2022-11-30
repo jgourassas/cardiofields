@@ -1,7 +1,7 @@
  <h5 class="title is-5 has-text-centered frame_5">
-   Showing Field 
-<span class="frame_3">
-<%= "#{@definition.name}" %>
+   Showing Field Data
+<span>
+<%#= "#{@definition.name}" %>
 </span>
 
 </h5>
@@ -242,25 +242,37 @@
 <span class="tag is-white", style="font-size: 14px;">
    <i class="fa fa-eye" aria-hidden="true"></i>
    </span>
+    <% string_len = to_string(defs_option.selection_definition) %>
+
  <strong class="frame_5 ">Selection Definition:</strong>
+   <%= if String.length(string_len) === 0 do  %>
+   <span style="color:red;">  N/A Epty Field Data</span>
+  <%else %>
 <span class="has-text-justify is-size-5 box">
 <%= raw defs_option.selection_definition %>
 </span>
+<%end %>
+
 </li>
 
 <li  class="list-item">
+
 <span class="tag is-white", style="font-size: 14px;">
    <i class="fa fa-eye" aria-hidden="true"></i>
    </span>
-   <% string_len = to_string(defs_option.selection_reference) %>
-   <%= if String.length(string_len) === 0 do  %>
-    <span style="color:red;"> Reference:  N/A Epty Field Data</span>
-   <% else %>
- <strong class="frame_5">Selection Reference :</strong>
- <%=  defs_option.selection_reference %>
-   <% end %>
 
+   <% string_len = to_string(defs_option.selection_reference) %>
+    <strong class="frame_5 ">Selection Reference:</strong>
+   <%= if String.length(string_len) === 0 do  %>
+    <span style="color:red;"> N/A Epty Field Data</span>
+   <% else %>
+
+   <strong class="frame_5">Selection Reference :</strong>
+ <%=  defs_option.selection_reference %>
+  
+  <% end %>
 </li>
+
 </div>
 <%end %><!----if ---->
 
