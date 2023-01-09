@@ -3,8 +3,7 @@
   Search For A Database Table
  </h5>
 </div><!------title form------------------->
-
-<div class="columns is-centered frame_1">
+<div class="columns is-centered frame_1,  style="background-color: #C3C3E5;">
   <div class="column is-3">
  <span class="has-form">
 

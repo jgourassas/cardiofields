@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.8 (Debian 13.8-0+deb11u1)
--- Dumped by pg_dump version 13.8 (Debian 13.8-0+deb11u1)
+-- Dumped from database version 13.9 (Debian 13.9-0+deb11u1)
+-- Dumped by pg_dump version 13.9 (Debian 13.9-0+deb11u1)
 
--- Started on 2022-11-30 05:49:21 EET
+-- Started on 2023-01-09 16:33:21 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -200,7 +200,7 @@ INSERT INTO public.defs_tables (id, cda_xml, code, code_system, code_system_name
 SELECT pg_catalog.setval('public.defs_tables_id_seq', 941, true);
 
 
--- Completed on 2022-11-30 05:49:21 EET
+-- Completed on 2023-01-09 16:33:21 EET
 
 --
 -- PostgreSQL database dump complete
